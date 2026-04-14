@@ -9,6 +9,7 @@ import {
   useState,
   type TransitionEvent,
 } from "react";
+import { createPortal } from "react-dom";
 import "leaflet/dist/leaflet.css";
 import "@/styles/leaflet-sip.css";
 import { I18nContext } from "@/components/providers/AppProviders";
@@ -133,6 +134,7 @@ export function SipLeafletMap({
   const elRef = useRef<HTMLDivElement | null>(null);
   const shellRef = useRef<HTMLDivElement | null>(null);
   const [shellW, setShellW] = useState(0);
+  const [portalReady, setPortalReady] = useState(false);
   const [selected, setSelected] = useState<MapInfoSelection | null>(null);
   const selectedRef = useRef<MapInfoSelection | null>(null);
   selectedRef.current = selected;
@@ -235,6 +237,10 @@ export function SipLeafletMap({
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  useEffect(() => {
+    setPortalReady(true);
   }, []);
 
   useEffect(() => {
@@ -669,6 +675,7 @@ export function SipLeafletMap({
   const rightTranslateOpen = isMobileFullscreen ? mobileSheet === "right" : rightOpen;
   const showRightChrome = Boolean(selected) && !(variant === "fullscreen" && rightPanelPeek);
   const rightShown = showRightChrome && rightTranslateOpen;
+  const isMobileTier = layoutTier === "mobile";
 
   const { leftMax, rightMax } = useMemo(() => {
     if (isMobileFullscreen) return { leftMax: 320, rightMax: 420 };
@@ -943,47 +950,83 @@ export function SipLeafletMap({
       ) : null}
 
       {showRightChrome && selected ? (
-        <div
-          className={[
-            "pointer-events-none absolute z-20 flex min-h-0 min-w-0 flex-col transition-transform duration-300 ease-in-out",
-            isMobileFullscreen
-              ? [
-                  "left-4 right-4 top-4 w-auto max-w-none overflow-hidden",
-                  "max-h-[min(70vh,520px)] pt-[max(0.25rem,env(safe-area-inset-top))]",
-                ].join(" ")
-              : "bottom-3 right-3 top-3 max-w-[420px]",
-            rightTranslateOpen ? "translate-x-0" : "translate-x-[calc(100%+24px)]",
-          ].join(" ")}
-          style={
-            isMobileFullscreen
-              ? undefined
-              : { width: rightMax, maxWidth: rightMax, minWidth: Math.min(240, rightMax) }
-          }
-          onTransitionEnd={onRightPanelTransitionEnd}
-        >
+        isMobileTier && portalReady ? (
+          createPortal(
+            <div
+              className={[
+                "pointer-events-none fixed left-4 right-4 z-40 flex min-h-0 min-w-0 flex-col transition-transform duration-300 ease-in-out",
+                // Keep below the site header, but still viewport-relative.
+                "top-20",
+                // Viewport-based sizing (top+bottom) so inner scroll always works and never clips on rounded/overflow-hidden parents.
+                // Also keep clear of the fullscreen map footer (disclaimer bar).
+                "bottom-[calc(1rem+env(safe-area-inset-bottom)+4rem)]",
+                rightTranslateOpen ? "translate-x-0" : "translate-x-[calc(100%+24px)]",
+              ].join(" ")}
+              onTransitionEnd={onRightPanelTransitionEnd}
+            >
+              <div className="pointer-events-auto flex min-h-0 max-h-full flex-1 flex-col overflow-hidden rounded-2xl border border-outline-variant/15 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] touch-pan-y">
+                <MapInfoPanel
+                  layout="sidebar"
+                  selection={selected}
+                  lang={lang}
+                  t={t}
+                  onClose={beginCloseRightPanel}
+                  onMinimize={
+                    variant === "fullscreen"
+                      ? () => {
+                          setRightPanelPeek(true);
+                          setMobileSheet(null);
+                        }
+                      : undefined
+                  }
+                />
+              </div>
+            </div>,
+            document.body,
+          )
+        ) : (
           <div
             className={[
-              "pointer-events-auto flex min-h-0 max-h-full flex-1 flex-col overflow-hidden border border-outline-variant/15 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)]",
-              isMobileFullscreen ? "touch-pan-y rounded-2xl" : "rounded-[12px]",
+              "pointer-events-none absolute z-20 flex min-h-0 min-w-0 flex-col transition-transform duration-300 ease-in-out",
+              isMobileFullscreen
+                ? [
+                    "left-4 right-4 top-4 w-auto max-w-none overflow-hidden",
+                    "max-h-[min(70vh,520px)] pt-[max(0.25rem,env(safe-area-inset-top))]",
+                  ].join(" ")
+                : "bottom-3 right-3 top-3 max-w-[420px]",
+              rightTranslateOpen ? "translate-x-0" : "translate-x-[calc(100%+24px)]",
             ].join(" ")}
+            style={
+              isMobileFullscreen
+                ? undefined
+                : { width: rightMax, maxWidth: rightMax, minWidth: Math.min(240, rightMax) }
+            }
+            onTransitionEnd={onRightPanelTransitionEnd}
           >
-            <MapInfoPanel
-              layout="sidebar"
-              selection={selected}
-              lang={lang}
-              t={t}
-              onClose={beginCloseRightPanel}
-              onMinimize={
-                variant === "fullscreen"
-                  ? () => {
-                      setRightPanelPeek(true);
-                      if (layoutTier === "mobile") setMobileSheet(null);
-                    }
-                  : undefined
-              }
-            />
+            <div
+              className={[
+                "pointer-events-auto flex min-h-0 max-h-full flex-1 flex-col overflow-hidden border border-outline-variant/15 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)]",
+                isMobileFullscreen ? "touch-pan-y rounded-2xl" : "rounded-[12px]",
+              ].join(" ")}
+            >
+              <MapInfoPanel
+                layout="sidebar"
+                selection={selected}
+                lang={lang}
+                t={t}
+                onClose={beginCloseRightPanel}
+                onMinimize={
+                  variant === "fullscreen"
+                    ? () => {
+                        setRightPanelPeek(true);
+                        if (layoutTier === "mobile") setMobileSheet(null);
+                      }
+                    : undefined
+                }
+              />
+            </div>
           </div>
-        </div>
+        )
       ) : null}
     </div>
   );

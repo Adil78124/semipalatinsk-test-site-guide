@@ -100,7 +100,7 @@ function FullMapPageInner() {
         </main>
       )}
 
-      <footer className="z-[1000] shrink-0 border-t border-outline-variant/10 bg-surface/95 px-3 py-2 text-center text-[10px] leading-snug text-on-surface-variant backdrop-blur sm:text-[11px]">
+      <footer className="z-[1000] shrink-0 border-t border-outline-variant/10 bg-surface/95 px-3 py-2 text-center text-[10px] leading-snug text-on-surface-variant backdrop-blur translate-y-[30px] sm:translate-y-0 sm:text-[11px]">
         <p className="mb-1.5 max-w-4xl mx-auto text-[10px] text-on-surface sm:text-[11px]">{t("map.shortDisclaimer")}</p>
         <p className="max-w-4xl mx-auto text-on-surface-variant">{t("map.attributionShort")}</p>
       </footer>

@@ -70,7 +70,9 @@ export function MapInfoPanel({
             </button>
           </div>
         </div>
-        <div className={`min-w-0 px-3 py-3 ${isSidebar ? "flex-1 overflow-y-auto overscroll-contain" : ""}`}>
+        <div
+          className={`min-w-0 px-3 py-3 ${isSidebar ? "flex-1 overflow-y-auto overscroll-contain [-webkit-overflow-scrolling:touch]" : ""}`}
+        >
           <p className="mb-3 text-[12px] leading-relaxed text-on-surface-variant">{sipSite.shortDescription}</p>
           <div className="whitespace-pre-wrap text-[12px] leading-relaxed text-on-surface">{sipSite.fullDescription}</div>
           <div className="mt-3 space-y-2 text-[11px] text-on-surface-variant">
@@ -154,7 +156,7 @@ export function MapInfoPanel({
         </div>
       </div>
       <div
-        className={`min-w-0 space-y-2.5 px-3 py-3 text-[11px] text-on-surface-variant ${isSidebar ? "flex-1 overflow-y-auto overscroll-contain" : ""}`}
+        className={`min-w-0 space-y-2.5 px-3 py-3 text-[11px] text-on-surface-variant ${isSidebar ? "flex-1 overflow-y-auto overscroll-contain [-webkit-overflow-scrolling:touch]" : ""}`}
       >
         {(catalogEntry.summary?.[lang] ?? catalogEntry.summary?.ru) ? (
           <p className="font-medium leading-relaxed text-on-surface">
