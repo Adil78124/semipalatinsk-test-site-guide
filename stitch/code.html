@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Methodology &amp; Data Sources | Geoecological Editorial</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#005318",
+                    "on-secondary-container": "#19722b",
+                    "on-primary-fixed": "#002204",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#126d27",
+                    "surface-container": "#eceeed",
+                    "outline-variant": "#bfcaba",
+                    "on-tertiary-fixed-variant": "#7f2448",
+                    "surface-variant": "#e1e3e2",
+                    "surface-bright": "#f8faf9",
+                    "inverse-on-surface": "#eff1f0",
+                    "on-primary-container": "#cbffc2",
+                    "surface-dim": "#d8dad9",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f2f4f3",
+                    "on-background": "#191c1c",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#83da85",
+                    "secondary-container": "#9cf49c",
+                    "tertiary": "#923357",
+                    "primary-fixed-dim": "#88d982",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#ffedf0",
+                    "surface": "#f8faf9",
+                    "on-surface": "#191c1c",
+                    "error": "#ba1a1a",
+                    "primary": "#0d631b",
+                    "outline": "#707a6c",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#002105",
+                    "background": "#f8faf9",
+                    "on-primary-fixed-variant": "#005312",
+                    "primary-container": "#2e7d32",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#a3f69c",
+                    "on-surface-variant": "#40493d",
+                    "on-tertiary-fixed": "#3f001c",
+                    "tertiary-fixed-dim": "#ffb1c7",
+                    "surface-tint": "#1b6d24",
+                    "inverse-primary": "#88d982",
+                    "tertiary-container": "#b14b6f",
+                    "tertiary-fixed": "#ffd9e2",
+                    "inverse-surface": "#2e3131",
+                    "surface-container-highest": "#e1e3e2",
+                    "surface-container-high": "#e6e9e8",
+                    "secondary-fixed": "#9ff79f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8faf9]/70 dark:bg-[#191c1c]/70 backdrop-blur-md shadow-sm dark:shadow-none h-20 flex items-center">
+<div class="flex justify-between items-center px-8 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-extrabold uppercase tracking-widest text-[#191c1c] dark:text-[#f8faf9] font-headline">
+                Geoecological Editorial
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline font-bold tracking-tight text-[#191c1c] dark:text-[#f8faf9] opacity-80 hover:opacity-100 transition-opacity duration-300" href="#">Methodology</a>
+<a class="font-headline font-bold tracking-tight text-[#0d631b] dark:text-[#2e7d32] border-b-2 border-[#0d631b] pb-1" href="#">Data Sources</a>
+<a class="font-headline font-bold tracking-tight text-[#191c1c] dark:text-[#f8faf9] opacity-80 hover:opacity-100 transition-opacity duration-300" href="#">Glossary</a>
+<a class="font-headline font-bold tracking-tight text-[#191c1c] dark:text-[#f8faf9] opacity-80 hover:opacity-100 transition-opacity duration-300" href="#">Archive</a>
+<a class="font-headline font-bold tracking-tight text-[#191c1c] dark:text-[#f8faf9] opacity-80 hover:opacity-100 transition-opacity duration-300" href="#">Team</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container px-6 py-2.5 rounded-xl font-headline font-bold transition-all duration-300 scale-95 hover:scale-100">
+                    Institutional Access
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-24 pb-32 px-8">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-surface/40 to-surface z-10"></div>
+<img class="w-full h-full object-cover opacity-30 grayscale" data-alt="High-resolution satellite imagery of the Semipalatinsk Test Site landscape with desolate steppes and circular crater patterns under soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG43er1Zh5ymkrOjHZY8ZoxZLSnz0NMRBVMVEHhhwhe_t1h5uhtas5ij7uVIiIO29SY2bZZBgsZUYIqXTmwac8eLpEd6bdfO_c_qMtY5M4TEGeggdkXhcMYQuSmcU0Queejf5gi9uDJmqy4qiGX6ykZyQ0AYATtsF7_jGLyymXCnIYHRZ12k6PrVuCI0Nk2_DpmC51h9Gl851NXjgH_JncsGUFxJ6_a7Q8z2PeXSiMUX9EvjOleVg0yX3oxcAkVnLEQlfZ2z-shjc"/>
+</div>
+<div class="relative z-20 max-w-screen-xl mx-auto text-center">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs font-bold tracking-wider uppercase mb-8">
+                    Справочно-образовательный материал
+                </span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-on-surface tracking-tight mb-8">
+                    Источники данных и методика
+                </h1>
+<p class="max-w-2xl mx-auto text-xl text-on-surface-variant font-light leading-relaxed">
+                    Как устроены данные на сайте и на каких научных и институциональных источниках основан проект.
+                </p>
+</div>
+</section>
+<!-- Legal Disclaimer -->
+<section class="px-8 -mt-16 relative z-30">
+<div class="max-w-4xl mx-auto bg-surface-container-low border-l-4 border-primary p-8 rounded-r-xl shadow-xl shadow-on-surface/5">
+<div class="flex items-start gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">gavel</span>
+</div>
+<div>
+<h2 class="text-xl font-headline font-bold mb-3 text-on-surface">Правовое уведомление</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                            Данный ресурс предназначен исключительно для <span class="font-semibold text-primary">образовательных и справочных целей</span>. Проект не предоставляет право доступа на территорию СИП (Семипалатинский испытательный полигон). Все официальные решения и планирование маршрутов требуют обязательной верификации в уполномоченных государственных органах и научных институтах Республики Казахстан.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Data Methodology Grid -->
+<section class="px-8 py-24 max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="max-w-2xl">
+<span class="font-label text-xs font-bold tracking-[0.2em] text-secondary uppercase">Methodology</span>
+<h2 class="text-4xl font-headline font-bold mt-2">Архитектура данных</h2>
+</div>
+<div class="text-on-surface-variant italic font-light">
+                    * Все данные проходят тройную проверку
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">location_on</span>
+<h3 class="font-headline font-bold text-lg mb-3">Точки на карте</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Геопривязанные координаты объектов инфраструктуры и исследовательских площадок.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">layers</span>
+<h3 class="font-headline font-bold text-lg mb-3">KML/KMZ форматы</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Использование стандартных геопространственных контейнеров для интеграции слоев.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-6) border_color">border_color</span>
+<h3 class="font-headline font-bold text-lg mb-3">Неофициальные границы</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Визуализация зон влияния на основе исторических карт и открытых архивов.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">article</span>
+<h3 class="font-headline font-bold text-lg mb-3">Тексты и источники</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Научная редактура материалов экспертами в области геоэкологии и истории.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">visibility</span>
+<h3 class="font-headline font-bold text-lg mb-3">Режим посещения</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Индикация доступности локаций согласно текущему статусу землепользования.</p>
+</div>
+</div>
+</section>
+<!-- Publications & Sources -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-screen-xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-headline font-bold mb-4 text-on-surface">Научный базис и партнеры</h2>
+<p class="text-on-surface-variant">Реестр ключевых источников, использованных при формировании базы данных</p>
+</div>
+<div class="space-y-4">
+<!-- Source Item -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 hover:bg-surface-bright transition-colors border border-transparent hover:border-outline-variant/20">
+<div class="flex items-center gap-6 flex-1">
+<div class="w-16 h-16 bg-surface-container rounded-lg flex items-center justify-center font-headline font-black text-on-surface-variant">PLOS</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<h4 class="font-headline font-bold text-xl">PLOS ONE</h4>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/10 text-primary uppercase">Journal</span>
+</div>
+<p class="text-sm text-on-surface-variant">Scientific Reports on Radioecological Impact (2023). Peer-reviewed research data.</p>
+</div>
+</div>
+<div class="text-right flex items-center gap-8">
+<div class="hidden lg:block text-right">
+<span class="block text-[10px] text-outline uppercase font-bold tracking-tighter">Year</span>
+<span class="font-medium text-sm">2023</span>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold group-hover:underline">
+<span class="material-symbols-outlined text-xl">open_in_new</span>
+<span class="text-sm">Link</span>
+</button>
+</div>
+</div>
+<!-- Source Item -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 hover:bg-surface-bright transition-colors border border-transparent hover:border-outline-variant/20">
+<div class="flex items-center gap-6 flex-1">
+<div class="w-16 h-16 bg-surface-container rounded-lg flex items-center justify-center font-headline font-black text-on-surface-variant">NNC</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<h4 class="font-headline font-bold text-xl">National Nuclear Center</h4>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-secondary/10 text-secondary uppercase">Institutional</span>
+</div>
+<p class="text-sm text-on-surface-variant">Official data from sts.nnc.kz &amp; nnc.kz regarding site monitoring.</p>
+</div>
+</div>
+<div class="text-right flex items-center gap-8">
+<div class="hidden lg:block text-right">
+<span class="block text-[10px] text-outline uppercase font-bold tracking-tighter">Access</span>
+<span class="font-medium text-sm">Public</span>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold group-hover:underline">
+<span class="material-symbols-outlined text-xl">open_in_new</span>
+<span class="text-sm">Link</span>
+</button>
+</div>
+</div>
+<!-- Source Item -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6 hover:bg-surface-bright transition-colors border border-transparent hover:border-outline-variant/20">
+<div class="flex items-center gap-6 flex-1">
+<div class="w-16 h-16 bg-surface-container rounded-lg flex items-center justify-center font-headline font-black text-on-surface-variant">IAEA</div>
+<div>
+<div class="flex items-center gap-3 mb-1">
+<h4 class="font-headline font-bold text-xl">IAEA Reports</h4>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-tertiary/10 text-tertiary uppercase">Global Agency</span>
+</div>
+<p class="text-sm text-on-surface-variant">International standards and historical assessment records.</p>
+</div>
+</div>
+<div class="text-right flex items-center gap-8">
+<div class="hidden lg:block text-right">
+<span class="block text-[10px] text-outline uppercase font-bold tracking-tighter">Type</span>
+<span class="font-medium text-sm">Framework</span>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold group-hover:underline">
+<span class="material-symbols-outlined text-xl">open_in_new</span>
+<span class="text-sm">Link</span>
+</button>
+</div>
+</div>
+<!-- Adilet / UNEP / OSM (Compact) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 flex items-center justify-between">
+<span class="font-bold text-sm">Adilet Portal</span>
+<span class="material-symbols-outlined text-sm text-outline">link</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 flex items-center justify-between">
+<span class="font-bold text-sm">UNEP Records</span>
+<span class="material-symbols-outlined text-sm text-outline">link</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 flex items-center justify-between">
+<span class="font-bold text-sm">OSM Data</span>
+<span class="material-symbols-outlined text-sm text-outline">link</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/10 flex items-center justify-between">
+<span class="font-bold text-sm">Wikipedia</span>
+<span class="material-symbols-outlined text-sm text-outline">link</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Glossary Section -->
+<section class="py-24 px-8 max-w-screen-xl mx-auto">
+<div class="mb-16">
+<span class="font-label text-xs font-bold tracking-[0.2em] text-tertiary uppercase">Lexicon</span>
+<h2 class="text-4xl font-headline font-bold mt-2">Глоссарий терминов</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Радионуклид</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Атом с нестабильным ядром, обладающий избыточной энергией.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Cs-137</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Цезий-137: один из основных техногенных радионуклидов-загрязнителей.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Sr-90</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Стронций-90: аналог кальция, накапливается в костной ткани.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Pu-239+240</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Изотопы плутония, характеризующиеся длительным периодом полураспада.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Am-241</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Америций-241: продукт распада плутония-241, альфа-излучатель.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Бк/кг</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Беккерель на килограмм: удельная активность вещества.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">μSv/h</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Микрозиверт в час: мощность амбиентного эквивалента дозы.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Fallout</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Радиоактивные осадки, выпадающие из атмосферы после взрыва.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Дозиметрия</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Методы измерения ионизирующего излучения.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Штольня</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Горизонтальная горная выработка для подземных испытаний на Дегелене.</dd>
+</div>
+<div class="group">
+<dt class="font-headline font-bold text-primary mb-2 text-lg">Ground Zero</dt>
+<dd class="text-sm text-on-surface-variant leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Точка эпицентра взрыва на поверхности или под землей.</dd>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="px-8 pb-24">
+<div class="max-w-screen-xl mx-auto bg-primary-container text-on-primary-container p-12 md:p-20 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-12 opacity-10">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">language</span>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="text-4xl font-headline font-extrabold mb-6">Перейти к исследованию</h2>
+<p class="text-lg mb-10 opacity-90 leading-relaxed">Интерактивный картографический слой визуализирует все описанные данные на реальной местности Восточного Казахстана.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-xl font-headline font-bold shadow-lg hover:shadow-xl transition-all">
+                            Открыть интерактивную карту
+                        </button>
+<button class="border-2 border-on-primary-container/30 px-8 py-4 rounded-xl font-headline font-bold hover:bg-on-primary-container/10 transition-all">
+                            Изучить научные карты
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-8 mt-24 bg-[#f2f4f3] dark:bg-[#1f2120] font-['Inter'] text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-screen-2xl mx-auto">
+<div class="lg:col-span-1">
+<div class="font-['Manrope'] font-semibold text-[#191c1c] dark:text-[#f8faf9] mb-4 text-lg">Geoecological Editorial</div>
+<p class="text-[#191c1c] dark:text-[#f8faf9] opacity-60">© 2024 Geoecological Editorial Project. Scientific &amp; Reliable Data Standards.</p>
+</div>
+<div>
+<h5 class="font-headline font-bold mb-4 text-[#0d631b] dark:text-[#2e7d32]">Navigation</h5>
+<ul class="space-y-2">
+<li><a class="text-[#191c1c] dark:text-[#f8faf9] opacity-60 hover:text-[#0d631b] dark:hover:text-[#2e7d32] transition-colors" href="#">Institutional Partners</a></li>
+<li><a class="text-[#191c1c] dark:text-[#f8faf9] opacity-60 hover:text-[#0d631b] dark:hover:text-[#2e7d32] transition-colors" href="#">Data Usage Agreement</a></li>
+<li><a class="text-[#191c1c] dark:text-[#f8faf9] opacity-60 hover:text-[#0d631b] dark:hover:text-[#2e7d32] transition-colors" href="#">Contact Research Lead</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline font-bold mb-4 text-[#0d631b] dark:text-[#2e7d32]">Legal</h5>
+<ul class="space-y-2">
+<li><a class="text-[#191c1c] dark:text-[#f8faf9] opacity-60 hover:text-[#0d631b] dark:hover:text-[#2e7d32] transition-colors" href="#">Legal Disclaimers</a></li>
+<li><a class="text-[#191c1c] dark:text-[#f8faf9] opacity-60 hover:text-[#0d631b] dark:hover:text-[#2e7d32] transition-colors underline underline-offset-4" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-start lg:items-end">
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-40 mb-2">Verified by</span>
+<div class="flex gap-4 grayscale opacity-50">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+<span class="material-symbols-outlined text-3xl">security</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,12 @@
+{
+  id: "route-4",
+  title: "Курчатов — Опытное поле",
+  description: "Маршрут к месту первого ядерного испытания СССР 1949 года — одному из важнейших объектов полигона.",
+  start: "Курчатов",
+  end: "Опытное поле",
+  duration: "3–4 часа",
+  type: "автомобильный",
+  difficulty: "средний",
+  image: "/images/routes/route-4.jpg",
+  googleMapsUrl: "https://www.google.com/maps/dir/?api=1&origin=Kurchatov,Kazakhstan&destination=Semipalatinsk+Test+Site"
+}

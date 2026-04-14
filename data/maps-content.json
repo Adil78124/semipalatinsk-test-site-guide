@@ -1,0 +1,513 @@
+{
+  "maps": [
+    {
+      "slug": "sip-overview",
+      "code": "G001",
+      "title": {
+        "ru": "Обзорное расположение СИП в Казахстане",
+        "kk": "СИП-тың Қазақстандағы жалпы орналасуы",
+        "en": "Overview location of STS in Kazakhstan"
+      },
+      "shortTitle": {
+        "ru": "Обзорное расположение СИП",
+        "kk": "СИП орналасуы",
+        "en": "STS overview"
+      },
+      "description": {
+        "ru": "Показывает расположение Семипалатинского испытательного полигона в пределах Казахстана и его связь с ближайшими регионами. Помогает понять масштаб территории и её географическое положение.",
+        "kk": "Семей сынақ полигонының Қазақстан аумағындағы орналасуын және жақын өңірлермен байланысын көрсетеді. Аумақтың ауқымын және географиялық контекстін түсінуге көмектеседі.",
+        "en": "Shows where the Semipalatinsk Test Site is located within Kazakhstan and how it relates to nearby regions. Helps understand the scale and geographic context of the territory."
+      },
+      "image": "/journal.pone.0294632.g001.PNG",
+      "sourceShort": {
+        "ru": "PLOS ONE (Panitskiy et al., 2023)",
+        "kk": "PLOS ONE (Panitskiy et al., 2023)",
+        "en": "PLOS ONE (Panitskiy et al., 2023)"
+      },
+      "cta": {
+        "ru": "Открыть карту",
+        "kk": "Картаны ашу",
+        "en": "Open map"
+      },
+      "prev": null,
+      "next": "territory-scheme",
+      "page": {
+        "category": {
+          "ru": "Scientific & Institutional Materials",
+          "kk": "Scientific & Institutional Materials",
+          "en": "Scientific & Institutional Materials"
+        },
+        "subtitle": {
+          "ru": "Показывает расположение Семипалатинского испытательного полигона в пределах Казахстана и его связь с ближайшими регионами.",
+          "kk": "Семей сынақ полигонының Қазақстан аумағындағы орналасуын және жақын өңірлермен байланысын көрсетеді.",
+          "en": "Shows the location of the Semipalatinsk Test Site within Kazakhstan and its relation to nearby regions."
+        },
+        "breadcrumbs": {
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Обзорное расположение СИП в Казахстане" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "СИП-тың Қазақстандағы жалпы орналасуы" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "Overview location of STS in Kazakhstan" }]
+        },
+        "meta": {
+          "verified": true,
+          "verifiedLabel": {
+            "ru": "Проверяемый источник",
+            "kk": "Тексерілетін дереккөз",
+            "en": "Verifiable source"
+          }
+        },
+        "sections": {
+          "whatShows": {
+            "ru": "Это обзорная схема из научной публикации, которая показывает положение территории СИП в пределах Казахстана и помогает увидеть её связь с соседними регионами и населенными пунктами.",
+            "kk": "Бұл — ғылыми жарияланымдағы шолу сызбасы: СИП аумағының Қазақстандағы орнын және жақын өңірлермен/елді мекендермен байланысын көрсетеді.",
+            "en": "An overview figure from a scientific publication showing where the STS territory sits within Kazakhstan and how it relates to nearby regions and settlements."
+          },
+          "whyImportant": {
+            "ru": "Карта помогает понять географический масштаб проекта и место СИП в общем пространственном контексте. Это важно для вводного знакомства с территорией.",
+            "kk": "Карта жобаның географиялық ауқымын және СИП-тың кеңістіктік контексттегі орнын түсінуге көмектеседі. Бұл аумақпен танысудың бастапқы қадамы үшін маңызды.",
+            "en": "Helps understand the geographic scale of the project and the STS position in the broader spatial context—useful for an introductory overview."
+          },
+          "howInterpret": {
+            "ru": "Эта схема даёт общий пространственный контекст, но не предназначена для самостоятельного планирования посещения. Для любых маршрутов важны действующие ограничения, мониторинг и официальные рекомендации.",
+            "kk": "Бұл сызба жалпы контекст береді, бірақ өз бетінше баруды жоспарлау үшін емес. Кез келген маршрут үшін қолданыстағы шектеулер, мониторинг және ресми ұсынымдар маңызды.",
+            "en": "Provides general context, but is not intended for self-planned visits. For any routes, follow current restrictions, monitoring, and official guidance."
+          }
+        },
+        "warning": {
+          "title": {
+            "ru": "Важно",
+            "kk": "Маңызды",
+            "en": "Important"
+          },
+          "text": {
+            "ru": "Карты помогают ориентироваться в научных данных и понимать особенности территории. Они не являются разрешением на свободное посещение. При планировании маршрутов приоритет — безопасность и официальные ограничения.",
+            "kk": "Карталар ғылыми деректерді түсінуге көмектеседі, бірақ еркін баруға рұқсат емес. Маршрут жоспарлауда басымдық — қауіпсіздік және ресми шектеулер.",
+            "en": "Maps help orient you in scientific data, but they are not permission for unrestricted access. For route planning, safety and official restrictions come first."
+          }
+        }
+      }
+    },
+    {
+      "slug": "territory-scheme",
+      "code": "G002",
+      "title": {
+        "ru": "Схема территории СИП и точки отбора проб",
+        "kk": "СИП аумағының сызбасы және сынама нүктелері",
+        "en": "STS scheme and sampling points"
+      },
+      "shortTitle": {
+        "ru": "Схема территории СИП",
+        "kk": "СИП сызбасы",
+        "en": "Territory scheme"
+      },
+      "description": {
+        "ru": "Схематично отображает основные участки территории, исследовательские зоны и точки отбора проб, используемые в научных исследованиях.",
+        "kk": "Негізгі учаскелерді, зерттеу аймақтарын және ғылыми зерттеулерде қолданылатын сынама алу нүктелерін сызбалық түрде көрсетеді.",
+        "en": "A schematic overview of key areas, study zones, and sampling points used in scientific research."
+      },
+      "image": "/journal.pone.0294632.g002.PNG",
+      "sourceShort": {
+        "ru": "PLOS ONE (Panitskiy et al., 2023)",
+        "kk": "PLOS ONE (Panitskiy et al., 2023)",
+        "en": "PLOS ONE (Panitskiy et al., 2023)"
+      },
+      "cta": {
+        "ru": "Открыть карту",
+        "kk": "Картаны ашу",
+        "en": "Open map"
+      },
+      "prev": "sip-overview",
+      "next": "cs137-distribution",
+      "page": {
+        "category": {
+          "ru": "Scientific & Institutional Materials",
+          "kk": "Scientific & Institutional Materials",
+          "en": "Scientific & Institutional Materials"
+        },
+        "subtitle": {
+          "ru": "Схематично отображает основные участки территории, исследовательские зоны и точки отбора проб, используемые в научных исследованиях.",
+          "kk": "СИП аумағының негізгі учаскелерін, зерттеу аймақтарын және сынама нүктелерін сызбалық түрде көрсетеді.",
+          "en": "A schematic view of key areas and sampling points referenced in research materials."
+        },
+        "breadcrumbs": {
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Схема территории СИП и точки отбора проб" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "СИП аумағының сызбасы және сынама нүктелері" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "STS scheme and sampling points" }]
+        },
+        "meta": {
+          "verified": true,
+          "verifiedLabel": {
+            "ru": "Проверяемый источник",
+            "kk": "Тексерілетін дереккөз",
+            "en": "Verifiable source"
+          }
+        },
+        "sections": {
+          "whatShows": {
+            "ru": "Это схема территории СИП из научной публикации, на которой показаны основные исследовательские участки, границы площадок и точки отбора проб.",
+            "kk": "Бұл — ғылыми жарияланымдағы СИП сызбасы: негізгі учаскелер, алаңдар шекаралары және сынама алу нүктелері көрсетілген.",
+            "en": "A scheme from the publication showing key areas, site boundaries, and sampling points."
+          },
+          "whyImportant": {
+            "ru": "Карта помогает увидеть внутреннюю структуру территории и понять, что разные участки имеют разный исследовательский и экологический контекст.",
+            "kk": "Карта аумақтың ішкі құрылымын көрсетіп, әр учаскенің зерттеу және экологиялық контексті әртүрлі екенін түсінуге көмектеседі.",
+            "en": "Helps visualize the internal structure of the territory and understand how different areas have different research and environmental contexts."
+          },
+          "howInterpret": {
+            "ru": "Схема предназначена для понимания структуры территории, а не для самостоятельного выбора пути посещения. Для любых маршрутов важны официальные ограничения и требования безопасности.",
+            "kk": "Сызба аумақ құрылымын түсіну үшін, ал өз бетінше маршрут таңдауға арналмаған. Кез келген маршрут үшін ресми шектеулер мен қауіпсіздік талаптары маңызды.",
+            "en": "Intended to understand the territory structure, not to choose a visit path on your own. For any routes, follow official restrictions and safety requirements."
+          }
+        },
+        "warning": {
+          "title": {
+            "ru": "Важно",
+            "kk": "Маңызды",
+            "en": "Important"
+          },
+          "text": {
+            "ru": "Карты помогают ориентироваться в научных данных и понимать особенности территории. Они не являются разрешением на свободное посещение. При планировании маршрутов приоритет — безопасность и официальные ограничения.",
+            "kk": "Карталар ғылыми деректерді түсінуге көмектеседі, бірақ еркін баруға рұқсат емес. Маршрут жоспарлауда басымдық — қауіпсіздік және ресми шектеулер.",
+            "en": "Maps help orient you in scientific data, but they are not permission for unrestricted access. For route planning, safety and official restrictions come first."
+          }
+        }
+      }
+    },
+    {
+      "slug": "cs137-distribution",
+      "code": "G003",
+      "title": {
+        "ru": "Распределение Cs-137 (цезий-137)",
+        "kk": "Cs-137 (цезий‑137) таралуы",
+        "en": "Cs‑137 distribution (cesium‑137)"
+      },
+      "shortTitle": {
+        "ru": "Распределение Cs-137",
+        "kk": "Cs‑137 таралуы",
+        "en": "Cs‑137 distribution"
+      },
+      "description": {
+        "ru": "Отражает распределение цезия-137 по данным исследования. Позволяет увидеть, как условия различаются между участками территории.",
+        "kk": "Зерттеу деректері бойынша цезий‑137 таралуын көрсетеді. Учаскелер арасындағы жағдайдың айырмашылығын көруге көмектеседі.",
+        "en": "Shows the study-based distribution of Cs‑137 and helps illustrate how conditions differ across locations."
+      },
+      "image": "/journal.pone.0294632.g003.PNG",
+      "sourceShort": {
+        "ru": "PLOS ONE (Panitskiy et al., 2023)",
+        "kk": "PLOS ONE (Panitskiy et al., 2023)",
+        "en": "PLOS ONE (Panitskiy et al., 2023)"
+      },
+      "cta": {
+        "ru": "Открыть карту",
+        "kk": "Картаны ашу",
+        "en": "Open map"
+      },
+      "prev": "territory-scheme",
+      "next": "am241-distribution",
+      "page": {
+        "category": {
+          "ru": "Scientific & Institutional Materials",
+          "kk": "Scientific & Institutional Materials",
+          "en": "Scientific & Institutional Materials"
+        },
+        "subtitle": {
+          "ru": "Отражает распределение цезия-137 по данным исследования и помогает понять, почему условия могут отличаться между участками.",
+          "kk": "Зерттеу деректері бойынша цезий‑137 таралуын көрсетеді және учаскелер неге әртүрлі болатынын түсіндіруге көмектеседі.",
+          "en": "Shows Cs‑137 distribution based on the study and helps explain why conditions can differ by location."
+        },
+        "breadcrumbs": {
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Распределение Cs-137 (цезий-137)" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "Cs-137 (цезий‑137) таралуы" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "Cs‑137 distribution (cesium‑137)" }]
+        },
+        "meta": {
+          "verified": true,
+          "verifiedLabel": {
+            "ru": "Проверяемый источник",
+            "kk": "Тексерілетін дереккөз",
+            "en": "Verifiable source"
+          }
+        },
+        "sections": {
+          "whatShows": {
+            "ru": "Это визуализация из научной публикации, позволяющая увидеть пространственные различия по цезию-137 на территории исследования.",
+            "kk": "Бұл — ғылыми жарияланымдағы визуализация: зерттеу аумағында цезий‑137 бойынша кеңістіктік айырмашылықтарды көруге мүмкіндік береді.",
+            "en": "A figure from the publication that helps visualize spatial differences for Cs‑137 across the study area."
+          },
+          "whyImportant": {
+            "ru": "Территория СИП неоднородна. Эта карта помогает понять, почему условия и режимы посещения могут отличаться между участками.",
+            "kk": "СИП аумағы біркелкі емес. Бұл карта учаскелер бойынша жағдай мен бару режимдерінің неге айырмашылығы болуы мүмкін екенін түсіндіруге көмектеседі.",
+            "en": "The STS territory is heterogeneous. This map helps explain why conditions and visit regimes can differ between locations."
+          },
+          "howInterpret": {
+            "ru": "Карта не является руководством к посещению. Для любых действий на территории важны действующие ограничения, мониторинг и официальные рекомендации. Научные материалы дают контекст, но не заменяют решения, связанные с безопасностью.",
+            "kk": "Карта баруға нұсқаулық емес. Кез келген әрекет үшін қолданыстағы шектеулер, мониторинг және ресми ұсынымдар маңызды. Ғылыми материалдар контекст береді, бірақ қауіпсіздік шешімдерін алмастырмайды.",
+            "en": "This is not a guide for visiting. Any actions depend on current restrictions, monitoring, and official guidance. Scientific figures provide context but do not replace safety decisions."
+          }
+        },
+        "warning": {
+          "title": {
+            "ru": "Важно",
+            "kk": "Маңызды",
+            "en": "Important"
+          },
+          "text": {
+            "ru": "Карты помогают ориентироваться в научных данных и понимать особенности территории. Они не являются разрешением на свободное посещение. При планировании маршрутов приоритет — безопасность и официальные ограничения.",
+            "kk": "Карталар ғылыми деректерді түсінуге көмектеседі, бірақ еркін баруға рұқсат емес. Маршрут жоспарлауда басымдық — қауіпсіздік және ресми шектеулер.",
+            "en": "Maps help orient you in scientific data, but they are not permission for unrestricted access. For route planning, safety and official restrictions come first."
+          }
+        }
+      }
+    },
+    {
+      "slug": "am241-distribution",
+      "code": "G004",
+      "title": {
+        "ru": "Распределение Am-241 (америций-241)",
+        "kk": "Am-241 (америций‑241) таралуы",
+        "en": "Am‑241 distribution (americium‑241)"
+      },
+      "shortTitle": {
+        "ru": "Распределение Am-241",
+        "kk": "Am‑241 таралуы",
+        "en": "Am‑241 distribution"
+      },
+      "description": {
+        "ru": "Показывает пространственные различия по америцию-241 в пределах территории СИП на основе научных данных.",
+        "kk": "Ғылыми деректер негізінде СИП аумағындағы америций‑241 бойынша кеңістіктік айырмашылықтарды көрсетеді.",
+        "en": "Shows study-based spatial differences for Am‑241 within the STS territory."
+      },
+      "image": "/journal.pone.0294632.g004.PNG",
+      "sourceShort": {
+        "ru": "PLOS ONE (Panitskiy et al., 2023)",
+        "kk": "PLOS ONE (Panitskiy et al., 2023)",
+        "en": "PLOS ONE (Panitskiy et al., 2023)"
+      },
+      "cta": {
+        "ru": "Открыть карту",
+        "kk": "Картаны ашу",
+        "en": "Open map"
+      },
+      "prev": "cs137-distribution",
+      "next": "sr90-distribution",
+      "page": {
+        "category": {
+          "ru": "Scientific & Institutional Materials",
+          "kk": "Scientific & Institutional Materials",
+          "en": "Scientific & Institutional Materials"
+        },
+        "subtitle": {
+          "ru": "Показывает пространственные различия по америцию-241 в пределах территории СИП на основе научных данных.",
+          "kk": "Ғылыми деректерге сүйене отырып, СИП аумағындағы америций‑241 бойынша кеңістіктік айырмашылықтарды көрсетеді.",
+          "en": "Shows spatial variation for Am‑241 within the STS territory based on research data."
+        },
+        "breadcrumbs": {
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Распределение Am-241 (америций-241)" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "Am-241 (америций‑241) таралуы" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "Am‑241 distribution (americium‑241)" }]
+        },
+        "meta": {
+          "verified": true,
+          "verifiedLabel": {
+            "ru": "Проверяемый источник",
+            "kk": "Тексерілетін дереккөз",
+            "en": "Verifiable source"
+          }
+        },
+        "sections": {
+          "whatShows": {
+            "ru": "Это визуализация из научной публикации, показывающая пространственные различия по америцию-241 в пределах исследуемой территории.",
+            "kk": "Бұл — ғылыми жарияланымдағы визуализация: зерттелетін аумақта америций‑241 бойынша кеңістіктік айырмашылықтарды көрсетеді.",
+            "en": "A figure from the publication showing spatial differences for Am‑241 within the study area."
+          },
+          "whyImportant": {
+            "ru": "Карта помогает увидеть, что радиоэкологическая ситуация может заметно различаться между участками, и подтверждает необходимость аккуратного зонирования.",
+            "kk": "Карта радиоэкологиялық жағдайдың учаскелер арасында айтарлықтай өзгеруі мүмкін екенін көрсетеді және зонирлеудің қажеттілігін қолдайды.",
+            "en": "Helps illustrate that radioecological conditions can vary by location and supports the need for careful zoning."
+          },
+          "howInterpret": {
+            "ru": "Научная фигура предназначена для понимания исследовательского контекста. Она не заменяет действующие правила доступа, мониторинг и официальные рекомендации по безопасности.",
+            "kk": "Бұл ғылыми фигура зерттеу контекстін түсіну үшін берілген. Ол қолданыстағы кіру ережелерін, мониторинг пен ресми қауіпсіздік ұсынымдарын алмастырмайды.",
+            "en": "Provided to understand research context. It does not replace current access rules, monitoring, or official safety guidance."
+          }
+        },
+        "warning": {
+          "title": {
+            "ru": "Важно",
+            "kk": "Маңызды",
+            "en": "Important"
+          },
+          "text": {
+            "ru": "Карты помогают ориентироваться в научных данных и понимать особенности территории. Они не являются разрешением на свободное посещение. При планировании маршрутов приоритет — безопасность и официальные ограничения.",
+            "kk": "Карталар ғылыми деректерді түсінуге көмектеседі, бірақ еркін баруға рұқсат емес. Маршрут жоспарлауда басымдық — қауіпсіздік және ресми шектеулер.",
+            "en": "Maps help orient you in scientific data, but they are not permission for unrestricted access. For route planning, safety and official restrictions come first."
+          }
+        }
+      }
+    },
+    {
+      "slug": "sr90-distribution",
+      "code": "G006",
+      "title": {
+        "ru": "Распределение Sr-90 (стронций-90)",
+        "kk": "Sr-90 (стронций‑90) таралуы",
+        "en": "Sr‑90 distribution (strontium‑90)"
+      },
+      "shortTitle": {
+        "ru": "Распределение Sr-90",
+        "kk": "Sr‑90 таралуы",
+        "en": "Sr‑90 distribution"
+      },
+      "description": {
+        "ru": "Отображает распределение стронция-90 на различных участках территории, используемое в научных исследованиях.",
+        "kk": "Ғылыми зерттеулерде қолданылатын аумақтың әртүрлі учаскелеріндегі стронций‑90 таралуын көрсетеді.",
+        "en": "Shows the study-based distribution of Sr‑90 across locations used in scientific analysis."
+      },
+      "image": "/journal.pone.0294632.g006.PNG",
+      "sourceShort": {
+        "ru": "PLOS ONE (Panitskiy et al., 2023)",
+        "kk": "PLOS ONE (Panitskiy et al., 2023)",
+        "en": "PLOS ONE (Panitskiy et al., 2023)"
+      },
+      "cta": {
+        "ru": "Открыть карту",
+        "kk": "Картаны ашу",
+        "en": "Open map"
+      },
+      "prev": "am241-distribution",
+      "next": null,
+      "page": {
+        "category": {
+          "ru": "Scientific & Institutional Materials",
+          "kk": "Scientific & Institutional Materials",
+          "en": "Scientific & Institutional Materials"
+        },
+        "subtitle": {
+          "ru": "Отображает распределение стронция-90 на различных участках территории, используемое в научных исследованиях.",
+          "kk": "Ғылыми зерттеулерде қолданылатын аумақтың әртүрлі учаскелеріндегі стронций‑90 таралуын көрсетеді.",
+          "en": "Shows the distribution of Sr‑90 across locations used in scientific studies."
+        },
+        "breadcrumbs": {
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Распределение Sr-90 (стронций-90)" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "Sr-90 (стронций‑90) таралуы" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "Sr‑90 distribution (strontium‑90)" }]
+        },
+        "meta": {
+          "verified": true,
+          "verifiedLabel": {
+            "ru": "Проверяемый источник",
+            "kk": "Тексерілетін дереккөз",
+            "en": "Verifiable source"
+          }
+        },
+        "sections": {
+          "whatShows": {
+            "ru": "Это визуализация из научной публикации, показывающая распределение стронция-90 в пределах исследуемой территории.",
+            "kk": "Бұл — ғылыми жарияланымдағы визуализация: зерттелетін аумақта стронций‑90 таралуын көрсетеді.",
+            "en": "A figure from the publication showing the distribution of Sr‑90 within the study area."
+          },
+          "whyImportant": {
+            "ru": "Карта помогает понять, что разные участки требуют разного подхода к интерпретации данных и вопросам безопасности.",
+            "kk": "Карта әртүрлі учаскелер деректерді түсіндіруде және қауіпсіздік мәселелерінде әртүрлі тәсілді қажет ететінін түсінуге көмектеседі.",
+            "en": "Helps explain why different locations may require different interpretation and safety considerations."
+          },
+          "howInterpret": {
+            "ru": "Эта карта не предназначена для самостоятельного выбора маршрута. Для посещения территории приоритет имеют действующие ограничения, мониторинг и официальные рекомендации.",
+            "kk": "Бұл карта өз бетінше маршрут таңдауға арналмаған. Аумаққа баруда басымдық — қолданыстағы шектеулер, мониторинг және ресми ұсынымдар.",
+            "en": "Not intended for choosing a route independently. For visits, prioritize current restrictions, monitoring, and official guidance."
+          }
+        },
+        "warning": {
+          "title": {
+            "ru": "Важно",
+            "kk": "Маңызды",
+            "en": "Important"
+          },
+          "text": {
+            "ru": "Карты помогают ориентироваться в научных данных и понимать особенности территории. Они не являются разрешением на свободное посещение. При планировании маршрутов приоритет — безопасность и официальные ограничения.",
+            "kk": "Карталар ғылыми деректерді түсінуге көмектеседі, бірақ еркін баруға рұқсат емес. Маршрут жоспарлауда басымдық — қауіпсіздік және ресми шектеулер.",
+            "en": "Maps help orient you in scientific data, but they are not permission for unrestricted access. For route planning, safety and official restrictions come first."
+          }
+        }
+      }
+    }
+  ],
+  "listPage": {
+    "page": {
+      "title": {
+        "ru": "Карты СИП и исследовательские материалы",
+        "kk": "СИП карталары және зерттеу материалдары",
+        "en": "STS maps & research materials"
+      },
+      "label": {
+        "ru": "Архив карт",
+        "kk": "Карта архиві",
+        "en": "Maps archive"
+      },
+      "subtitle": {
+        "ru": "Подборка научных карт и схем по территории СИП, основанных на открытых исследовательских данных.",
+        "kk": "Ашық зерттеу деректеріне негізделген СИП аумағы бойынша ғылыми карталар мен сызбалар жинағы.",
+        "en": "A curated set of scientific maps and schemes for the STS territory based on open research materials."
+      },
+      "description": {
+        "ru": "Каждая карта сопровождается кратким пояснением, указанием источника и рекомендациями по корректной интерпретации.",
+        "kk": "Әр карта қысқа түсіндірме, дереккөз және деректерді дұрыс түсіндіру бойынша ұсыныммен берілген.",
+        "en": "Each map includes a short explanation, a source reference, and guidance for careful interpretation."
+      }
+    },
+    "sourceBlock": {
+      "title": {
+        "ru": "Научные источники",
+        "kk": "Ғылыми дереккөздер",
+        "en": "Scientific sources"
+      },
+      "text": {
+        "ru": "Ниже — ключевые источники, на которых основаны визуальные материалы раздела карт. Раздел подготовлен для просвещения и аккуратной интерпретации данных.",
+        "kk": "Төменде карталар бөлімінің визуалды материалдары негізделген негізгі дереккөздер берілген. Бөлім ағартушылық және мұқият интерпретация үшін дайындалған.",
+        "en": "Key references used for the maps section. Prepared for education and careful interpretation."
+      },
+      "mainSourceTitle": {
+        "ru": "Основной источник",
+        "kk": "Негізгі дереккөз",
+        "en": "Primary source"
+      },
+      "publication": {
+        "ru": "PLOS ONE — статья и фигуры (карты)",
+        "kk": "PLOS ONE — мақала және фигуралар (карталар)",
+        "en": "PLOS ONE — article and figures (maps)"
+      },
+      "description": {
+        "ru": "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.",
+        "kk": "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.",
+        "en": "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site."
+      },
+      "note": {
+        "ru": "Карты в этом разделе соответствуют фигурам статьи (g001, g002, g003, g004, g006).",
+        "kk": "Бұл бөлімдегі карталар мақаладағы фигураларға сәйкес (g001, g002, g003, g004, g006).",
+        "en": "Maps in this section correspond to article figures (g001, g002, g003, g004, g006)."
+      },
+      "pdfLabel": {
+        "ru": "Открыть PDF",
+        "kk": "PDF ашу",
+        "en": "Open PDF"
+      },
+      "doiLabel": {
+        "ru": "DOI",
+        "kk": "DOI",
+        "en": "DOI"
+      }
+    },
+    "warningBlock": {
+      "title": {
+        "ru": "Важно",
+        "kk": "Маңызды",
+        "en": "Important"
+      },
+      "text": {
+        "ru": "Карты помогают ориентироваться в научных данных и понимать неоднородность территории. Они не являются самостоятельным разрешением на свободное посещение участков. При планировании маршрутов приоритет — безопасность и официальные рекомендации.",
+        "kk": "Карталар ғылыми деректерге бағдар береді және аумақтың біркелкі еместігін түсіндіреді. Олар учаскелерге еркін баруға дербес рұқсат емес. Маршрут жоспарлауда басымдық — қауіпсіздік және ресми ұсынымдар.",
+        "en": "Maps help orient you in scientific data and understand territory heterogeneity. They are not standalone permission for unrestricted access. For route planning, safety and official guidance come first."
+      }
+    }
+  }
+}
+

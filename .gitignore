@@ -13,6 +13,13 @@
 /.next/
 /out/
 
+# cursor / local debug
+.cursor/debug-*.log
+
+# caches
+.turbo
+.cache
+
 # production
 /build
 
