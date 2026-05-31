@@ -19,8 +19,8 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: "Geoecological Editorial — Семипалатинский испытательный полигон",
-    template: "%s · Geoecological Editorial",
+    default: "Путеводитель по СИП — Семипалатинский испытательный полигон",
+    template: "%s · Путеводитель по СИП",
   },
   description:
     "Справочный портал о Семипалатинском испытательном полигоне (СИП): карты, режим посещения, источники. Не заменяет официальные регламенты доступа.",

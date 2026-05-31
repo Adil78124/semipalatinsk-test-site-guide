@@ -4,11 +4,12 @@ import type { Lang } from "@/components/i18n/translations";
 export type MapSlug =
   | "sip-overview"
   | "territory-scheme"
+  | "sip-segments-map"
   | "cs137-distribution"
   | "am241-distribution"
   | "sr90-distribution";
 
-export type MapCode = "G001" | "G002" | "G003" | "G004" | "G006";
+export type MapCode = "G001" | "G002" | "SEG" | "G003" | "G004" | "G006";
 
 export type L10n = Record<Lang, string>;
 

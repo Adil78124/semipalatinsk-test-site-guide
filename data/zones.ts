@@ -14,14 +14,11 @@ export type ZoneData = {
   statusClass: string;
 };
 
-const ROUTED_ZONE_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAXJjDk_UURL3dDBKnxIDirZ3z9NMK5SWF6D66v1Nsl91jQxd7gi9Xrd7qqylRCs_0xmaiMk1D2IR17Jl9OFMK51Wf7W-QWdHeg_zOF0ahrz6T3Sq1_l2QkoOEE1LXZ5zM4SkWXCgfF78y0psOiZQbBhGFNMdZnzYPIG1KHWa2bmMRLg2GaysaGwFjF_UVM6UMIsl9NFppjziMOmDQcM7YWxbhHwWaQOnPuRYdfSZBcArZljMO_ZXFvZqvIc86_rOayHu6hbzMqq4g";
+const ROUTED_ZONE_IMG = "/images/kurchatov-city.jpg";
 
-const RESTRICTED_ZONE_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuDsK-LljG5V1B6l4Pf45SgLyK6gRF8BdiNWKZtAJiz1EKK6g6cSse2tIwKYSBLqltgPcDmYP4nF28CgAjbCH02txSw8TK_tODIVszct-dThUd38TVh76YQJoolbLBYWwZppKI9mcoSLgOsdbCh9t-YsNkCSR9oJGa-3KXuymMVOCLsluSsrrJwMnBzO03zBPZyO4durKb2JPQf4DXp-2Zv9RmH8m_pbLf9zozCX53uEGcqvNZQNs8V80510AlrFWjCTYQqJu-mxgtA";
+const RESTRICTED_ZONE_IMG = "/images/balapan.jpg";
 
-const CLOSED_ZONE_IMG =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuC6fOYuj_hkz6GcfQJhuuK74GXh7D5VNqolDk35K52pAX-emISiw4KdKHfb-aSl-APuSnTfv_bSkQQxQHW6Aet-bj0n_wmDWFicStER7j_psRW7Nmioet4--e9PFflP3A0xA67RqIMQz8xKh2ew4W00k5btRjYpaldMEKbzBu284LNVSVYxeIsooLLo9b2EO8-TOyUtT0VchfTTCVtu3tnP9YZhUSVmd28ol4_GuMXDL6m_Wd7XatS4ac10gPZZeF48byauWfdwZE8";
+const CLOSED_ZONE_IMG = "/images/degelen.jpg";
 
 export const ZONES: ZoneData[] = [
   {

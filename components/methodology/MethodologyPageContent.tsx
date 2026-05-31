@@ -57,7 +57,16 @@ const MAP_KEYS = [
 ] as const;
 
 /** Primary sources: NPA → NNC → IAEA → peer-reviewed */
-const PRIMARY_SOURCE_IDS = ["adilet", "nnc-sts", "nnc-main", "iaea", "panitskiy-2023-plos"] as const;
+const PRIMARY_SOURCE_IDS = [
+  "adilet",
+  "nnc-sts",
+  "nnc-main",
+  "iaea",
+  "panitskiy-2023-plos",
+  "toporova-2021-dose-methods",
+  "subbotin-2023-atomic-lake-dose",
+  "mukusheva-2024-monitoring-concepts",
+] as const;
 const AUX_SOURCE_IDS = ["unep", "osm", "wikipedia"] as const;
 
 function pubById(id: string): PublicationEntry | undefined {
@@ -65,13 +74,20 @@ function pubById(id: string): PublicationEntry | undefined {
 }
 
 function pubHref(entry: PublicationEntry): string {
-  return entry.doi ? `https://doi.org/${entry.doi}` : entry.url ?? "#";
+  return entry.url ?? (entry.doi ? `https://doi.org/${entry.doi}` : "#");
+}
+
+function sourceActionLabels(lang: Lang) {
+  if (lang === "en") return { article: "Article page", doi: "DOI", pdf: "PDF" };
+  if (lang === "kk") return { article: "Мақала беті", doi: "DOI", pdf: "PDF" };
+  return { article: "Страница статьи", doi: "DOI", pdf: "PDF" };
 }
 
 export function MethodologyPageContent() {
   const i18n = useContext(I18nContext);
   const t = i18n?.t ?? fallbackT;
   const lang: Lang = i18n?.lang ?? "ru";
+  const sourceLabels = sourceActionLabels(lang);
 
   return (
     <>
@@ -95,34 +111,34 @@ export function MethodologyPageContent() {
       </section>
 
       <div className="relative z-30 -mt-12 space-y-20 px-8 pb-24">
-        <section className="mx-auto max-w-3xl">
+        <section className="mx-auto max-w-4xl">
           <h2 className="mb-6 font-headline text-2xl font-bold text-on-surface md:text-3xl">
             {t("methodology.v2.sourceTypesTitle")}
           </h2>
-          <ol className="list-decimal space-y-3 pl-6 text-sm leading-relaxed text-on-surface-variant marker:font-bold marker:text-primary">
+          <ol className="list-decimal space-y-3 pl-6 text-lg leading-relaxed text-on-surface-variant marker:font-bold marker:text-primary">
             {SOURCE_TYPE_KEYS.map((k) => (
               <li key={k}>{t(k)}</li>
             ))}
           </ol>
         </section>
 
-        <section className="mx-auto max-w-3xl">
+        <section className="mx-auto max-w-4xl">
           <h2 className="mb-6 font-headline text-2xl font-bold text-on-surface md:text-3xl">
             {t("methodology.v2.usedTitle")}
           </h2>
-          <ul className="list-disc space-y-2 pl-6 text-sm leading-relaxed text-on-surface-variant marker:text-secondary">
+          <ul className="list-disc space-y-2 pl-6 text-lg leading-relaxed text-on-surface-variant marker:text-secondary">
             {USED_KEYS.map((k) => (
               <li key={k}>{t(k)}</li>
             ))}
           </ul>
         </section>
 
-        <section id="methodology-limits" className="mx-auto max-w-3xl scroll-mt-24">
+        <section id="methodology-limits" className="mx-auto max-w-4xl scroll-mt-24">
           <div className="rounded-r-xl border-l-4 border-primary bg-surface-container-low p-8 shadow-sm">
             <h2 className="mb-6 font-headline text-2xl font-bold text-on-surface md:text-3xl">
               {t("methodology.v2.limitsTitle")}
             </h2>
-            <ul className="list-disc space-y-3 pl-6 text-sm leading-relaxed text-on-surface-variant marker:text-primary">
+            <ul className="list-disc space-y-3 pl-6 text-lg leading-relaxed text-on-surface-variant marker:text-primary">
               {LIMIT_KEYS.map((k) => (
                 <li key={k}>{t(k)}</li>
               ))}
@@ -130,36 +146,36 @@ export function MethodologyPageContent() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-3xl">
+        <section className="mx-auto max-w-4xl">
           <h2 className="mb-4 font-headline text-2xl font-bold text-on-surface md:text-3xl">
             {t("methodology.v2.mapTitle")}
           </h2>
-          <p className="mb-6 text-sm leading-relaxed text-on-surface-variant">{t("methodology.v2.mapIntro")}</p>
-          <ul className="list-disc space-y-2 pl-6 text-sm leading-relaxed text-on-surface-variant marker:text-tertiary">
+          <p className="mb-6 text-lg leading-relaxed text-on-surface-variant">{t("methodology.v2.mapIntro")}</p>
+          <ul className="list-disc space-y-2 pl-6 text-lg leading-relaxed text-on-surface-variant marker:text-tertiary">
             {MAP_KEYS.map((k) => (
               <li key={k}>{t(k)}</li>
             ))}
           </ul>
-          <p className="mt-6 rounded-xl border border-outline-variant/15 bg-surface-container-lowest/80 p-4 text-sm leading-relaxed text-on-surface-variant">
+          <p className="mt-6 rounded-xl border border-outline-variant/15 bg-surface-container-lowest/80 p-5 text-lg leading-relaxed text-on-surface-variant">
             {t("methodology.v2.mapKmlNote")}
           </p>
         </section>
 
-        <section className="mx-auto max-w-3xl">
+        <section className="mx-auto max-w-4xl">
           <h2 className="mb-4 font-headline text-xl font-bold text-on-surface md:text-2xl">
             {t("methodology.v2.editorialTitle")}
           </h2>
-          <blockquote className="border-l-4 border-secondary/40 pl-6 text-base italic leading-relaxed text-on-surface-variant">
+          <blockquote className="border-l-4 border-secondary/40 pl-6 text-lg italic leading-relaxed text-on-surface-variant">
             {t("methodology.v2.editorialQuote")}
           </blockquote>
         </section>
 
-        <section className="mx-auto max-w-3xl">
+        <section className="mx-auto max-w-4xl">
           <h2 className="mb-2 font-headline text-2xl font-bold text-on-surface md:text-3xl">
             {t("methodology.v2.primarySectionTitle")}
           </h2>
-          <p className="mb-8 text-sm leading-relaxed text-on-surface-variant">{t("methodology.v2.primarySectionLead")}</p>
-          <ol className="list-decimal space-y-6 pl-6 text-sm leading-relaxed text-on-surface-variant marker:font-bold marker:text-primary">
+          <p className="mb-8 text-lg leading-relaxed text-on-surface-variant">{t("methodology.v2.primarySectionLead")}</p>
+          <ol className="list-decimal space-y-6 pl-6 text-lg leading-relaxed text-on-surface-variant marker:font-bold marker:text-primary">
             {PRIMARY_SOURCE_IDS.map((id) => {
               const entry = pubById(id);
               if (!entry?.url) return null;
@@ -175,6 +191,47 @@ export function MethodologyPageContent() {
                     {entry.title[lang]}
                   </a>
                   <p className="mt-2 text-on-surface-variant">{entry.summary[lang]}</p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    {entry.url ? (
+                      <a
+                        href={entry.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-widest text-on-surface transition-colors hover:bg-surface-container"
+                      >
+                        <span className="material-symbols-outlined text-[18px]" aria-hidden>
+                          open_in_new
+                        </span>
+                        {sourceLabels.article}
+                      </a>
+                    ) : null}
+                    {entry.doi ? (
+                      <a
+                        href={`https://doi.org/${entry.doi}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-widest text-on-surface transition-colors hover:bg-surface-container"
+                      >
+                        <span className="material-symbols-outlined text-[18px]" aria-hidden>
+                          tag
+                        </span>
+                        {sourceLabels.doi}
+                      </a>
+                    ) : null}
+                    {entry.pdfUrl ? (
+                      <a
+                        href={entry.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-widest text-on-primary shadow-lg shadow-primary/20"
+                      >
+                        <span className="material-symbols-outlined text-[18px]" aria-hidden>
+                          picture_as_pdf
+                        </span>
+                        {sourceLabels.pdf}
+                      </a>
+                    ) : null}
+                  </div>
                 </li>
               );
             })}
@@ -190,7 +247,7 @@ export function MethodologyPageContent() {
                     href={entry.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-primary underline decoration-primary/25 underline-offset-2 hover:decoration-primary"
+                    className="text-lg font-medium text-primary underline decoration-primary/25 underline-offset-2 hover:decoration-primary"
                   >
                     {entry.title[lang]}
                   </a>
@@ -207,13 +264,13 @@ export function MethodologyPageContent() {
             {t("methodology.design.lexiconKicker")}
           </span>
           <h2 className="mt-2 font-headline text-4xl font-bold">{t("methodology.design.glossaryHeading")}</h2>
-          <p className="mt-4 text-sm leading-relaxed text-on-surface-variant">{t("methodology.glossary.lead")}</p>
+          <p className="mt-4 text-lg leading-relaxed text-on-surface-variant">{t("methodology.glossary.lead")}</p>
         </div>
         <dl className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {GLOSSARY_IDS.map((gid) => (
             <div key={gid} className="group">
-              <dt className="mb-2 font-headline text-lg font-bold text-primary">{t(`glossary.${gid}.title` as TranslationKey)}</dt>
-              <dd className="text-sm leading-relaxed text-on-surface-variant opacity-80 transition-opacity group-hover:opacity-100">
+              <dt className="mb-2 font-headline text-xl font-bold text-primary">{t(`glossary.${gid}.title` as TranslationKey)}</dt>
+              <dd className="text-lg leading-relaxed text-on-surface-variant opacity-80 transition-opacity group-hover:opacity-100">
                 {t(`glossary.${gid}.desc` as TranslationKey)}
               </dd>
             </div>

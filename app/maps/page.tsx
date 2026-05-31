@@ -4,14 +4,30 @@ import React, { useContext } from "react";
 import { l10n, mapsContent } from "@/data/mapsContent";
 import { I18nContext } from "@/components/providers/AppProviders";
 import type { TranslationKey } from "@/components/i18n/translations";
+import { PUBLICATIONS_CATALOG } from "@/data/publicationsCatalog";
 
 const fallbackT = (key: TranslationKey) => String(key);
+const ADDITIONAL_SOURCE_IDS = [
+  "toporova-2021-dose-methods",
+  "subbotin-2023-atomic-lake-dose",
+  "mukusheva-2024-monitoring-concepts",
+] as const;
+
+function sourceLabels(lang: "ru" | "kk" | "en") {
+  if (lang === "en") return { title: "Additional scientific publications", article: "Article", pdf: "PDF" };
+  if (lang === "kk") return { title: "Қосымша ғылыми жарияланымдар", article: "Мақала", pdf: "PDF" };
+  return { title: "Дополнительные научные публикации", article: "Статья", pdf: "PDF" };
+}
 
 export default function MapsIndexPage() {
   const i18n = useContext(I18nContext);
   const t = i18n?.t ?? fallbackT;
   const lang = i18n?.lang ?? "ru";
   const { maps, listPage } = mapsContent;
+  const labels = sourceLabels(lang);
+  const additionalSources = ADDITIONAL_SOURCE_IDS.map((id) => PUBLICATIONS_CATALOG.find((p) => p.id === id)).filter(
+    Boolean,
+  );
 
   return (
     <section className="py-16 bg-surface-container-low">
@@ -120,6 +136,58 @@ export default function MapsIndexPage() {
                   <h4 className="font-headline font-extrabold text-xl">{l10n(lang, listPage.warningBlock.title)}</h4>
                   <p className="font-body text-sm leading-relaxed opacity-90 whitespace-pre-line">{l10n(lang, listPage.warningBlock.text)}</p>
                 </div>
+              </div>
+            </div>
+
+            <div className="mt-8 border-t border-outline-variant/10 pt-8">
+              <h4 className="font-headline text-2xl font-extrabold text-on-surface">{labels.title}</h4>
+              <div className="mt-5 grid grid-cols-1 gap-4">
+                {additionalSources.map((entry) =>
+                  entry ? (
+                    <article
+                      key={entry.id}
+                      className="rounded-2xl border border-outline-variant/10 bg-surface-container-low p-5"
+                    >
+                      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                        <div className="min-w-0">
+                          <p className="text-xs font-bold uppercase tracking-widest text-outline opacity-70">
+                            {entry.year} · Вестник НЯЦ РК
+                          </p>
+                          <h5 className="mt-2 font-headline text-lg font-bold leading-snug text-on-surface">
+                            {entry.title[lang]}
+                          </h5>
+                          <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
+                            {entry.summary[lang]}
+                          </p>
+                        </div>
+                        <div className="flex shrink-0 flex-wrap gap-2">
+                          {entry.url ? (
+                            <a
+                              href={entry.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-widest text-on-surface"
+                            >
+                              <span className="material-symbols-outlined text-[18px]">open_in_new</span>
+                              {labels.article}
+                            </a>
+                          ) : null}
+                          {entry.pdfUrl ? (
+                            <a
+                              href={entry.pdfUrl}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-widest text-on-primary shadow-lg shadow-primary/20"
+                            >
+                              <span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                              {labels.pdf}
+                            </a>
+                          ) : null}
+                        </div>
+                      </div>
+                    </article>
+                  ) : null,
+                )}
               </div>
             </div>
           </div>

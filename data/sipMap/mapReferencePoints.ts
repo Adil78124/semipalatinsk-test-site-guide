@@ -10,6 +10,8 @@ export type MapPointType = "settlement" | "test_site" | "landmark";
 /** Ориентир «Атомное озеро»: 49°55′27.7″N 78°59′22.7″E (десятичные градусы). */
 export const ATOMIC_LAKE_LAT = 49 + 55 / 60 + 27.7 / 3600;
 export const ATOMIC_LAKE_LNG = 78 + 59 / 60 + 22.7 / 3600;
+const KARAZHYRA_LAT = 50.02733244;
+const KARAZHYRA_LNG = 78.72924935;
 
 export type MapReferenceSourceType = "official" | "scientific" | "osm" | "wikipedia" | "manual";
 
@@ -51,10 +53,15 @@ const SIP_EN: Record<string, string> = {
   "experimental-field": "Experimental field",
   "site-4": "Site 4",
   "site-4a": "Site 4A",
+  "aktan-birlik": "Aktan-Berli",
   balapan: "Balapan",
   degelen: "Degelen",
   "sary-uzen": "Sary-Uzen",
   telkem: "Telkem",
+};
+
+const SIP_KK: Record<string, string> = {
+  "aktan-birlik": "Ақтан-Бірлік",
 };
 
 function siteCategoryToMapType(category: SitePointCategory): MapPointType {
@@ -63,21 +70,24 @@ function siteCategoryToMapType(category: SitePointCategory): MapPointType {
 }
 
 function sitePointToReference(sp: SitePoint): MapReferencePoint {
+  const isApproximate = sp.coordPrecision === "approx" || sp.coordPrecision === "estimated_center";
   return {
     id: sp.id,
     mapType: siteCategoryToMapType(sp.category),
     names: {
       ru: sp.name,
-      kk: sp.name,
+      kk: SIP_KK[sp.id] ?? sp.name,
       en: SIP_EN[sp.id] ?? sp.name,
     },
     lat: sp.lat,
     lng: sp.lng,
-    sourceName:
-      "НЯЦ РК — интерактивный атлас (sts.nnc.kz); координаты маркера — экспорт KML/KMZ «Главная.kmz»",
-    sourceUrl: STS_ATLAS,
-    sourceType: "official",
-    confidence: "high",
+    sourceName: isApproximate
+      ? "Ориентировочное положение по опубликованной карте-схеме СИП; требуется уточнение по официальным геоданным."
+      : "НЯЦ РК — интерактивный атлас (sts.nnc.kz); координаты маркера — экспорт KML/KMZ «Главная.kmz»",
+    sourceUrl: isApproximate ? undefined : STS_ATLAS,
+    sourceType: isApproximate ? "manual" : "official",
+    confidence: isApproximate ? "reference" : "high",
+    isApproximate,
     sipSiteId: sp.id,
   };
 }
@@ -125,6 +135,33 @@ const EXTRA_REFERENCE_POINTS: MapReferencePoint[] = [
       ru: "Водохранилище, образованное в результате подземного ядерного взрыва в 1965 году.",
       kk: "1965 жылғы ядролық жарылыстың нәтижесінде пайда болған су қоймасы.",
       en: "A reservoir formed by an underground nuclear explosion in 1965.",
+    },
+  },
+  {
+    id: "landmark-karazhyra",
+    mapType: "landmark",
+    names: {
+      ru: "Каражыра",
+      kk: "Қаражыра",
+      en: "Karazhyra",
+    },
+    lat: KARAZHYRA_LAT,
+    lng: KARAZHYRA_LNG,
+    sourceName:
+      "Справочная координата угольного разреза Каражыра; объект расположен рядом с площадкой Балапан.",
+    sourceUrl: "https://www.gem.wiki/Karazhyra_Coal_Mine",
+    sourceType: "manual",
+    confidence: "reference",
+    googleMapsUrl: googleMapsQueryUrl(KARAZHYRA_LAT, KARAZHYRA_LNG),
+    summary: {
+      ru: "Угольный разрез и промышленный ориентир рядом с площадкой Балапан.",
+      kk: "Балапан алаңы маңындағы көмір разрезі және өндірістік бағдар.",
+      en: "A coal mine and industrial landmark near the Balapan test area.",
+    },
+    description: {
+      ru: "Каражыра показана на карте как справочный ориентир рядом с Балапаном. Маркер не относится к испытательным площадкам и не является указанием на режим допуска.",
+      kk: "Қаражыра картада Балапан маңындағы анықтамалық бағдар ретінде көрсетілген. Маркер сынақ алаңы болып саналмайды және кіру режимін білдірмейді.",
+      en: "Karazhyra is shown as a reference landmark near Balapan. The marker is not a test site and does not indicate access status.",
     },
   },
 ];

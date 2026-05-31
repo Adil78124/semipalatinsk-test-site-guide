@@ -21,9 +21,16 @@ export default function MapDetailPage() {
   const map = getMapBySlug(slug);
   const prev = map ? getPrevMap(map) : null;
   const next = map ? getNextMap(map) : null;
+  const isSegmentsMap = map?.slug === "sip-segments-map";
 
   const pageTitle = map ? l10n(lang, map.title) : t("maps.notFound");
   const lead = map ? l10n(lang, map.page.subtitle) : "";
+  const sourceTitle = isSegmentsMap ? l10n(lang, map.sourceShort) : "PLOS ONE — статья и фигуры (карты)";
+  const sourceDescription = isSegmentsMap
+    ? l10n(lang, map.description)
+    : "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.";
+  const sourceYear = isSegmentsMap ? "—" : "2023";
+  const sourceType = isSegmentsMap ? "Картографический материал" : "Научная публикация";
 
   const infoBlocks = useMemo(
     () => [
@@ -133,67 +140,71 @@ export default function MapDetailPage() {
             <div className="space-y-6">
               <div>
                 <span className="font-label text-[10px] uppercase tracking-widest text-outline">Название публикации</span>
-                <p className="font-body font-semibold text-sm mt-1">PLOS ONE — статья и фигуры (карты)</p>
+                <p className="font-body font-semibold text-sm mt-1">{sourceTitle}</p>
               </div>
               <div>
                 <span className="font-label text-[10px] uppercase tracking-widest text-outline">Описание</span>
                 <p className="font-body text-sm mt-1 whitespace-pre-line">
-                  Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.
+                  {sourceDescription}
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <span className="font-label text-[10px] uppercase tracking-widest text-outline">Год</span>
-                  <p className="font-body text-sm mt-1">{map.page?.meta?.verified ? "2023" : "2023"}</p>
+                  <p className="font-body text-sm mt-1">{sourceYear}</p>
                 </div>
                 <div>
                   <span className="font-label text-[10px] uppercase tracking-widest text-outline">Тип</span>
-                  <p className="font-body text-sm mt-1">Научная публикация</p>
+                  <p className="font-body text-sm mt-1">{sourceType}</p>
                 </div>
               </div>
               <div className="pt-4 border-t border-outline-variant/20">
                 <p className="text-[11px] italic text-outline leading-tight">{map.page?.warning?.text ? "Материал используется в информационно-образовательных целях." : ""}</p>
               </div>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <a
-                  href={SCIENTIFIC_ARTICLE_PDF_HREF}
-                  download="Panitskiy-2023-PLOS-scientific-article-segments.pdf"
-                  className="inline-flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg shadow-primary/20"
-                >
-                  <span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
-                  {t("sources.openPdf")}
-                </a>
-                <a
-                  href="https://doi.org/10.1371/journal.pone.0294632"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 bg-white/70 border border-outline-variant/20 text-on-surface px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest"
-                >
-                  <span className="material-symbols-outlined text-[18px]">open_in_new</span>
-                  DOI
-                </a>
-              </div>
+              {!isSegmentsMap ? (
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <a
+                    href={SCIENTIFIC_ARTICLE_PDF_HREF}
+                    download="Panitskiy-2023-PLOS-scientific-article-segments.pdf"
+                    className="inline-flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg shadow-primary/20"
+                  >
+                    <span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                    {t("sources.openPdf")}
+                  </a>
+                  <a
+                    href="https://doi.org/10.1371/journal.pone.0294632"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 bg-white/70 border border-outline-variant/20 text-on-surface px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest"
+                  >
+                    <span className="material-symbols-outlined text-[18px]">open_in_new</span>
+                    DOI
+                  </a>
+                </div>
+              ) : null}
             </div>
           </div>
 
-          <a
-            href={SCIENTIFIC_ARTICLE_PDF_HREF}
-            download="Panitskiy-2023-PLOS-scientific-article-segments.pdf"
-            className="block p-6 rounded-2xl border border-primary/20 bg-primary/5 transition-colors hover:bg-primary/10 hover:border-primary/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          >
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
-                <span className="material-symbols-outlined" aria-hidden>
-                  download
-                </span>
+          {!isSegmentsMap ? (
+            <a
+              href={SCIENTIFIC_ARTICLE_PDF_HREF}
+              download="Panitskiy-2023-PLOS-scientific-article-segments.pdf"
+              className="block p-6 rounded-2xl border border-primary/20 bg-primary/5 transition-colors hover:bg-primary/10 hover:border-primary/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+                  <span className="material-symbols-outlined" aria-hidden>
+                    download
+                  </span>
+                </div>
+                <div className="min-w-0">
+                  <h4 className="font-headline font-bold text-sm">{t("maps.download.title")}</h4>
+                  <p className="text-xs text-on-surface-variant">{t("maps.download.subtitle")}</p>
+                  <p className="mt-2 text-[11px] font-semibold text-primary">{t("sources.openPdf")}</p>
+                </div>
               </div>
-              <div className="min-w-0">
-                <h4 className="font-headline font-bold text-sm">{t("maps.download.title")}</h4>
-                <p className="text-xs text-on-surface-variant">{t("maps.download.subtitle")}</p>
-                <p className="mt-2 text-[11px] font-semibold text-primary">{t("sources.openPdf")}</p>
-              </div>
-            </div>
-          </a>
+            </a>
+          ) : null}
           <a
             href={map.image}
             download

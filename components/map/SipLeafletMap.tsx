@@ -183,6 +183,7 @@ export function SipLeafletMap({
   const [filters, setFilters] = useState<Record<SitePointCategory, boolean>>({
     overview: true,
     testSite: true,
+    sipObject: true,
     excavation: true,
     radiological: true,
   });
@@ -780,7 +781,7 @@ export function SipLeafletMap({
                   {t("map.points.filtersTitle")}
                 </div>
                 <div className="grid grid-cols-1 gap-1.5 text-[11px] leading-tight text-on-surface">
-                  {(["overview", "testSite", "excavation", "radiological"] as SitePointCategory[]).map((c) => (
+                  {(["overview", "testSite", "sipObject", "excavation", "radiological"] as SitePointCategory[]).map((c) => (
                     <label key={c} className="flex cursor-pointer select-none items-center gap-2">
                       <input
                         className="shrink-0 rounded border-outline-variant/40"

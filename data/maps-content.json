@@ -116,7 +116,7 @@
         "en": "Open map"
       },
       "prev": "sip-overview",
-      "next": "cs137-distribution",
+      "next": "sip-segments-map",
       "page": {
         "category": {
           "ru": "Scientific & Institutional Materials",
@@ -173,6 +173,92 @@
       }
     },
     {
+      "slug": "sip-segments-map",
+      "code": "SEG",
+      "title": {
+        "ru": "Карта сегментов СИП",
+        "kk": "СИП сегменттерінің картасы",
+        "en": "STS segments map"
+      },
+      "shortTitle": {
+        "ru": "Карта сегментов СИП",
+        "kk": "СИП сегменттері",
+        "en": "STS segments"
+      },
+      "description": {
+        "ru": "Радиоэкологическая обследовательная карта СИП, представленная на сайте как карта сегментов территории. Помогает увидеть деление территории на крупные смысловые участки для справочной интерпретации.",
+        "kk": "Сайтта аумақ сегменттерінің картасы ретінде берілген СИП бойынша радиоэкологиялық шолу картасы. Аумақты анықтамалық түсіндіруге арналған ірі бөліктерге бөлуге көмектеседі.",
+        "en": "A radioecological survey map of the STS presented as a territory segments map. Helps show major interpretive segments of the area for reference use."
+      },
+      "image": "/радиоэкологическая обследоватедьная карта сип.jpg",
+      "sourceShort": {
+        "ru": "Картографический материал проекта",
+        "kk": "Жобаның картографиялық материалы",
+        "en": "Project cartographic material"
+      },
+      "cta": {
+        "ru": "Открыть карту",
+        "kk": "Картаны ашу",
+        "en": "Open map"
+      },
+      "prev": "territory-scheme",
+      "next": "cs137-distribution",
+      "page": {
+        "category": {
+          "ru": "Карты СИП и исследовательские материалы",
+          "kk": "СИП карталары және зерттеу материалдары",
+          "en": "STS maps & research materials"
+        },
+        "subtitle": {
+          "ru": "Радиоэкологическая обследовательная карта СИП, адаптированная на сайте как «Карта сегментов СИП».",
+          "kk": "Сайтта «СИП сегменттерінің картасы» ретінде бейімделген радиоэкологиялық шолу картасы.",
+          "en": "A radioecological survey map adapted on the site as the STS segments map."
+        },
+        "breadcrumbs": {
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Карта сегментов СИП" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "СИП сегменттерінің картасы" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "STS segments map" }]
+        },
+        "meta": {
+          "verified": true,
+          "verifiedLabel": {
+            "ru": "Справочная карта",
+            "kk": "Анықтамалық карта",
+            "en": "Reference map"
+          }
+        },
+        "sections": {
+          "whatShows": {
+            "ru": "Карта показывает радиоэкологическое представление территории СИП через крупные сегменты. На сайте она используется как справочный слой для понимания структуры территории.",
+            "kk": "Карта СИП аумағын ірі сегменттер арқылы радиоэкологиялық тұрғыдан көрсетеді. Сайтта ол аумақ құрылымын түсіндіретін анықтамалық қабат ретінде пайдаланылады.",
+            "en": "The map presents the STS territory through major radioecological segments. On the site it is used as a reference layer for understanding the territory structure."
+          },
+          "whyImportant": {
+            "ru": "Сегментная подача помогает быстрее ориентироваться в неоднородной территории и связывать отдельные материалы сайта с крупными участками СИП.",
+            "kk": "Сегменттік беру біркелкі емес аумақта бағдарлануды жеңілдетеді және сайт материалдарын СИП-тың ірі учаскелерімен байланыстырады.",
+            "en": "The segmented view helps users orient within a heterogeneous territory and connect site materials with major STS areas."
+          },
+          "howInterpret": {
+            "ru": "Карта предназначена для справочного чтения материалов сайта. Она не является юридическим описанием границ, документом допуска или заменой полевого радиоэкологического контроля.",
+            "kk": "Карта сайт материалдарын анықтамалық оқу үшін арналған. Ол заңды шекара сипаттамасы, рұқсат құжаты немесе далалық радиоэкологиялық бақылауды алмастырмайды.",
+            "en": "The map is intended for reference interpretation of site materials. It is not a legal boundary description, access document, or substitute for field radioecological control."
+          }
+        },
+        "warning": {
+          "title": {
+            "ru": "Важно",
+            "kk": "Маңызды",
+            "en": "Important"
+          },
+          "text": {
+            "ru": "Карта сегментов помогает ориентироваться в материалах сайта, но не задаёт официальный режим доступа и не подтверждает безопасность самостоятельного посещения.",
+            "kk": "Сегменттер картасы сайт материалдарын түсінуге көмектеседі, бірақ ресми кіру режимін белгілемейді және өз бетінше барудың қауіпсіздігін растамайды.",
+            "en": "The segments map helps navigate site materials, but it does not define official access regimes or confirm safety for independent visits."
+          }
+        }
+      }
+    },
+    {
       "slug": "cs137-distribution",
       "code": "G003",
       "title": {
@@ -201,7 +287,7 @@
         "kk": "Картаны ашу",
         "en": "Open map"
       },
-      "prev": "territory-scheme",
+      "prev": "sip-segments-map",
       "next": "am241-distribution",
       "page": {
         "category": {

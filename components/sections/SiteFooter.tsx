@@ -5,25 +5,42 @@ import { usePathname } from "next/navigation";
 import { I18nContext } from "@/components/providers/AppProviders";
 import { UnifiedSiteDisclaimer } from "@/components/ui/UnifiedSiteDisclaimer";
 
+const PROJECT_LINK =
+  "https://abu.edu.kz/ru/science/projects%26initiatives/1747376582725/1760959493335/1760961589673";
+
 export function SiteFooter() {
   const pathname = usePathname();
   const i18n = useContext(I18nContext);
   if (!i18n) return null;
   const { t } = i18n;
+  const copyright = t("footer.meta.copyright");
 
   const homeHref = (hash: string) => (pathname === "/" ? hash : `/${hash}`);
 
   return (
-    <footer id="contacts" className="w-full mt-24 bg-[#f8faf9] dark:bg-[#191c1c] border-t border-[#bfcaba]/15">
+    <footer id="contacts" className="w-full mt-24 scroll-mt-24 bg-[#f8faf9] dark:bg-[#191c1c] border-t border-[#bfcaba]/15">
       <div className="px-6 md:px-12 py-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5 space-y-6">
           <div className="font-['Manrope'] font-black text-[#0d631b] text-2xl">
             {t("brand")}
           </div>
-          <p className="font-['Inter'] text-sm text-[#191c1c] dark:text-[#f8faf9] opacity-70 leading-relaxed max-w-md whitespace-pre-line">
-            {t("footer.about")}
-          </p>
+          <div className="max-w-md space-y-3">
+            <p className="font-['Inter'] text-sm text-[#191c1c] dark:text-[#f8faf9] opacity-70 leading-relaxed whitespace-pre-line">
+              {t("footer.about")}
+            </p>
+            <a
+              href={PROJECT_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-['Inter'] text-sm font-bold text-primary underline underline-offset-4 transition-opacity hover:opacity-80"
+            >
+              {t("footer.partner")}
+              <span className="material-symbols-outlined text-[16px] leading-none" aria-hidden>
+                open_in_new
+              </span>
+            </a>
+          </div>
         </div>
 
           <div className="lg:col-span-4 grid grid-cols-2 gap-10">
@@ -75,7 +92,7 @@ export function SiteFooter() {
                 <li>
                   <a
                     className="font-['Inter'] text-sm text-[#191c1c] dark:text-[#f8faf9] opacity-80 hover:opacity-100 underline underline-offset-4 transition-all"
-                    href={homeHref("#contacts")}
+                    href="/contacts"
                   >
                     {t("footer.links.contacts")}
                   </a>
@@ -136,13 +153,15 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="px-6 md:px-12 py-8 border-t border-outline-variant/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4">
-          <p className="text-[10px] font-label font-bold uppercase tracking-widest text-outline opacity-50">
-            {t("footer.meta.copyright")}
-          </p>
+      {copyright ? (
+        <div className="px-6 md:px-12 py-8 border-t border-outline-variant/10">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4">
+            <p className="text-[10px] font-label font-bold uppercase tracking-widest text-outline opacity-50">
+              {copyright}
+            </p>
+          </div>
         </div>
-      </div>
+      ) : null}
     </footer>
   );
 }

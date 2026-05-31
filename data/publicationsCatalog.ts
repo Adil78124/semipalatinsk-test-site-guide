@@ -13,6 +13,7 @@ export type PublicationEntry = {
   summary: LocalizedText;
   doi?: string;
   url?: string;
+  pdfUrl?: string;
 };
 
 /**
@@ -53,6 +54,63 @@ export const PUBLICATIONS_CATALOG: PublicationEntry[] = [
       en: "Official NNC materials and maps. Pad marker coordinates match the KML/KMZ export of the same Google My Maps layer as on sts.nnc.kz.",
     },
     url: "https://sts.nnc.kz/?load=main",
+  },
+  {
+    id: "toporova-2021-dose-methods",
+    kind: "peer_reviewed",
+    authors: "Топорова А.В., Бакланова Ю.В., Стрильчук Ю.Г., Шатров А.Н.",
+    year: "2021",
+    title: {
+      ru: "Обзор методических указаний и рекомендаций по оценке годовой эффективной дозы человека при проживании на радиоактивно загрязненной территории",
+      kk: "Радиоактивті ластанған аумақта тұрған кездегі адамның жылдық тиімді дозасын бағалау жөніндегі әдістемелік нұсқаулар мен ұсынымдарға шолу",
+      en: "Review of methodic instructions and recommendations for evaluation of annual effective dose to human being in cases of living at radioactive contaminated areas",
+    },
+    summary: {
+      ru: "Вестник НЯЦ РК, 2021: обзор подходов, коэффициентов и методик оценки дозовых нагрузок для населения на радиоактивно загрязненных территориях, включая контекст СИП.",
+      kk: "NNC RK Bulletin, 2021: радиоактивті ластанған аумақтарда, соның ішінде СИП контекстінде, дозалық жүктемелерді бағалау әдістері мен коэффициенттеріне шолу.",
+      en: "NNC RK Bulletin, 2021: review of methods, coefficients, and approaches for dose assessment in radioactively contaminated territories, including the STS context.",
+    },
+    doi: "10.52676/1729-7885-2021-2-57-69",
+    url: "https://journals.nnc.kz/jour/article/view/352",
+    pdfUrl: "/pdf/352-801-1-SM.pdf",
+  },
+  {
+    id: "subbotin-2023-atomic-lake-dose",
+    kind: "peer_reviewed",
+    authors: "Субботин С.Б., Айдарханов А.О., Романенко Е.В., Топорова А.В., Супрунов В.И., Актаев М.Р.",
+    year: "2023",
+    title: {
+      ru: "Оценка дозовых нагрузок для различных поведенческих сценариев на территории «Атомного озера»",
+      kk: "«Атом көлінің» аумағындағы әртүрлі мінез-құлық кезеңдері үшін дозалық жүктемелерді бағалау",
+      en: "Assessment of dose loads for various behavioral scenarios on the territory of the “Atomic Lake”",
+    },
+    summary: {
+      ru: "Вестник НЯЦ РК, 2023: расчет дозовых нагрузок для сценариев «турист», «персонал» и «фермер» на территории «Атомного озера» с учетом Cs-137, Sr-90, Pu-239+240, Am-241 и трития.",
+      kk: "NNC RK Bulletin, 2023: «Атом көлі» аумағында турист, персонал және фермер сценарийлері үшін Cs-137, Sr-90, Pu-239+240, Am-241 және тритийді ескеретін дозалық бағалау.",
+      en: "NNC RK Bulletin, 2023: dose-load assessment for tourist, staff, and farmer scenarios at Atomic Lake, considering Cs-137, Sr-90, Pu-239+240, Am-241, and tritium.",
+    },
+    doi: "10.52676/1729-7885-2023-1-55-60",
+    url: "https://journals.nnc.kz/jour/article/view/467",
+    pdfUrl: "/pdf/467-1762-1-PB.pdf",
+  },
+  {
+    id: "mukusheva-2024-monitoring-concepts",
+    kind: "peer_reviewed",
+    authors: "Мукушева М.К., Фесенко С.В.",
+    year: "2024",
+    title: {
+      ru: "Анализ концепций радиоэкологического мониторинга в районах расположения объектов ядерной энергетики",
+      kk: "Ядролық энергетика объектілері орналасқан аудандардағы радиоэкологиялық мониторинг тұжырымдамаларын талдау",
+      en: "Analysis of radioecological monitoring concepts in areas of nuclear energy facilities",
+    },
+    summary: {
+      ru: "Вестник НЯЦ РК, 2024: анализ международных подходов к радиационному контролю и радиоэкологическому мониторингу в районах размещения объектов атомной энергетики.",
+      kk: "NNC RK Bulletin, 2024: атом энергетикасы объектілері орналасқан аудандардағы радиациялық бақылау мен радиоэкологиялық мониторинг бойынша халықаралық тәсілдерге талдау.",
+      en: "NNC RK Bulletin, 2024: analysis of international approaches to radiation control and radioecological monitoring around nuclear energy facilities.",
+    },
+    doi: "10.52676/1729-7885-2024-2-128-134",
+    url: "https://journals.nnc.kz/jour/article/view/658",
+    pdfUrl: "/pdf/658-2754-1-PB.pdf",
   },
   {
     id: "nnc-main",

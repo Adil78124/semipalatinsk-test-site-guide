@@ -74,7 +74,7 @@ export function SiteHeader() {
       { href: sectionHref("about"), labelKey: "nav.about", useNextLink: false },
       { href: sectionHref("science"), labelKey: "nav.science", useNextLink: false },
       { href: sectionHref("guide"), labelKey: "nav.guide", useNextLink: false },
-      { href: sectionHref("contacts"), labelKey: "nav.contacts", useNextLink: false },
+      { href: "/contacts", labelKey: "nav.contacts", useNextLink: true },
       { href: "/maps", labelKey: "nav.maps", useNextLink: true },
       { href: "/methodology", labelKey: "footer.links.methodology", useNextLink: true },
     ],
@@ -153,7 +153,7 @@ export function SiteHeader() {
             href={pathname === "/" ? "#home" : "/"}
             className="font-['Manrope'] font-extrabold text-[#0d631b] dark:text-[#2e7d32] tracking-tighter text-xl whitespace-nowrap shrink-0"
           >
-            <span className="lg:hidden">GeoEco</span>
+            <span className="lg:hidden">СИП</span>
             <span className="hidden lg:inline">{t("brand")}</span>
           </a>
 

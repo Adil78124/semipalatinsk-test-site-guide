@@ -185,6 +185,7 @@ export type TranslationKey =
   | "map.points.close"
   | "map.points.category.overview"
   | "map.points.category.testSite"
+  | "map.points.category.sipObject"
   | "map.points.category.excavation"
   | "map.points.category.radiological"
   | "map.catalog.filtersTitle"
@@ -463,7 +464,7 @@ export type TranslationKey =
 
 export const translations: Record<Lang, Record<TranslationKey, string>> = {
   ru: {
-    brand: "Geoecological Editorial",
+    brand: "Путеводитель по СИП",
     "nav.home": "Главная",
     "nav.sip": "О СИП",
     "nav.map": "Карта",
@@ -694,6 +695,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "map.points.close": "Закрыть",
     "map.points.category.overview": "Общая информация",
     "map.points.category.testSite": "Испытательная площадка",
+    "map.points.category.sipObject": "Испытательный участок / объект СИП",
     "map.points.category.excavation": "Экскавационный эксперимент",
     "map.points.category.radiological": "Радиологическая площадка",
     "map.catalog.filtersTitle": "Слои объектов",
@@ -768,7 +770,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "safety.note":
       "Номера «экстренных линий» в открытом интерфейсе не приводятся: при работе по допуску ориентируйтесь на контакты, указанные в ваших документах, и на официальные каналы уполномоченных органов.",
     "footer.about":
-      "Geoecological Editorial — научно-справочный и картографический ресурс о территории бывшего Семипалатинского испытательного полигона. Используются открытые материалы НЯЦ (sts.nnc.kz, nnc.kz), экспорт KML/KMZ площадок проекта и рецензируемые публикации, перечисленные в разделе методики.\n© 2026 Geoecological Editorial.",
+      "Портал подготовлен в рамках реализации грантового финансирования исследований молодых ученых по проекту «Жас ғалым» на 2025-2027 годы на тему «AP25794915 Научное исследование экономического потенциала ядерного туризма на примере Семипалатинского испытательного полигона». Данное исследование финансируется Комитетом науки и высшего образования Министерства науки и высшего образования Республики Казахстан.",
     "footer.links.title": "Навигация",
     "footer.links.home": "Главная",
     "footer.links.sip": "О СИП",
@@ -783,7 +785,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "footer.meta.title": "Важно",
     "footer.meta.disclaimer":
       "Сайт не заменяет официальный допуск, регламенты доступа к территории СИП и радиационного мониторинга. Режим на местности задают законодательство Республики Казахстан, уполномоченные органы, оператор территории и документы допуска. Материалы сайта — справочные.",
-    "footer.meta.copyright": "© 2026 Geoecological Editorial",
+    "footer.meta.copyright": "",
     "researchMaps.kicker": "Научные карты",
     "researchMaps.title": "Рисунки из PLOS ONE (2023)",
     "researchMaps.lead":
@@ -868,7 +870,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "footer.account.title": "Аккаунт",
     "footer.account.safetyProtocols": "Протоколы безопасности",
     "footer.account.researcherLogin": "Вход для исследователей",
-    "footer.partner": "",
+    "footer.partner": "Страница проекта на сайте ABU",
     "about.card.ecology.title": "Исследования",
     "about.card.ecology.body":
       "Радиоэкологические исследования СИП продолжаются до сих пор: мониторинг почв, воды и биоты, оценка распределения радионуклидов и экологических рисков.\n\nКлючевые организации: НЯЦ РК и ИРБЭ при поддержке МАГАТЭ. Часто обсуждаемые изотопы: ¹³⁷Cs, ⁹⁰Sr, ²³⁹Pu, ²⁴¹Am.\n\nИсточники: https://www.nnc.kz · https://www.iaea.org",
@@ -1041,7 +1043,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Условный центр наземного или близкого к поверхности испытания — точка под взрывом. На схемах это ориентир, а не приглашение к визиту без допуска.",
   },
   kk: {
-    brand: "Geoecological Editorial",
+    brand: "Путеводитель по СИП",
     "nav.home": "Басты бет",
     "nav.sip": "СИП туралы",
     "nav.map": "Карта",
@@ -1272,6 +1274,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "map.points.close": "Жабу",
     "map.points.category.overview": "Жалпы ақпарат",
     "map.points.category.testSite": "Сынақ алаңы",
+    "map.points.category.sipObject": "Сынақ учаскесі / СИП нысаны",
     "map.points.category.excavation": "Экскавациялық тәжірибе",
     "map.points.category.radiological": "Радиологиялық алаң",
     "map.catalog.filtersTitle": "Нысан қабаттары",
@@ -1346,7 +1349,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "safety.note":
       "Ашық интерфейсте «жедел желілер» нөмірлері келтірілмейді: рұқсат бойынша жұмыста құжаттағы байланыстар мен уәкілетті органдардың ресми арналарына сүйеніңіз.",
     "footer.about":
-      "Geoecological Editorial — бұрынғы Семей (Семипалатинск) сынақ полигоны аумағы туралы ғылыми-анықтамалық және картографиялық ресурс. НЯО ашық материалдары (sts.nnc.kz, nnc.kz), жобаның KML/KMZ алаң экспорты және әдістеме бөлімінде көрсетілген рецензияланған дереккөздер қолданылады.\n© 2026 Geoecological Editorial.",
+      "Портал подготовлен в рамках реализации грантового финансирования исследований молодых ученых по проекту «Жас ғалым» на 2025-2027 годы на тему «AP25794915 Научное исследование экономического потенциала ядерного туризма на примере Семипалатинского испытательного полигона». Данное исследование финансируется Комитетом науки и высшего образования Министерства науки и высшего образования Республики Казахстан.",
     "footer.links.title": "Навигация",
     "footer.links.home": "Басты бет",
     "footer.links.sip": "СИП туралы",
@@ -1361,7 +1364,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "footer.meta.title": "Маңызды",
     "footer.meta.disclaimer":
       "Сайт ресми рұқсатты, СИП аумағына кіру мен сәулелену мониторингінің регламенттерін алмастырмайды. Нақты режимді ҚР заңнамасы, уәкілетті органдар, оператор және рұқсат құжаттары анықтайды. Материалдар анықтамалық.",
-    "footer.meta.copyright": "© 2026 Geoecological Editorial",
+    "footer.meta.copyright": "",
     "researchMaps.kicker": "Ғылыми карталар",
     "researchMaps.title": "PLOS ONE (2023) суреттері",
     "researchMaps.lead":
@@ -1446,7 +1449,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "footer.account.title": "Аккаунт",
     "footer.account.safetyProtocols": "Қауіпсіздік хаттамалары",
     "footer.account.researcherLogin": "Зерттеуші кірісі",
-    "footer.partner": "",
+    "footer.partner": "ABU сайтындағы жоба беті",
     "about.card.ecology.title": "Зерттеулер",
     "about.card.ecology.body":
       "СЯА бойынша радиоэкологиялық зерттеулер әлі де жалғасуда: топырақ, су, биота мониторингі және радионуклидтердің таралуын бағалау.\n\nНегізгі ұйымдар: НЯО РК және ИРБЭ (МАГАТЭ қолдауы). Жиі қаралатын изотоптар: ¹³⁷Cs, ⁹⁰Sr, ²³⁹Pu, ²⁴¹Am.\n\nДереккөздер: https://www.nnc.kz · https://www.iaea.org",
@@ -1620,7 +1623,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Жер бетіндегі немесе оған жақын сынақтың шартты орталығы — жарылыс астындағы нүкте. Схемаларда бұл бағдар, рұқсатсыз бару шақыруы емес.",
   },
   en: {
-    brand: "Geoecological Editorial",
+    brand: "Путеводитель по СИП",
     "nav.home": "Home",
     "nav.sip": "About STS",
     "nav.map": "Map",
@@ -1851,6 +1854,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "map.points.close": "Close",
     "map.points.category.overview": "Overview",
     "map.points.category.testSite": "Test site",
+    "map.points.category.sipObject": "Test area / STS object",
     "map.points.category.excavation": "Excavation experiment",
     "map.points.category.radiological": "Radiological site",
     "map.catalog.filtersTitle": "Object layers",
@@ -1925,7 +1929,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "safety.note":
       "Public “emergency hotlines” are not listed here; when operating under clearance, use contacts in your paperwork and official channels of competent authorities.",
     "footer.about":
-      "Geoecological Editorial is a scientific reference and mapping resource on the territory of the former Semipalatinsk Test Site. It uses open NNC materials (sts.nnc.kz, nnc.kz), the project’s KML/KMZ pad export, and peer-reviewed sources listed under Methodology.\n© 2026 Geoecological Editorial.",
+      "Портал подготовлен в рамках реализации грантового финансирования исследований молодых ученых по проекту «Жас ғалым» на 2025-2027 годы на тему «AP25794915 Научное исследование экономического потенциала ядерного туризма на примере Семипалатинского испытательного полигона». Данное исследование финансируется Комитетом науки и высшего образования Министерства науки и высшего образования Республики Казахстан.",
     "footer.links.title": "Navigation",
     "footer.links.home": "Home",
     "footer.links.sip": "About SIP",
@@ -1940,7 +1944,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "footer.meta.title": "Note",
     "footer.meta.disclaimer":
       "This site does not replace official clearance, STS access and radiation-monitoring regulations. The on-site regime is set by Kazakhstan’s legislation, authorised bodies, the territory operator, and clearance documents. Site content is for reference only.",
-    "footer.meta.copyright": "© 2026 Geoecological Editorial",
+    "footer.meta.copyright": "",
     "researchMaps.kicker": "Scientific maps",
     "researchMaps.title": "Figures from PLOS ONE (2023)",
     "researchMaps.lead":
@@ -2025,7 +2029,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "footer.account.title": "Account",
     "footer.account.safetyProtocols": "Safety protocols",
     "footer.account.researcherLogin": "Researcher login",
-    "footer.partner": "",
+    "footer.partner": "Project page on the ABU website",
     "about.card.ecology.title": "Research",
     "about.card.ecology.body":
       "Radio-ecological studies at the STS are ongoing: monitoring of soil, water, and biota and assessment of radionuclide distributions and environmental risks.\n\nKey institutions: NNC RK and IRSE (with IAEA support). Commonly discussed isotopes: ¹³⁷Cs, ⁹⁰Sr, ²³⁹Pu, ²⁴¹Am.\n\nSources: https://www.nnc.kz · https://www.iaea.org",
