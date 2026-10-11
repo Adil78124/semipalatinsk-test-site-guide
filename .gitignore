@@ -35,6 +35,11 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# local source/reference assets (not part of the web release)
+/assets/source/route-photos/
+/public/images/routes/route-1_kurchatov_exposition.jpg
+/public/images/routes/reference-route-placeholder.svg
+
 # vercel
 .vercel
 

@@ -116,7 +116,7 @@
         "en": "Open map"
       },
       "prev": "sip-overview",
-      "next": "sip-segments-map",
+      "next": "cs137-distribution",
       "page": {
         "category": {
           "ru": "Scientific & Institutional Materials",
@@ -173,28 +173,29 @@
       }
     },
     {
-      "slug": "sip-segments-map",
-      "code": "SEG",
+      "slug": "cs137-distribution",
+      "code": "CS137",
       "title": {
-        "ru": "Карта сегментов СИП",
-        "kk": "СИП сегменттерінің картасы",
-        "en": "STS segments map"
+        "ru": "Области удельной активности ¹³⁷Cs в почвенном покрове",
+        "kk": "Топырақ жамылғысындағы ¹³⁷Cs меншікті белсенділігі аймақтары",
+        "en": "Areas of ¹³⁷Cs specific activity in the soil cover"
       },
       "shortTitle": {
-        "ru": "Карта сегментов СИП",
-        "kk": "СИП сегменттері",
-        "en": "STS segments"
+        "ru": "Удельная активность ¹³⁷Cs",
+        "kk": "¹³⁷Cs меншікті белсенділігі",
+        "en": "¹³⁷Cs specific activity"
       },
       "description": {
-        "ru": "Радиоэкологическая обследовательная карта СИП, представленная на сайте как карта сегментов территории. Помогает увидеть деление территории на крупные смысловые участки для справочной интерпретации.",
-        "kk": "Сайтта аумақ сегменттерінің картасы ретінде берілген СИП бойынша радиоэкологиялық шолу картасы. Аумақты анықтамалық түсіндіруге арналған ірі бөліктерге бөлуге көмектеседі.",
-        "en": "A radioecological survey map of the STS presented as a territory segments map. Helps show major interpretive segments of the area for reference use."
+        "ru": "Показывает выделенные авторами области и диапазоны удельной активности ¹³⁷Cs в почвенном покрове СИП. Это научная схема, а не карта текущей мощности дозы или безопасных туристических маршрутов.",
+        "kk": "Авторлар бөліп көрсеткен СИП топырақ жамылғысындағы ¹³⁷Cs меншікті белсенділігінің аймақтары мен ауқымдарын көрсетеді. Бұл қазіргі доза қуатының немесе қауіпсіз туристік маршруттардың картасы емес, ғылыми сызба.",
+        "en": "Shows the areas and ranges of ¹³⁷Cs specific activity in the STS soil cover identified by the authors. It is a scientific scheme, not a map of current dose rate or safe tourist routes."
       },
-      "image": "/радиоэкологическая обследоватедьная карта сип.jpg",
+      "image": "/images/scientific-maps/cs137-specific-activity.png",
+      "sourceKind": "manuscript",
       "sourceShort": {
-        "ru": "Картографический материал проекта",
-        "kk": "Жобаның картографиялық материалы",
-        "en": "Project cartographic material"
+        "ru": "Молдажанов и соавт., финальная рукопись (2026), рис. 2",
+        "kk": "Молдажанов және т.б., соңғы қолжазба (2026), 2-сурет",
+        "en": "Moldazhanov et al., final manuscript (2026), Fig. 2"
       },
       "cta": {
         "ru": "Открыть карту",
@@ -202,46 +203,46 @@
         "en": "Open map"
       },
       "prev": "territory-scheme",
-      "next": "cs137-distribution",
+      "next": "sr90-distribution",
       "page": {
         "category": {
-          "ru": "Карты СИП и исследовательские материалы",
-          "kk": "СИП карталары және зерттеу материалдары",
-          "en": "STS maps & research materials"
+          "ru": "Научные карты из рукописи",
+          "kk": "Қолжазбадағы ғылыми карталар",
+          "en": "Scientific maps from the manuscript"
         },
         "subtitle": {
-          "ru": "Радиоэкологическая обследовательная карта СИП, адаптированная на сайте как «Карта сегментов СИП».",
-          "kk": "Сайтта «СИП сегменттерінің картасы» ретінде бейімделген радиоэкологиялық шолу картасы.",
-          "en": "A radioecological survey map adapted on the site as the STS segments map."
+          "ru": "Области и диапазоны удельной активности ¹³⁷Cs в почвенном покрове по материалам финальной рукописи.",
+          "kk": "Соңғы қолжазба материалдары бойынша топырақ жамылғысындағы ¹³⁷Cs меншікті белсенділігінің аймақтары мен ауқымдары.",
+          "en": "Areas and ranges of ¹³⁷Cs specific activity in the soil cover, as presented in the final manuscript."
         },
         "breadcrumbs": {
-          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Карта сегментов СИП" }],
-          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "СИП сегменттерінің картасы" }],
-          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "STS segments map" }]
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Удельная активность ¹³⁷Cs" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "¹³⁷Cs меншікті белсенділігі" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "¹³⁷Cs specific activity" }]
         },
         "meta": {
           "verified": true,
           "verifiedLabel": {
-            "ru": "Справочная карта",
-            "kk": "Анықтамалық карта",
-            "en": "Reference map"
+            "ru": "Источник указан авторами",
+            "kk": "Дереккөзді авторлар көрсеткен",
+            "en": "Source identified by the authors"
           }
         },
         "sections": {
           "whatShows": {
-            "ru": "Карта показывает радиоэкологическое представление территории СИП через крупные сегменты. На сайте она используется как справочный слой для понимания структуры территории.",
-            "kk": "Карта СИП аумағын ірі сегменттер арқылы радиоэкологиялық тұрғыдан көрсетеді. Сайтта ол аумақ құрылымын түсіндіретін анықтамалық қабат ретінде пайдаланылады.",
-            "en": "The map presents the STS territory through major radioecological segments. On the site it is used as a reference layer for understanding the territory structure."
+            "ru": "Карта выделяет области превышения и диапазоны удельной активности ¹³⁷Cs в почвенном покрове, а также показывает границу СИП, испытательные площадки, гидрографию и масштаб.",
+            "kk": "Карта топырақ жамылғысындағы ¹³⁷Cs меншікті белсенділігінің асқан аймақтары мен ауқымдарын, сондай-ақ СИП шекарасын, сынақ алаңдарын, гидрографияны және масштабты көрсетеді.",
+            "en": "The map identifies areas of elevated ¹³⁷Cs specific activity and value ranges in the soil cover, together with the STS boundary, test sites, hydrography, and scale."
           },
           "whyImportant": {
-            "ru": "Сегментная подача помогает быстрее ориентироваться в неоднородной территории и связывать отдельные материалы сайта с крупными участками СИП.",
-            "kk": "Сегменттік беру біркелкі емес аумақта бағдарлануды жеңілдетеді және сайт материалдарын СИП-тың ірі учаскелерімен байланыстырады.",
-            "en": "The segmented view helps users orient within a heterogeneous territory and connect site materials with major STS areas."
+            "ru": "Схема наглядно показывает пространственную неоднородность данных по ¹³⁷Cs и помогает читать диапазоны, приведённые в легенде исходного рисунка.",
+            "kk": "Сызба ¹³⁷Cs деректерінің кеңістіктік біркелкі еместігін көрсетіп, бастапқы сурет аңызындағы ауқымдарды түсінуге көмектеседі.",
+            "en": "The scheme makes the spatial heterogeneity of the ¹³⁷Cs data visible and helps readers interpret the ranges in the original legend."
           },
           "howInterpret": {
-            "ru": "Карта предназначена для справочного чтения материалов сайта. Она не является юридическим описанием границ, документом допуска или заменой полевого радиоэкологического контроля.",
-            "kk": "Карта сайт материалдарын анықтамалық оқу үшін арналған. Ол заңды шекара сипаттамасы, рұқсат құжаты немесе далалық радиоэкологиялық бақылауды алмастырмайды.",
-            "en": "The map is intended for reference interpretation of site materials. It is not a legal boundary description, access document, or substitute for field radioecological control."
+            "ru": "Цветовые классы следует читать только по легенде рисунка. Схема не описывает актуальную обстановку в реальном времени, не определяет безопасный маршрут и не заменяет полевые измерения.",
+            "kk": "Түстік санаттарды тек сурет аңызы бойынша оқу керек. Сызба нақты уақыттағы жағдайды сипаттамайды, қауіпсіз маршрутты анықтамайды және далалық өлшеулерді алмастырмайды.",
+            "en": "Read the colour classes only against the figure legend. The scheme does not describe real-time conditions, define a safe route, or replace field measurements."
           }
         },
         "warning": {
@@ -251,83 +252,84 @@
             "en": "Important"
           },
           "text": {
-            "ru": "Карта сегментов помогает ориентироваться в материалах сайта, но не задаёт официальный режим доступа и не подтверждает безопасность самостоятельного посещения.",
-            "kk": "Сегменттер картасы сайт материалдарын түсінуге көмектеседі, бірақ ресми кіру режимін белгілемейді және өз бетінше барудың қауіпсіздігін растамайды.",
-            "en": "The segments map helps navigate site materials, but it does not define official access regimes or confirm safety for independent visits."
+            "ru": "Научная карта носит справочный характер: она не является разрешением на посещение, не определяет безопасный маршрут и не заменяет официальный допуск и радиационный контроль.",
+            "kk": "Ғылыми карта анықтамалық сипатта: ол баруға рұқсат емес, қауіпсіз маршрутты анықтамайды және ресми рұқсат пен радиациялық бақылауды алмастырмайды.",
+            "en": "This scientific map is for reference: it is not permission to visit, does not define a safe route, and does not replace official clearance or radiation monitoring."
           }
         }
       }
     },
     {
-      "slug": "cs137-distribution",
-      "code": "G003",
+      "slug": "sr90-distribution",
+      "code": "SR90",
       "title": {
-        "ru": "Распределение Cs-137 (цезий-137)",
-        "kk": "Cs-137 (цезий‑137) таралуы",
-        "en": "Cs‑137 distribution (cesium‑137)"
+        "ru": "Области удельной активности ⁹⁰Sr в почвенном покрове",
+        "kk": "Топырақ жамылғысындағы ⁹⁰Sr меншікті белсенділігі аймақтары",
+        "en": "Areas of ⁹⁰Sr specific activity in the soil cover"
       },
       "shortTitle": {
-        "ru": "Распределение Cs-137",
-        "kk": "Cs‑137 таралуы",
-        "en": "Cs‑137 distribution"
+        "ru": "Удельная активность ⁹⁰Sr",
+        "kk": "⁹⁰Sr меншікті белсенділігі",
+        "en": "⁹⁰Sr specific activity"
       },
       "description": {
-        "ru": "Отражает распределение цезия-137 по данным исследования. Позволяет увидеть, как условия различаются между участками территории.",
-        "kk": "Зерттеу деректері бойынша цезий‑137 таралуын көрсетеді. Учаскелер арасындағы жағдайдың айырмашылығын көруге көмектеседі.",
-        "en": "Shows the study-based distribution of Cs‑137 and helps illustrate how conditions differ across locations."
+        "ru": "Показывает выделенные авторами области и диапазоны удельной активности ⁹⁰Sr в почвенном покрове СИП. Карта предназначена для научной интерпретации, а не для оценки безопасности конкретного маршрута.",
+        "kk": "Авторлар бөліп көрсеткен СИП топырақ жамылғысындағы ⁹⁰Sr меншікті белсенділігінің аймақтары мен ауқымдарын көрсетеді. Карта нақты маршруттың қауіпсіздігін бағалауға емес, ғылыми түсіндіруге арналған.",
+        "en": "Shows the areas and ranges of ⁹⁰Sr specific activity in the STS soil cover identified by the authors. The map is intended for scientific interpretation, not for assessing the safety of a particular route."
       },
-      "image": "/journal.pone.0294632.g003.PNG",
+      "image": "/images/scientific-maps/sr90-specific-activity.png",
+      "sourceKind": "manuscript",
       "sourceShort": {
-        "ru": "PLOS ONE (Panitskiy et al., 2023)",
-        "kk": "PLOS ONE (Panitskiy et al., 2023)",
-        "en": "PLOS ONE (Panitskiy et al., 2023)"
+        "ru": "Молдажанов и соавт., финальная рукопись (2026), рис. 2",
+        "kk": "Молдажанов және т.б., соңғы қолжазба (2026), 2-сурет",
+        "en": "Moldazhanov et al., final manuscript (2026), Fig. 2"
       },
       "cta": {
         "ru": "Открыть карту",
         "kk": "Картаны ашу",
         "en": "Open map"
       },
-      "prev": "sip-segments-map",
+      "prev": "cs137-distribution",
       "next": "am241-distribution",
       "page": {
         "category": {
-          "ru": "Scientific & Institutional Materials",
-          "kk": "Scientific & Institutional Materials",
-          "en": "Scientific & Institutional Materials"
+          "ru": "Научные карты из рукописи",
+          "kk": "Қолжазбадағы ғылыми карталар",
+          "en": "Scientific maps from the manuscript"
         },
         "subtitle": {
-          "ru": "Отражает распределение цезия-137 по данным исследования и помогает понять, почему условия могут отличаться между участками.",
-          "kk": "Зерттеу деректері бойынша цезий‑137 таралуын көрсетеді және учаскелер неге әртүрлі болатынын түсіндіруге көмектеседі.",
-          "en": "Shows Cs‑137 distribution based on the study and helps explain why conditions can differ by location."
+          "ru": "Области и диапазоны удельной активности ⁹⁰Sr в почвенном покрове по материалам финальной рукописи.",
+          "kk": "Соңғы қолжазба материалдары бойынша топырақ жамылғысындағы ⁹⁰Sr меншікті белсенділігінің аймақтары мен ауқымдары.",
+          "en": "Areas and ranges of ⁹⁰Sr specific activity in the soil cover, as presented in the final manuscript."
         },
         "breadcrumbs": {
-          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Распределение Cs-137 (цезий-137)" }],
-          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "Cs-137 (цезий‑137) таралуы" }],
-          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "Cs‑137 distribution (cesium‑137)" }]
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Удельная активность ⁹⁰Sr" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "⁹⁰Sr меншікті белсенділігі" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "⁹⁰Sr specific activity" }]
         },
         "meta": {
           "verified": true,
           "verifiedLabel": {
-            "ru": "Проверяемый источник",
-            "kk": "Тексерілетін дереккөз",
-            "en": "Verifiable source"
+            "ru": "Источник указан авторами",
+            "kk": "Дереккөзді авторлар көрсеткен",
+            "en": "Source identified by the authors"
           }
         },
         "sections": {
           "whatShows": {
-            "ru": "Это визуализация из научной публикации, позволяющая увидеть пространственные различия по цезию-137 на территории исследования.",
-            "kk": "Бұл — ғылыми жарияланымдағы визуализация: зерттеу аумағында цезий‑137 бойынша кеңістіктік айырмашылықтарды көруге мүмкіндік береді.",
-            "en": "A figure from the publication that helps visualize spatial differences for Cs‑137 across the study area."
+            "ru": "Карта выделяет области превышения и диапазоны удельной активности ⁹⁰Sr в почвенном покрове, сохраняя исходные границы, масштаб и легенду.",
+            "kk": "Карта бастапқы шекараларды, масштабты және аңызды сақтай отырып, топырақ жамылғысындағы ⁹⁰Sr меншікті белсенділігінің асқан аймақтары мен ауқымдарын көрсетеді.",
+            "en": "The map identifies areas of elevated ⁹⁰Sr specific activity and value ranges in the soil cover while preserving the original boundaries, scale, and legend."
           },
           "whyImportant": {
-            "ru": "Территория СИП неоднородна. Эта карта помогает понять, почему условия и режимы посещения могут отличаться между участками.",
-            "kk": "СИП аумағы біркелкі емес. Бұл карта учаскелер бойынша жағдай мен бару режимдерінің неге айырмашылығы болуы мүмкін екенін түсіндіруге көмектеседі.",
-            "en": "The STS territory is heterogeneous. This map helps explain why conditions and visit regimes can differ between locations."
+            "ru": "Схема показывает пространственную неоднородность данных по ⁹⁰Sr и позволяет сопоставить выделенные области с испытательными площадками.",
+            "kk": "Сызба ⁹⁰Sr деректерінің кеңістіктік біркелкі еместігін көрсетіп, бөлінген аймақтарды сынақ алаңдарымен салыстыруға мүмкіндік береді.",
+            "en": "The scheme shows the spatial heterogeneity of the ⁹⁰Sr data and allows the highlighted areas to be compared with the test sites."
           },
           "howInterpret": {
-            "ru": "Карта не является руководством к посещению. Для любых действий на территории важны действующие ограничения, мониторинг и официальные рекомендации. Научные материалы дают контекст, но не заменяют решения, связанные с безопасностью.",
-            "kk": "Карта баруға нұсқаулық емес. Кез келген әрекет үшін қолданыстағы шектеулер, мониторинг және ресми ұсынымдар маңызды. Ғылыми материалдар контекст береді, бірақ қауіпсіздік шешімдерін алмастырмайды.",
-            "en": "This is not a guide for visiting. Any actions depend on current restrictions, monitoring, and official guidance. Scientific figures provide context but do not replace safety decisions."
+            "ru": "Диапазоны интерпретируются только по легенде исходного рисунка. Карта не является картой мощности дозы, не задаёт режим доступа и не заменяет актуальные измерения.",
+            "kk": "Ауқымдар тек бастапқы сурет аңызы бойынша түсіндіріледі. Карта доза қуатының картасы емес, кіру режимін белгілемейді және өзекті өлшеулерді алмастырмайды.",
+            "en": "Interpret the ranges only through the original legend. This is not a dose-rate map, does not define access conditions, and does not replace current measurements."
           }
         },
         "warning": {
@@ -346,74 +348,75 @@
     },
     {
       "slug": "am241-distribution",
-      "code": "G004",
+      "code": "AM241",
       "title": {
-        "ru": "Распределение Am-241 (америций-241)",
-        "kk": "Am-241 (америций‑241) таралуы",
-        "en": "Am‑241 distribution (americium‑241)"
+        "ru": "Области удельной активности ²⁴¹Am в почвенном покрове",
+        "kk": "Топырақ жамылғысындағы ²⁴¹Am меншікті белсенділігі аймақтары",
+        "en": "Areas of ²⁴¹Am specific activity in the soil cover"
       },
       "shortTitle": {
-        "ru": "Распределение Am-241",
-        "kk": "Am‑241 таралуы",
-        "en": "Am‑241 distribution"
+        "ru": "Удельная активность ²⁴¹Am",
+        "kk": "²⁴¹Am меншікті белсенділігі",
+        "en": "²⁴¹Am specific activity"
       },
       "description": {
-        "ru": "Показывает пространственные различия по америцию-241 в пределах территории СИП на основе научных данных.",
-        "kk": "Ғылыми деректер негізінде СИП аумағындағы америций‑241 бойынша кеңістіктік айырмашылықтарды көрсетеді.",
-        "en": "Shows study-based spatial differences for Am‑241 within the STS territory."
+        "ru": "Показывает выделенные авторами области и диапазоны удельной активности ²⁴¹Am в почвенном покрове СИП. Схема предназначена для чтения научных данных, а не для самостоятельного выбора маршрута.",
+        "kk": "Авторлар бөліп көрсеткен СИП топырақ жамылғысындағы ²⁴¹Am меншікті белсенділігінің аймақтары мен ауқымдарын көрсетеді. Сызба өз бетінше маршрут таңдауға емес, ғылыми деректерді оқуға арналған.",
+        "en": "Shows the areas and ranges of ²⁴¹Am specific activity in the STS soil cover identified by the authors. The scheme is intended for reading scientific data, not for independently selecting a route."
       },
-      "image": "/journal.pone.0294632.g004.PNG",
+      "image": "/images/scientific-maps/am241-specific-activity.png",
+      "sourceKind": "manuscript",
       "sourceShort": {
-        "ru": "PLOS ONE (Panitskiy et al., 2023)",
-        "kk": "PLOS ONE (Panitskiy et al., 2023)",
-        "en": "PLOS ONE (Panitskiy et al., 2023)"
+        "ru": "Молдажанов и соавт., финальная рукопись (2026), рис. 2",
+        "kk": "Молдажанов және т.б., соңғы қолжазба (2026), 2-сурет",
+        "en": "Moldazhanov et al., final manuscript (2026), Fig. 2"
       },
       "cta": {
         "ru": "Открыть карту",
         "kk": "Картаны ашу",
         "en": "Open map"
       },
-      "prev": "cs137-distribution",
-      "next": "sr90-distribution",
+      "prev": "sr90-distribution",
+      "next": "pu239240-distribution",
       "page": {
         "category": {
-          "ru": "Scientific & Institutional Materials",
-          "kk": "Scientific & Institutional Materials",
-          "en": "Scientific & Institutional Materials"
+          "ru": "Научные карты из рукописи",
+          "kk": "Қолжазбадағы ғылыми карталар",
+          "en": "Scientific maps from the manuscript"
         },
         "subtitle": {
-          "ru": "Показывает пространственные различия по америцию-241 в пределах территории СИП на основе научных данных.",
-          "kk": "Ғылыми деректерге сүйене отырып, СИП аумағындағы америций‑241 бойынша кеңістіктік айырмашылықтарды көрсетеді.",
-          "en": "Shows spatial variation for Am‑241 within the STS territory based on research data."
+          "ru": "Области и диапазоны удельной активности ²⁴¹Am в почвенном покрове по материалам финальной рукописи.",
+          "kk": "Соңғы қолжазба материалдары бойынша топырақ жамылғысындағы ²⁴¹Am меншікті белсенділігінің аймақтары мен ауқымдары.",
+          "en": "Areas and ranges of ²⁴¹Am specific activity in the soil cover, as presented in the final manuscript."
         },
         "breadcrumbs": {
-          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Распределение Am-241 (америций-241)" }],
-          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "Am-241 (америций‑241) таралуы" }],
-          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "Am‑241 distribution (americium‑241)" }]
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Удельная активность ²⁴¹Am" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "²⁴¹Am меншікті белсенділігі" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "²⁴¹Am specific activity" }]
         },
         "meta": {
           "verified": true,
           "verifiedLabel": {
-            "ru": "Проверяемый источник",
-            "kk": "Тексерілетін дереккөз",
-            "en": "Verifiable source"
+            "ru": "Источник указан авторами",
+            "kk": "Дереккөзді авторлар көрсеткен",
+            "en": "Source identified by the authors"
           }
         },
         "sections": {
           "whatShows": {
-            "ru": "Это визуализация из научной публикации, показывающая пространственные различия по америцию-241 в пределах исследуемой территории.",
-            "kk": "Бұл — ғылыми жарияланымдағы визуализация: зерттелетін аумақта америций‑241 бойынша кеңістіктік айырмашылықтарды көрсетеді.",
-            "en": "A figure from the publication showing spatial differences for Am‑241 within the study area."
+            "ru": "Карта выделяет области превышения и диапазоны удельной активности ²⁴¹Am в почвенном покрове, а также сохраняет исходную легенду, масштаб и обозначения площадок.",
+            "kk": "Карта топырақ жамылғысындағы ²⁴¹Am меншікті белсенділігінің асқан аймақтары мен ауқымдарын көрсетіп, бастапқы аңызды, масштабты және алаң белгілерін сақтайды.",
+            "en": "The map identifies areas of elevated ²⁴¹Am specific activity and value ranges in the soil cover, while retaining the original legend, scale, and test-site labels."
           },
           "whyImportant": {
-            "ru": "Карта помогает увидеть, что радиоэкологическая ситуация может заметно различаться между участками, и подтверждает необходимость аккуратного зонирования.",
-            "kk": "Карта радиоэкологиялық жағдайдың учаскелер арасында айтарлықтай өзгеруі мүмкін екенін көрсетеді және зонирлеудің қажеттілігін қолдайды.",
-            "en": "Helps illustrate that radioecological conditions can vary by location and supports the need for careful zoning."
+            "ru": "Схема помогает увидеть пространственную локализацию выделенных авторами областей ²⁴¹Am и сопоставить её с основными испытательными площадками.",
+            "kk": "Сызба авторлар бөлген ²⁴¹Am аймақтарының кеңістіктік орналасуын көруге және оны негізгі сынақ алаңдарымен салыстыруға көмектеседі.",
+            "en": "The scheme helps show where the authors located the highlighted ²⁴¹Am areas and how they relate to the principal test sites."
           },
           "howInterpret": {
-            "ru": "Научная фигура предназначена для понимания исследовательского контекста. Она не заменяет действующие правила доступа, мониторинг и официальные рекомендации по безопасности.",
-            "kk": "Бұл ғылыми фигура зерттеу контекстін түсіну үшін берілген. Ол қолданыстағы кіру ережелерін, мониторинг пен ресми қауіпсіздік ұсынымдарын алмастырмайды.",
-            "en": "Provided to understand research context. It does not replace current access rules, monitoring, or official safety guidance."
+            "ru": "Диапазоны следует читать по легенде исходного рисунка. Карта не показывает текущую мощность дозы, не определяет безопасные границы и не заменяет профессиональный контроль.",
+            "kk": "Ауқымдарды бастапқы сурет аңызы бойынша оқу қажет. Карта қазіргі доза қуатын көрсетпейді, қауіпсіз шекараларды анықтамайды және кәсіби бақылауды алмастырмайды.",
+            "en": "Read the ranges through the original legend. The map does not show current dose rate, define safe boundaries, or replace professional monitoring."
           }
         },
         "warning": {
@@ -431,28 +434,29 @@
       }
     },
     {
-      "slug": "sr90-distribution",
-      "code": "G006",
+      "slug": "pu239240-distribution",
+      "code": "PU239240",
       "title": {
-        "ru": "Распределение Sr-90 (стронций-90)",
-        "kk": "Sr-90 (стронций‑90) таралуы",
-        "en": "Sr‑90 distribution (strontium‑90)"
+        "ru": "Области удельной активности ²³⁹⁺²⁴⁰Pu в почвенном покрове",
+        "kk": "Топырақ жамылғысындағы ²³⁹⁺²⁴⁰Pu меншікті белсенділігі аймақтары",
+        "en": "Areas of ²³⁹⁺²⁴⁰Pu specific activity in the soil cover"
       },
       "shortTitle": {
-        "ru": "Распределение Sr-90",
-        "kk": "Sr‑90 таралуы",
-        "en": "Sr‑90 distribution"
+        "ru": "Удельная активность ²³⁹⁺²⁴⁰Pu",
+        "kk": "²³⁹⁺²⁴⁰Pu меншікті белсенділігі",
+        "en": "²³⁹⁺²⁴⁰Pu specific activity"
       },
       "description": {
-        "ru": "Отображает распределение стронция-90 на различных участках территории, используемое в научных исследованиях.",
-        "kk": "Ғылыми зерттеулерде қолданылатын аумақтың әртүрлі учаскелеріндегі стронций‑90 таралуын көрсетеді.",
-        "en": "Shows the study-based distribution of Sr‑90 across locations used in scientific analysis."
+        "ru": "Показывает выделенные авторами области и диапазоны удельной активности ²³⁹⁺²⁴⁰Pu в почвенном покрове СИП. Это справочная научная схема, а не оценка индивидуального радиационного риска.",
+        "kk": "Авторлар бөліп көрсеткен СИП топырақ жамылғысындағы ²³⁹⁺²⁴⁰Pu меншікті белсенділігінің аймақтары мен ауқымдарын көрсетеді. Бұл жеке радиациялық тәуекелді бағалау емес, анықтамалық ғылыми сызба.",
+        "en": "Shows the areas and ranges of ²³⁹⁺²⁴⁰Pu specific activity in the STS soil cover identified by the authors. It is a reference scientific scheme, not an assessment of individual radiation risk."
       },
-      "image": "/journal.pone.0294632.g006.PNG",
+      "image": "/images/scientific-maps/pu239-240-specific-activity.png",
+      "sourceKind": "manuscript",
       "sourceShort": {
-        "ru": "PLOS ONE (Panitskiy et al., 2023)",
-        "kk": "PLOS ONE (Panitskiy et al., 2023)",
-        "en": "PLOS ONE (Panitskiy et al., 2023)"
+        "ru": "Молдажанов и соавт., финальная рукопись (2026), рис. 2",
+        "kk": "Молдажанов және т.б., соңғы қолжазба (2026), 2-сурет",
+        "en": "Moldazhanov et al., final manuscript (2026), Fig. 2"
       },
       "cta": {
         "ru": "Открыть карту",
@@ -463,43 +467,43 @@
       "next": null,
       "page": {
         "category": {
-          "ru": "Scientific & Institutional Materials",
-          "kk": "Scientific & Institutional Materials",
-          "en": "Scientific & Institutional Materials"
+          "ru": "Научные карты из рукописи",
+          "kk": "Қолжазбадағы ғылыми карталар",
+          "en": "Scientific maps from the manuscript"
         },
         "subtitle": {
-          "ru": "Отображает распределение стронция-90 на различных участках территории, используемое в научных исследованиях.",
-          "kk": "Ғылыми зерттеулерде қолданылатын аумақтың әртүрлі учаскелеріндегі стронций‑90 таралуын көрсетеді.",
-          "en": "Shows the distribution of Sr‑90 across locations used in scientific studies."
+          "ru": "Области и диапазоны удельной активности ²³⁹⁺²⁴⁰Pu в почвенном покрове по материалам финальной рукописи.",
+          "kk": "Соңғы қолжазба материалдары бойынша топырақ жамылғысындағы ²³⁹⁺²⁴⁰Pu меншікті белсенділігінің аймақтары мен ауқымдары.",
+          "en": "Areas and ranges of ²³⁹⁺²⁴⁰Pu specific activity in the soil cover, as presented in the final manuscript."
         },
         "breadcrumbs": {
-          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Распределение Sr-90 (стронций-90)" }],
-          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "Sr-90 (стронций‑90) таралуы" }],
-          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "Sr‑90 distribution (strontium‑90)" }]
+          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Удельная активность ²³⁹⁺²⁴⁰Pu" }],
+          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "²³⁹⁺²⁴⁰Pu меншікті белсенділігі" }],
+          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "²³⁹⁺²⁴⁰Pu specific activity" }]
         },
         "meta": {
           "verified": true,
           "verifiedLabel": {
-            "ru": "Проверяемый источник",
-            "kk": "Тексерілетін дереккөз",
-            "en": "Verifiable source"
+            "ru": "Источник указан авторами",
+            "kk": "Дереккөзді авторлар көрсеткен",
+            "en": "Source identified by the authors"
           }
         },
         "sections": {
           "whatShows": {
-            "ru": "Это визуализация из научной публикации, показывающая распределение стронция-90 в пределах исследуемой территории.",
-            "kk": "Бұл — ғылыми жарияланымдағы визуализация: зерттелетін аумақта стронций‑90 таралуын көрсетеді.",
-            "en": "A figure from the publication showing the distribution of Sr‑90 within the study area."
+            "ru": "Карта выделяет области превышения и диапазоны удельной активности ²³⁹⁺²⁴⁰Pu в почвенном покрове, сохраняя исходную легенду, масштаб и обозначения площадок.",
+            "kk": "Карта топырақ жамылғысындағы ²³⁹⁺²⁴⁰Pu меншікті белсенділігінің асқан аймақтары мен ауқымдарын көрсетіп, бастапқы аңызды, масштабты және алаң белгілерін сақтайды.",
+            "en": "The map identifies areas of elevated ²³⁹⁺²⁴⁰Pu specific activity and value ranges in the soil cover while retaining the original legend, scale, and test-site labels."
           },
           "whyImportant": {
-            "ru": "Карта помогает понять, что разные участки требуют разного подхода к интерпретации данных и вопросам безопасности.",
-            "kk": "Карта әртүрлі учаскелер деректерді түсіндіруде және қауіпсіздік мәселелерінде әртүрлі тәсілді қажет ететінін түсінуге көмектеседі.",
-            "en": "Helps explain why different locations may require different interpretation and safety considerations."
+            "ru": "Схема показывает пространственную неоднородность данных по изотопам плутония и помогает сопоставить выделенные области с испытательными площадками.",
+            "kk": "Сызба плутоний изотоптары деректерінің кеңістіктік біркелкі еместігін көрсетіп, бөлінген аймақтарды сынақ алаңдарымен салыстыруға көмектеседі.",
+            "en": "The scheme shows the spatial heterogeneity of the plutonium-isotope data and helps compare the highlighted areas with the test sites."
           },
           "howInterpret": {
-            "ru": "Эта карта не предназначена для самостоятельного выбора маршрута. Для посещения территории приоритет имеют действующие ограничения, мониторинг и официальные рекомендации.",
-            "kk": "Бұл карта өз бетінше маршрут таңдауға арналмаған. Аумаққа баруда басымдық — қолданыстағы шектеулер, мониторинг және ресми ұсынымдар.",
-            "en": "Not intended for choosing a route independently. For visits, prioritize current restrictions, monitoring, and official guidance."
+            "ru": "Диапазоны следует читать по легенде исходного рисунка. Карта не показывает актуальную мощность дозы, не определяет безопасный маршрут и не заменяет радиационный контроль.",
+            "kk": "Ауқымдарды бастапқы сурет аңызы бойынша оқу қажет. Карта өзекті доза қуатын көрсетпейді, қауіпсіз маршрутты анықтамайды және радиациялық бақылауды алмастырмайды.",
+            "en": "Read the ranges through the original legend. The map does not show current dose rate, define a safe route, or replace radiation monitoring."
           }
         },
         "warning": {
@@ -547,14 +551,14 @@
         "en": "Scientific sources"
       },
       "text": {
-        "ru": "Ниже — ключевые источники, на которых основаны визуальные материалы раздела карт. Раздел подготовлен для просвещения и аккуратной интерпретации данных.",
-        "kk": "Төменде карталар бөлімінің визуалды материалдары негізделген негізгі дереккөздер берілген. Бөлім ағартушылық және мұқият интерпретация үшін дайындалған.",
-        "en": "Key references used for the maps section. Prepared for education and careful interpretation."
+        "ru": "Каталог объединяет две карты из статьи PLOS ONE и четыре карты из финальной рукописи Молдажанова и соавторов. Атрибуция и ссылки указаны отдельно для каждой группы материалов.",
+        "kk": "Каталог PLOS ONE мақаласындағы екі картаны және Молдажанов пен авторлар ұжымының соңғы қолжазбасындағы төрт картаны біріктіреді. Атрибуция мен сілтемелер әр материал тобы үшін бөлек берілген.",
+        "en": "The catalogue combines two maps from a PLOS ONE article and four maps from the final manuscript by Moldazhanov and co-authors. Attribution and links are stated separately for each group."
       },
       "mainSourceTitle": {
-        "ru": "Основной источник",
-        "kk": "Негізгі дереккөз",
-        "en": "Primary source"
+        "ru": "Источник первых двух карт",
+        "kk": "Алғашқы екі картаның дереккөзі",
+        "en": "Source of the first two maps"
       },
       "publication": {
         "ru": "PLOS ONE — статья и фигуры (карты)",
@@ -567,9 +571,29 @@
         "en": "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site."
       },
       "note": {
-        "ru": "Карты в этом разделе соответствуют фигурам статьи (g001, g002, g003, g004, g006).",
-        "kk": "Бұл бөлімдегі карталар мақаладағы фигураларға сәйкес (g001, g002, g003, g004, g006).",
-        "en": "Maps in this section correspond to article figures (g001, g002, g003, g004, g006)."
+        "ru": "К статье PLOS ONE относятся только карты g001 и g002.",
+        "kk": "PLOS ONE мақаласына тек g001 және g002 карталары жатады.",
+        "en": "Only maps g001 and g002 belong to the PLOS ONE article."
+      },
+      "manuscriptTitle": {
+        "ru": "Источник четырёх карт удельной активности",
+        "kk": "Меншікті белсенділіктің төрт картасының дереккөзі",
+        "en": "Source of the four specific-activity maps"
+      },
+      "manuscriptPublication": {
+        "ru": "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — финальная рукопись (2026), рисунок 2",
+        "kk": "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — соңғы қолжазба (2026), 2-сурет",
+        "en": "Moldazhanov M. B., Martínez-Falcó J., Duiskenova R. Zh. — final manuscript (2026), Figure 2"
+      },
+      "manuscriptDescription": {
+        "ru": "Карты подготовлены авторами на основе источников [3, 9, 10]: материалов комплексного экологического обследования СИП, материалов НЯЦ РК и Zenodo.",
+        "kk": "Карталарды авторлар [3, 9, 10] дереккөздері негізінде дайындаған: СИП кешенді экологиялық зерттеу материалдары, ҚР ҰЯО материалдары және Zenodo.",
+        "en": "The authors prepared the maps from sources [3, 9, 10]: materials from the comprehensive environmental survey of the STS, materials of Kazakhstan's NNC, and Zenodo."
+      },
+      "manuscriptNote": {
+        "ru": "Рукопись не опубликована; DOI для неё не присваивается. Права на публичное размещение изображений необходимо согласовать с автором или правообладателем.",
+        "kk": "Қолжазба жарияланбаған; оған DOI берілмеген. Кескіндерді ашық жариялау құқығын автормен немесе құқық иесімен келісу қажет.",
+        "en": "The manuscript is unpublished and has no assigned DOI. Rights for public use of the images must be agreed with the author or rights holder."
       },
       "pdfLabel": {
         "ru": "Открыть PDF",

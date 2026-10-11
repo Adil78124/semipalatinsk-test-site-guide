@@ -70,7 +70,7 @@ export function ResearchMapsSection() {
                     <img
                       src={m.image}
                       alt={l10n(lang, m.title)}
-                      className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500"
+                      className="h-full w-full object-contain transition-all duration-500"
                       loading="lazy"
                     />
                   </div>
@@ -107,7 +107,7 @@ export function ResearchMapsSection() {
             <button
               type="button"
               className="px-8 py-3 rounded-full border border-outline-variant/30 hover:bg-surface-container transition-all font-bold text-sm"
-              onClick={() => setExpanded((v) => !v)}
+              onClick={() => setExpanded((value) => !value)}
             >
               {expanded ? t("researchMaps.showLess") : t("researchMaps.showMore")}
             </button>

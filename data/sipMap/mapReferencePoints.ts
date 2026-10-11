@@ -7,9 +7,17 @@ import { SITE_POINTS } from "@/data/sipMap/sitePointsData";
 /** Единая типология для справочной карты /map (расширяемая). */
 export type MapPointType = "settlement" | "test_site" | "landmark";
 
-/** Ориентир «Атомное озеро»: 49°55′27.7″N 78°59′22.7″E (десятичные градусы). */
-export const ATOMIC_LAKE_LAT = 49 + 55 / 60 + 27.7 / 3600;
-export const ATOMIC_LAKE_LNG = 78 + 59 / 60 + 22.7 / 3600;
+/** Центр круглого кратерного озера «Атомное озеро» (проверено по Google Maps и OSM way 172385354). */
+export const ATOMIC_LAKE_LAT = 49.93552;
+export const ATOMIC_LAKE_LNG = 79.00852;
+export const CHAGAN_GHOST_TOWN_LAT = 50.609111;
+export const CHAGAN_GHOST_TOWN_LNG = 79.242333;
+export const CHAGAN_16_AIRFIELD_LAT = 50.541083;
+export const CHAGAN_16_AIRFIELD_LNG = 79.1935;
+export const ZHAMANTUZ_LAKE_LAT = 50.550111;
+export const ZHAMANTUZ_LAKE_LNG = 77.859111;
+export const KYZYLKUDUK_LAT = 50.532028;
+export const KYZYLKUDUK_LNG = 77.947694;
 const KARAZHYRA_LAT = 50.02733244;
 const KARAZHYRA_LNG = 78.72924935;
 
@@ -121,7 +129,7 @@ const EXTRA_REFERENCE_POINTS: MapReferencePoint[] = [
     lat: ATOMIC_LAKE_LAT,
     lng: ATOMIC_LAKE_LNG,
     sourceName:
-      "Координаты ориентира: 49°55′27.7″N 78°59′22.7″E; контекст объекта — материалы НЯЦ (sts.nnc.kz)",
+      "Ориентировочный центр круглого кратерного озера: 49.93552° N, 79.00852° E; проверено по Google Maps и OpenStreetMap (озеро Shagan, way 172385354). Контекст объекта — материалы НЯЦ (sts.nnc.kz).",
     sourceUrl: STS_ATLAS,
     sourceType: "scientific",
     confidence: "medium",
@@ -135,6 +143,110 @@ const EXTRA_REFERENCE_POINTS: MapReferencePoint[] = [
       ru: "Водохранилище, образованное в результате подземного ядерного взрыва в 1965 году.",
       kk: "1965 жылғы ядролық жарылыстың нәтижесінде пайда болған су қоймасы.",
       en: "A reservoir formed by an underground nuclear explosion in 1965.",
+    },
+  },
+  {
+    id: "landmark-chagan-ghost-town",
+    mapType: "landmark",
+    names: {
+      ru: "Город-призрак Чаган",
+      kk: "Чаган елес-қаласы",
+      en: "Chagan ghost town",
+    },
+    lat: CHAGAN_GHOST_TOWN_LAT,
+    lng: CHAGAN_GHOST_TOWN_LNG,
+    sourceName:
+      "Финальная статья Молдажанова и соавторов, таблица 5, стр. 12; 50°36′32.8″ N, 79°14′32.4″ E.",
+    sourceType: "scientific",
+    confidence: "high",
+    googleMapsUrl: googleMapsQueryUrl(CHAGAN_GHOST_TOWN_LAT, CHAGAN_GHOST_TOWN_LNG),
+    summary: {
+      ru: "Историческая локация бывшего военного города Чаган, показанная отдельно от аэродрома и Атомного озера.",
+      kk: "Әуеайлақ пен Атом көлінен бөлек көрсетілген бұрынғы Чаган әскери қаласының тарихи орны.",
+      en: "Historic location of the former military town of Chagan, shown separately from the airfield and Atomic Lake.",
+    },
+    description: {
+      ru: "Справочная точка из научного источника. Маркер не подтверждает доступность дорог, безопасность или разрешение на посещение.",
+      kk: "Ғылыми дереккөздегі анықтамалық нүкте. Маркер жолдардың қолжетімділігін, қауіпсіздікті немесе баруға рұқсатты растамайды.",
+      en: "A reference point from the scientific source. The marker does not confirm road access, safety, or permission to visit.",
+    },
+  },
+  {
+    id: "landmark-chagan-16-airfield",
+    mapType: "landmark",
+    names: {
+      ru: "Аэродром Чаган-16",
+      kk: "Чаган-16 әуеайлағы",
+      en: "Chagan-16 airfield",
+    },
+    lat: CHAGAN_16_AIRFIELD_LAT,
+    lng: CHAGAN_16_AIRFIELD_LNG,
+    sourceName:
+      "Финальная статья Молдажанова и соавторов, таблица 5, стр. 12; 50°32′27.9″ N, 79°11′36.6″ E.",
+    sourceType: "scientific",
+    confidence: "high",
+    googleMapsUrl: googleMapsQueryUrl(CHAGAN_16_AIRFIELD_LAT, CHAGAN_16_AIRFIELD_LNG),
+    summary: {
+      ru: "Исторический аэродром Чаган-16; отдельный объект, не объединённый с городом Чаган или Атомным озером.",
+      kk: "Чаган-16 тарихи әуеайлағы; Чаган қаласымен немесе Атом көлімен біріктірілмеген жеке нысан.",
+      en: "Historic Chagan-16 airfield, represented separately from Chagan town and Atomic Lake.",
+    },
+    description: {
+      ru: "Справочная точка из научного источника. Наличие маркера не означает свободный доступ или подтверждённый автомобильный маршрут.",
+      kk: "Ғылыми дереккөздегі анықтамалық нүкте. Маркердің болуы еркін кіруді немесе расталған автомобиль маршрутын білдірмейді.",
+      en: "A reference point from the scientific source. Its marker does not imply unrestricted access or a verified driving route.",
+    },
+  },
+  {
+    id: "landmark-zhamantuz-lake",
+    mapType: "landmark",
+    names: {
+      ru: "Солёное озеро Жамантуз",
+      kk: "Жамантуз тұзды көлі",
+      en: "Salt lake Zhamantuz",
+    },
+    lat: ZHAMANTUZ_LAKE_LAT,
+    lng: ZHAMANTUZ_LAKE_LNG,
+    sourceName:
+      "Финальная статья Молдажанова и соавторов; 50°33′00.4″ N, 77°51′32.8″ E. Авторская фотография: рис. 4, стр. 14 (исходный файл отсутствует в рабочей копии).",
+    sourceType: "scientific",
+    confidence: "high",
+    googleMapsUrl: googleMapsQueryUrl(ZHAMANTUZ_LAKE_LAT, ZHAMANTUZ_LAKE_LNG),
+    summary: {
+      ru: "Солёное озеро Жамантуз, координаты которого приведены в финальной научной статье.",
+      kk: "Координаттары финалдық ғылыми мақалада берілген Жамантуз тұзды көлі.",
+      en: "Salt lake Zhamantuz, with coordinates reported in the final scientific article.",
+    },
+    description: {
+      ru: "Озеро показано как отдельная справочная точка. Маркер не подтверждает проезжаемость дорог, безопасность или разрешение на посещение.",
+      kk: "Көл жеке анықтамалық нүкте ретінде көрсетілген. Маркер жолдардың жүруге жарамдылығын, қауіпсіздікті немесе баруға рұқсатты растамайды.",
+      en: "The lake is shown as a separate reference point. The marker does not confirm road passability, safety, or permission to visit.",
+    },
+  },
+  {
+    id: "settlement-kyzylkuduk-reference",
+    mapType: "settlement",
+    names: {
+      ru: "Кызылкудук (справочный объект)",
+      kk: "Қызылқұдық (анықтамалық нысан)",
+      en: "Kyzylkuduk (reference point)",
+    },
+    lat: KYZYLKUDUK_LAT,
+    lng: KYZYLKUDUK_LNG,
+    sourceName:
+      "Финальная статья Молдажанова и соавторов; 50°31′55.3″ N, 77°56′51.7″ E.",
+    sourceType: "scientific",
+    confidence: "high",
+    googleMapsUrl: googleMapsQueryUrl(KYZYLKUDUK_LAT, KYZYLKUDUK_LNG),
+    summary: {
+      ru: "Посёлок рядом с озером Жамантуз; не подтверждён как обязательная остановка маршрута.",
+      kk: "Жамантуз көліне жақын елді мекен; маршруттың міндетті аялдамасы ретінде расталмаған.",
+      en: "A settlement near Lake Zhamantuz; not confirmed as a required route stop.",
+    },
+    description: {
+      ru: "Кызылкудук добавлен как отдельный справочный объект. Его включение в маршрут требует подтверждения заказчика.",
+      kk: "Қызылқұдық жеке анықтамалық нысан ретінде қосылды. Оны маршрутқа қосу тапсырыс берушінің растауын талап етеді.",
+      en: "Kyzylkuduk is included as a separate reference object. Its inclusion in the route requires client confirmation.",
     },
   },
   {

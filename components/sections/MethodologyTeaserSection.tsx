@@ -24,10 +24,12 @@ export function MethodologyTeaserSection() {
       <div className="container mx-auto px-6 md:px-8 max-w-4xl">
         <span className="font-label text-xs font-bold text-primary uppercase tracking-[0.2em]">{t("methodology.teaser.kicker")}</span>
         <h2 className="font-headline text-3xl md:text-4xl font-extrabold mt-3 text-on-surface">{t("methodology.teaser.title")}</h2>
-        <p className="mt-4 text-sm text-on-surface-variant leading-relaxed max-w-3xl">{t("methodology.teaser.lead")}</p>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-on-surface-variant md:text-lg">
+          {t("methodology.teaser.lead")}
+        </p>
 
         <div className="mt-6">
-          <UnifiedSiteDisclaimer variant="panel" />
+          <UnifiedSiteDisclaimer variant="panel" className="!px-4 !py-3 !text-base md:!text-lg" />
         </div>
 
         <div className="mt-8 space-y-2">
@@ -37,7 +39,7 @@ export function MethodologyTeaserSection() {
               <div key={item.id} className="rounded-xl border border-outline-variant/12 bg-white/90 overflow-hidden shadow-sm">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left text-sm font-bold text-on-surface hover:bg-surface-container-low/50 transition-colors"
+                  className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left text-base font-bold text-on-surface transition-colors hover:bg-surface-container-low/50 md:text-lg"
                   aria-expanded={isOpen}
                   onClick={() => setOpen(isOpen ? null : item.id)}
                 >
@@ -47,7 +49,7 @@ export function MethodologyTeaserSection() {
                   </span>
                 </button>
                 {isOpen ? (
-                  <div className="px-4 pb-4 text-sm text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-3">
+                  <div className="border-t border-outline-variant/10 px-5 pb-5 pt-4 text-base leading-relaxed text-on-surface-variant md:text-lg">
                     {t(item.bodyKey)}
                   </div>
                 ) : null}
@@ -59,7 +61,7 @@ export function MethodologyTeaserSection() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/methodology"
-            className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-bold text-on-primary shadow-md hover:opacity-95 transition-opacity"
+            className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-bold text-on-primary shadow-md transition-opacity hover:opacity-95"
           >
             {t("methodology.teaser.moreLink")}
             <span className="material-symbols-outlined text-[18px]">arrow_forward</span>

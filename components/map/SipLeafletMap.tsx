@@ -161,13 +161,7 @@ export function SipLeafletMap({
   const [rightPanelPeek, setRightPanelPeek] = useState(false);
 
   /** desktop ≥1024, tablet 768–1023, mobile <768 */
-  const [layoutTier, setLayoutTier] = useState<"desktop" | "tablet" | "mobile">(() => {
-    if (typeof window === "undefined") return "desktop";
-    const w = window.innerWidth;
-    if (w >= 1024) return "desktop";
-    if (w >= 768) return "tablet";
-    return "mobile";
-  });
+  const [layoutTier, setLayoutTier] = useState<"desktop" | "tablet" | "mobile">("desktop");
 
   /** Left tools column: open on desktop by default, collapsed on tablet (fullscreen). */
   const [leftExpanded, setLeftExpanded] = useState(true);

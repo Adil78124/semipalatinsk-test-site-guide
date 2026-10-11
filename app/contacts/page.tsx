@@ -20,10 +20,10 @@ const contacts = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: "Контакты - Путеводитель по СИП",
+  title: "Контакты - STS Nuclear-Tour",
   description: "Контакты проекта, ссылка на страницу ABU и номер разработчика сайта.",
   openGraph: {
-    title: "Контакты - Путеводитель по СИП",
+    title: "Контакты - STS Nuclear-Tour",
     description: "Контакты проекта и разработчика сайта.",
   },
 };

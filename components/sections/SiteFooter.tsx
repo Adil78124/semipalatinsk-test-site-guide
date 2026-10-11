@@ -76,7 +76,7 @@ export function SiteFooter() {
                 <li>
                   <a
                     className="font-['Inter'] text-sm text-[#191c1c] dark:text-[#f8faf9] opacity-80 hover:opacity-100 underline underline-offset-4 transition-all"
-                    href={homeHref("#zones")}
+                    href="/map?mode=routes"
                   >
                     {t("footer.links.zones")}
                   </a>
@@ -119,14 +119,6 @@ export function SiteFooter() {
                     href={homeHref("#guide")}
                   >
                     {t("footer.project.sipInfo")}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="font-['Inter'] text-sm text-[#191c1c] dark:text-[#f8faf9] opacity-80 hover:opacity-100 underline underline-offset-4 transition-all"
-                    href={homeHref("#about")}
-                  >
-                    {t("footer.project.about")}
                   </a>
                 </li>
                 <li>

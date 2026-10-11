@@ -14,9 +14,9 @@ const ADDITIONAL_SOURCE_IDS = [
 ] as const;
 
 function sourceLabels(lang: "ru" | "kk" | "en") {
-  if (lang === "en") return { title: "Additional scientific publications", article: "Article", pdf: "PDF" };
-  if (lang === "kk") return { title: "Қосымша ғылыми жарияланымдар", article: "Мақала", pdf: "PDF" };
-  return { title: "Дополнительные научные публикации", article: "Статья", pdf: "PDF" };
+  if (lang === "en") return { title: "Additional scientific publications", article: "Article", pdf: "PDF", survey: "Environmental survey", nnc: "Kazakhstan NNC" };
+  if (lang === "kk") return { title: "Қосымша ғылыми жарияланымдар", article: "Мақала", pdf: "PDF", survey: "Экологиялық зерттеу", nnc: "ҚР ҰЯО" };
+  return { title: "Дополнительные научные публикации", article: "Статья", pdf: "PDF", survey: "Экологическое обследование", nnc: "НЯЦ РК" };
 }
 
 export default function MapsIndexPage() {
@@ -128,14 +128,32 @@ export default function MapsIndexPage() {
                   </a>
                 </div>
               </div>
-              <div className="rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed border border-tertiary/10 p-6 flex gap-4 items-start">
-                <span className="material-symbols-outlined text-tertiary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  warning
-                </span>
-                <div className="space-y-2">
-                  <h4 className="font-headline font-extrabold text-xl">{l10n(lang, listPage.warningBlock.title)}</h4>
-                  <p className="font-body text-sm leading-relaxed opacity-90 whitespace-pre-line">{l10n(lang, listPage.warningBlock.text)}</p>
+              <div className="rounded-2xl bg-surface-container-low p-6 border border-outline-variant/10">
+                <div className="text-xs font-bold uppercase tracking-widest text-outline opacity-70">
+                  {l10n(lang, listPage.sourceBlock.manuscriptTitle)}
                 </div>
+                <div className="font-headline font-extrabold text-lg mt-2">{l10n(lang, listPage.sourceBlock.manuscriptPublication)}</div>
+                <p className="text-sm text-on-surface-variant mt-2 whitespace-pre-line">{l10n(lang, listPage.sourceBlock.manuscriptDescription)}</p>
+                <p className="text-xs text-on-surface-variant mt-3 whitespace-pre-line">{l10n(lang, listPage.sourceBlock.manuscriptNote)}</p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <a href="https://hearings.ndbecology.gov.kz/Disscusion/DisPublic/PublicHearingDetail?hearingId=17850" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-white/70 px-4 py-2 text-xs font-bold text-on-surface">
+                    <span className="material-symbols-outlined text-[18px]">open_in_new</span>{labels.survey}
+                  </a>
+                  <a href="https://doi.org/10.5281/zenodo.20699777" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-white/70 px-4 py-2 text-xs font-bold text-on-surface">
+                    <span className="material-symbols-outlined text-[18px]">open_in_new</span>Zenodo
+                  </a>
+                  <a href="https://nnc.kz/assets/mono2_kz.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-white/70 px-4 py-2 text-xs font-bold text-on-surface">
+                    <span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>{labels.nnc}
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed border border-tertiary/10 p-6 flex gap-4 items-start">
+              <span className="material-symbols-outlined text-tertiary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>warning</span>
+              <div className="space-y-2">
+                <h4 className="font-headline font-extrabold text-xl">{l10n(lang, listPage.warningBlock.title)}</h4>
+                <p className="font-body text-sm leading-relaxed opacity-90 whitespace-pre-line">{l10n(lang, listPage.warningBlock.text)}</p>
               </div>
             </div>
 

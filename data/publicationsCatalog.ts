@@ -32,9 +32,9 @@ export const PUBLICATIONS_CATALOG: PublicationEntry[] = [
       en: "Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site",
     },
     summary: {
-      ru: "Открытый доступ PLOS ONE: обзор СИП, схемы площадок, поля Cs-137, Am-241, Sr-90. Рисунки g001, g002, g003, g004, g006 на сайте взяты из этой статьи.",
-      kk: "Open-access PLOS ONE: STS overview, pad schemes, Cs-137, Am-241, Sr-90 fields. Figures g001–g006 on this site come from this paper.",
-      en: "Open-access PLOS ONE: STS overview, pad schemes, Cs-137, Am-241, Sr-90 fields. Figures g001, g002, g003, g004, g006 on this site come from this paper.",
+      ru: "Открытая статья PLOS ONE — источник двух обзорных карт каталога: g001 и g002. Четыре карты удельной активности из рукописи к этой статье не относятся.",
+      kk: "Ашық PLOS ONE мақаласы каталогтағы екі шолу картасының — g001 және g002 — дереккөзі. Қолжазбадағы меншікті белсенділіктің төрт картасы бұл мақалаға жатпайды.",
+      en: "The open-access PLOS ONE paper is the source of the catalogue's two overview maps, g001 and g002. The four manuscript specific-activity maps do not belong to this paper.",
     },
     doi: "10.1371/journal.pone.0294632",
     url: "https://doi.org/10.1371/journal.pone.0294632",

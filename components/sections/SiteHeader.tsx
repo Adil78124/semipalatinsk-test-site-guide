@@ -62,7 +62,7 @@ export function SiteHeader() {
       homeItem,
       { href: sectionHref("sip-info"), labelKey: "nav.sip", useNextLink: false },
       { href: "/map", labelKey: "nav.map", useNextLink: true },
-      { href: sectionHref("zones"), labelKey: "nav.zones", useNextLink: false },
+      { href: "/map?mode=routes", labelKey: "nav.zones", useNextLink: true },
       { href: sectionHref("research-maps"), labelKey: "nav.researchMaps", useNextLink: false },
       { href: sectionHref("safety"), labelKey: "nav.safety", useNextLink: false },
     ],
@@ -71,8 +71,6 @@ export function SiteHeader() {
 
   const moreNavItems = useMemo(
     (): NavItem[] => [
-      { href: sectionHref("about"), labelKey: "nav.about", useNextLink: false },
-      { href: sectionHref("science"), labelKey: "nav.science", useNextLink: false },
       { href: sectionHref("guide"), labelKey: "nav.guide", useNextLink: false },
       { href: "/contacts", labelKey: "nav.contacts", useNextLink: true },
       { href: "/maps", labelKey: "nav.maps", useNextLink: true },
@@ -151,10 +149,9 @@ export function SiteHeader() {
         <div className="flex items-center gap-4 flex-nowrap">
           <a
             href={pathname === "/" ? "#home" : "/"}
-            className="font-['Manrope'] font-extrabold text-[#0d631b] dark:text-[#2e7d32] tracking-tighter text-xl whitespace-nowrap shrink-0"
+            className="min-w-0 shrink whitespace-nowrap font-['Manrope'] text-[15px] font-extrabold tracking-tighter text-[#0d631b] sm:text-lg lg:shrink-0 xl:text-xl dark:text-[#2e7d32]"
           >
-            <span className="lg:hidden">СИП</span>
-            <span className="hidden lg:inline">{t("brand")}</span>
+            {t("brand")}
           </a>
 
           <div className="hidden lg:flex flex-1 min-w-0 items-center justify-center gap-x-2 xl:gap-x-3">

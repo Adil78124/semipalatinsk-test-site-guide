@@ -10,7 +10,6 @@ export type TranslationKey =
   | "nav.researchMaps"
   | "nav.maps"
   | "nav.guide"
-  | "nav.science"
   | "nav.safety"
   | "nav.contacts"
   | "nav.more"
@@ -37,6 +36,17 @@ export type TranslationKey =
   | "routes.title"
   | "routes.lead"
   | "routes.disclaimer"
+  | "routes.simple.kicker"
+  | "routes.simple.title"
+  | "routes.simple.lead"
+  | "routes.simple.cardLabel"
+  | "routes.simple.startLabel"
+  | "routes.simple.destinationLabel"
+  | "routes.simple.importantLabel"
+  | "routes.simple.locationsLabel"
+  | "routes.simple.openMaps"
+  | "routes.simple.photoSourceLabel"
+  | "routes.simple.sourceLabel"
   | "routes.card.kurchatov.type"
   | "routes.card.kurchatov.title"
   | "routes.card.kurchatov.desc"
@@ -240,12 +250,21 @@ export type TranslationKey =
   | "map.geo.poi.atomicLake.title"
   | "map.geo.poi.atomicLake.desc"
   | "safety.title"
-  | "safety.rule1"
-  | "safety.rule2"
-  | "safety.rule3"
-  | "safety.rule4"
-  | "safety.rule5"
-  | "safety.note"
+  | "safety.stage1.title"
+  | "safety.stage1.intro"
+  | "safety.stage1.items"
+  | "safety.stage1.extraIntro"
+  | "safety.stage1.extraItems"
+  | "safety.stage2.title"
+  | "safety.stage2.intro"
+  | "safety.stage2.items"
+  | "safety.stage2.warning"
+  | "safety.stage3.title"
+  | "safety.stage3.intro"
+  | "safety.stage3.items"
+  | "safety.disclaimer"
+  | "safety.sourceLabel"
+  | "safety.source"
   | "footer.about"
   | "footer.partner"
   | "footer.links.title"
@@ -464,17 +483,16 @@ export type TranslationKey =
 
 export const translations: Record<Lang, Record<TranslationKey, string>> = {
   ru: {
-    brand: "Путеводитель по СИП",
+    brand: "STS Nuclear-Tour",
     "nav.home": "Главная",
     "nav.sip": "О СИП",
     "nav.map": "Карта",
-    "nav.zones": "Режим доступа",
+    "nav.zones": "Маршруты",
     "nav.about": "О проекте",
     "nav.researchMaps": "Научные карты",
     "nav.maps": "Библиотека карт",
     "nav.guide": "Справочный гид",
-    "nav.science": "Научные данные",
-    "nav.safety": "Безопасность",
+    "nav.safety": "Рекомендации по безопасности",
     "nav.contacts": "Контакты",
     "nav.more": "Ещё",
     "nav.openMenu": "Открыть меню",
@@ -487,7 +505,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "map.fullPage.modePoi": "Точки",
     "map.fullPage.modeRoutes": "Маршруты",
     "map.fullPage.routesGoogleBanner":
-      "Открытие трека — в Google Maps. На карте СИП остаются только справочные маркеры для ориентира.",
+      "Отдельные точки открываются в Google Maps. На карте СИП показаны справочные маркеры; неподтверждённые автомобильные треки не строятся.",
     "header.searchPlaceholder": "Поиск по разделу «Режим доступа» и маршрутам…",
     "header.explore": "Разделы",
     "search.noResults": "Ничего не найдено по запросу",
@@ -507,6 +525,18 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Шесть карточек: какой объект или тема, какой статус доступа, какие точки на карте смотреть. Не турпродукт; выезд согласуется отдельно.",
     "routes.disclaimer":
       "Опора на публикации и схемы (в т.ч. карты ¹³⁷Cs, ²⁴¹Am, ²³⁹+²⁴⁰Pu, ⁹⁰Sr). Не приглашение на самовольный въезд в закрытые участки — см. «Важно» в подвале.",
+    "routes.simple.kicker": "Маршруты",
+    "routes.simple.title": "Простые маршруты",
+    "routes.simple.lead":
+      "Карточки показывают достоверные объекты и ссылки на отдельные точки в Google Maps. Они не подтверждают проезжаемость дорог, безопасность или свободный доступ: посещение требует официального согласования, сопровождения и радиационного контроля.",
+    "routes.simple.cardLabel": "маршрут",
+    "routes.simple.startLabel": "Старт",
+    "routes.simple.destinationLabel": "Объекты",
+    "routes.simple.importantLabel": "Важно",
+    "routes.simple.locationsLabel": "Открыть отдельные точки",
+    "routes.simple.openMaps": "открыть в Google Maps",
+    "routes.simple.photoSourceLabel": "Фото",
+    "routes.simple.sourceLabel": "Источник",
 
     "routes.card.kurchatov.type": "Обзорный",
     "routes.card.kurchatov.title": "Курчатов и научная инфраструктура",
@@ -758,25 +788,37 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "map.geo.poi.atomicLake.title": "Атомное озеро (водохранилище Чаган)",
     "map.geo.poi.atomicLake.desc":
       "Водохранилище, образованное в результате подземного ядерного взрыва в 1965 году.",
-    "safety.title": "Безопасность",
-    "safety.rule1":
-      "Не рассматривать материалы сайта как допуск на местность: условия задают законодательство РК, уполномоченные органы, оператор территории и официальные документы.",
-    "safety.rule2":
-      "Любое фактическое перемещение — только в рамках утверждённого маршрута и инструкций сопровождения; СИЗ и дозиметрический контроль — по регламенту допуска.",
-    "safety.rule3": "Не контактировать с почвой, растениями, конструкциями и неизвестными объектами; не отбирать пробы.",
-    "safety.rule4": "Воду и пищу — только из источников, разрешённых в рамках допуска; не использовать локальные продукты без официальной оценки.",
-    "safety.rule5":
-      "При сомнениях, отклонении от регламента или тревожных признаках — прекратить работу на участке и действовать по процедуре, заданной организатором допуска.",
-    "safety.note":
-      "Номера «экстренных линий» в открытом интерфейсе не приводятся: при работе по допуску ориентируйтесь на контакты, указанные в ваших документах, и на официальные каналы уполномоченных органов.",
+    "safety.title": "Рекомендации по безопасности",
+    "safety.stage1.title": "Этап 1 — подготовка к посещению полигона",
+    "safety.stage1.intro": "В период подготовки к посещению полигона рекомендуется:",
+    "safety.stage1.items":
+      "Подготовить комплект защиты для тела: одноразовый комбинезон плотностью не менее 65 г/м², пылезащитные бахилы, одноразовый респиратор с клапаном, одноразовые резиновые перчатки (желательно взять по 2–3 шт.).\nПроверить комплект защиты для тела на наличие брака, при необходимости заменить комплект.\nПодготовить необходимое количество бутилированной воды и еды. Еду необходимо упаковать в одноразовую упаковку.\nПодготовить индивидуальный дозиметр.\nПодготовить мусорный пакет для складирования отходов после завершения маршрута.\nПодготовить средства гигиены: мыло, воду и сухие салфетки.",
+    "safety.stage1.extraIntro": "Дополнительно на этапе подготовки рекомендуется:",
+    "safety.stage1.extraItems":
+      "Провести техническое обслуживание автомобиля, подготовить дополнительный комплект запасных колёс и дополнительную ёмкость для топлива в расчёте на 100 км пути.\nНанять индивидуального специалиста по дозиметрии в случае путешествия группой.\nОзнакомиться с правилами поведения на маршруте, включая запрет на курение и употребление спиртных напитков.",
+    "safety.stage2.title": "Этап 2 — прохождение маршрута",
+    "safety.stage2.intro": "Рекомендации на этапе прохождения маршрута по полигону:",
+    "safety.stage2.items":
+      "Непосредственно перед въездом в зону, представляющую радиационную опасность для населения, справить естественные надобности.\nНадеть средства индивидуальной защиты, предварительно проверив их на наличие повреждений.\nЗапустить индивидуальный дозиметр.\nНе отклоняться от заданной траектории движения.\nВ зоне, представляющей радиационную опасность для населения, не допускать самостоятельный сбор растительности, минералов, металлических и иных предметов.\nПо завершении посещения «грязной» зоны, непосредственно перед посадкой в автомобиль, рекомендуется снять защитный комплект и упаковать его в мусорный пакет.",
+    "safety.stage2.warning":
+      "В «грязной» зоне запрещается справлять естественные надобности, принимать пищу и пить воду.",
+    "safety.stage3.title": "Этап 3 — завершение посещения",
+    "safety.stage3.intro": "Рекомендации на этапе завершения посещения:",
+    "safety.stage3.items":
+      "Обеспечить утилизацию использованных комплектов защиты, одноразовой посуды и бутылок, предварительно плотно упаковав отходы.\nСправить естественные надобности.\nПомыть руки и лицо, щёткой очистить обувь от остатков пыли.\nПомыть автомобиль на бесконтактной мойке.\nЗафиксировать результаты дозиметрического контроля; в случае завышенных показателей обратиться к врачу.",
+    "safety.disclaimer":
+      "Эти справочные рекомендации не являются разрешением на посещение, не гарантируют безопасность и не заменяют официальный допуск, инструктаж, профессиональный радиационный контроль и указания ответственного оператора. Загрязнённые СИЗ и отходы утилизируются по утверждённым правилам ответственной организации, а не как бытовой мусор.",
+    "safety.sourceLabel": "Научный источник",
+    "safety.source":
+      "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. «Разработка рекомендаций по обеспечению радиационной безопасности туристов на маршрутах по объектам Семипалатинского испытательного полигона». Финальная редакция рукописи, предоставленная заказчиком (2026), стр. 16–17. Права на публичное размещение полного текста и файла уточняются отдельно.",
     "footer.about":
       "Портал подготовлен в рамках реализации грантового финансирования исследований молодых ученых по проекту «Жас ғалым» на 2025-2027 годы на тему «AP25794915 Научное исследование экономического потенциала ядерного туризма на примере Семипалатинского испытательного полигона». Данное исследование финансируется Комитетом науки и высшего образования Министерства науки и высшего образования Республики Казахстан.",
     "footer.links.title": "Навигация",
     "footer.links.home": "Главная",
     "footer.links.sip": "О СИП",
     "footer.links.mapRoutes": "Карта площадок",
-    "footer.links.zones": "Режим доступа",
-    "footer.links.safety": "Безопасность",
+    "footer.links.zones": "Маршруты",
+    "footer.links.safety": "Рекомендации по безопасности",
     "footer.links.contacts": "Контакты",
     "footer.project.title": "Проект",
     "footer.project.sipInfo": "Информация о СИП",
@@ -787,14 +829,14 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Сайт не заменяет официальный допуск, регламенты доступа к территории СИП и радиационного мониторинга. Режим на местности задают законодательство Республики Казахстан, уполномоченные органы, оператор территории и документы допуска. Материалы сайта — справочные.",
     "footer.meta.copyright": "",
     "researchMaps.kicker": "Научные карты",
-    "researchMaps.title": "Рисунки из PLOS ONE (2023)",
+    "researchMaps.title": "Научные карты СИП",
     "researchMaps.lead":
-      "Panitskiy A. et al. (2023): обзор контекста СИП, схема площадок и точек отбора в рамках исследования накопления радионуклидов в тканях и продуктах копытных; на рисунках — ¹³⁷Cs, ²⁴¹Am и ⁹⁰Sr. Ниже те же иллюстрации карточками. Это не оценка безопасности выезда на территорию.",
-    "researchMaps.note": "Источник и номер фигуры указаны на каждой карточке.",
+      "Каталог включает две обзорные карты из PLOS ONE (2023) и четыре карты удельной активности ¹³⁷Cs, ⁹⁰Sr, ²⁴¹Am и ²³⁹⁺²⁴⁰Pu из финальной рукописи Молдажанова и соавторов (2026). Карты предназначены для научно-справочной интерпретации и не оценивают безопасность посещения.",
+    "researchMaps.note": "Источник каждой карты указан отдельно; новые карты из рукописи не относятся к PLOS ONE.",
     "researchMaps.open": "Открыть",
     "researchMaps.cardCta": "Открыть карту",
     "researchMaps.showMore": "Показать больше",
-    "researchMaps.showLess": "Свернуть",
+    "researchMaps.showLess": "Показать меньше",
     "researchMaps.viewAll": "Смотреть все карты",
     "researchMaps.sourceLabel": "Источник:",
     "researchMaps.source.plos":
@@ -816,11 +858,11 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Поле ⁹⁰Sr на участках, показанных авторами.",
     "sources.title": "Источники",
     "sources.lead":
-      "Публикация и сайт НЯЦ, используемые в разделе карт.",
+      "Источники двух обзорных карт и четырёх карт удельной активности указаны раздельно.",
     "sources.primary": "Основной источник",
     "sources.plos.title": "PLOS ONE — статья и фигуры (карты)",
     "sources.plos.desc":
-      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nКарты в этом разделе соответствуют фигурам статьи (g001, g002, g003, g004, g006).",
+      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nК статье относятся только две обзорные карты: g001 и g002.",
     "sources.openPdf": "Открыть PDF",
     "sources.openSection": "Открыть источники",
     "sources.more": "Добавим позже",
@@ -1043,17 +1085,16 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Условный центр наземного или близкого к поверхности испытания — точка под взрывом. На схемах это ориентир, а не приглашение к визиту без допуска.",
   },
   kk: {
-    brand: "Путеводитель по СИП",
+    brand: "STS Nuclear-Tour",
     "nav.home": "Басты бет",
     "nav.sip": "СИП туралы",
     "nav.map": "Карта",
-    "nav.zones": "Кіру режимі",
+    "nav.zones": "Маршруттар",
     "nav.about": "Жоба туралы",
     "nav.researchMaps": "Ғылыми карталар",
     "nav.maps": "Карталар кітапханасы",
     "nav.guide": "Анықтамалық гид",
-    "nav.science": "Ғылыми деректер",
-    "nav.safety": "Қауіпсіздік",
+    "nav.safety": "Қауіпсіздік жөніндегі ұсынымдар",
     "nav.contacts": "Байланыс",
     "nav.more": "Тағы",
     "nav.openMenu": "Мәзірді ашу",
@@ -1066,7 +1107,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "map.fullPage.modePoi": "Нүктелер",
     "map.fullPage.modeRoutes": "Маршруттар",
     "map.fullPage.routesGoogleBanner":
-      "Трек Google Maps-та ашылады. СИП картасында тек бағдар үшін анықтамалық маркерлер қалады.",
+      "Жеке нүктелер Google Maps-та ашылады. СИП картасында анықтамалық маркерлер көрсетіледі; расталмаған автомобиль тректері салынбайды.",
     "header.searchPlaceholder": "«Кіру режимі» бөлімі мен маршруттар бойынша іздеу…",
     "header.explore": "Бөлімдер",
     "search.noResults": "Сұраныс бойынша ештеңе табылмады",
@@ -1086,6 +1127,18 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Алты карточка: нысан немесе тақырып, кіру мәртебесі, картада қарау нүктелері. Турөнім емес; шығу бөлек келісіледі.",
     "routes.disclaimer":
       "Жарияланымдар мен сызбаларға сүйенеді (¹³⁷Cs, ²⁴¹Am, ²³⁹+²⁴⁰Pu, ⁹⁰Sr карталары). Жабық учаскелерге өз бетінше баруға шақыру емес — төмендегі «Маңызды».",
+    "routes.simple.kicker": "Маршруттар",
+    "routes.simple.title": "Қарапайым маршруттар",
+    "routes.simple.lead":
+      "Карточкалар расталған нысандар мен Google Maps-тағы жеке нүктелерге сілтемелерді көрсетеді. Олар жолдардың жүруге жарамдылығын, қауіпсіздікті немесе еркін кіруді растамайды: бару үшін ресми келісім, сүйемелдеу және радиациялық бақылау қажет.",
+    "routes.simple.cardLabel": "маршрут",
+    "routes.simple.startLabel": "Бастау",
+    "routes.simple.destinationLabel": "Нысандар",
+    "routes.simple.importantLabel": "Маңызды",
+    "routes.simple.locationsLabel": "Жеке нүктелерді ашу",
+    "routes.simple.openMaps": "Google Maps-та ашу",
+    "routes.simple.photoSourceLabel": "Фото",
+    "routes.simple.sourceLabel": "Дереккөз",
 
     "routes.card.kurchatov.type": "Шолу",
     "routes.card.kurchatov.title": "Курчатов және ғылыми инфрақұрылым",
@@ -1337,25 +1390,37 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "map.geo.poi.atomicLake.title": "Шаған атом көлі",
     "map.geo.poi.atomicLake.desc":
       "1965 жылғы ядролық жарылыстың нәтижесінде пайда болған су қоймасы.",
-    "safety.title": "Қауіпсіздік",
-    "safety.rule1":
-      "Сайт материалдарын аумаққа рұқсат ретінде қарамаңыз: шарттарды ҚР заңнамасы, уәкілетті органдар, оператор және ресми құжаттар белгілейді.",
-    "safety.rule2":
-      "Нақты қозғалыс тек бекітілген маршрут пен сүйемелдеу нұсқауы шеңберінде; ҚҚҚ және дозиметрия — рұқсат регламенті бойынша.",
-    "safety.rule3": "Топырақ, өсімдік, құрылымдар мен белгісіз объектілермен контактке түспеңіз; сынама алмаңыз.",
-    "safety.rule4": "Су мен тағам — тек рұқсат шеңберінде рұқсат етілген көздерден; ресми бағалаусіз жергілікті өнімді қолданбаңыз.",
-    "safety.rule5":
-      "Күмән, регламенттен ауытқу немесе қауіп белгілері болса — учаскедегі жұмысты тоқтатыңыз да, рұқсат ұйымдастырушысының жедел рәсімін орындаңыз.",
-    "safety.note":
-      "Ашық интерфейсте «жедел желілер» нөмірлері келтірілмейді: рұқсат бойынша жұмыста құжаттағы байланыстар мен уәкілетті органдардың ресми арналарына сүйеніңіз.",
+    "safety.title": "Қауіпсіздік жөніндегі ұсынымдар",
+    "safety.stage1.title": "1-кезең — полигонға баруға дайындық",
+    "safety.stage1.intro": "Полигонға баруға дайындық кезеңінде мыналар ұсынылады:",
+    "safety.stage1.items":
+      "Денені қорғау жиынтығын дайындау: тығыздығы кемінде 65 г/м² бір реттік комбинезон, шаңнан қорғайтын бахила, клапаны бар бір реттік респиратор, бір реттік резеңке қолғаптар (2–3 жұп алған жөн).\nҚорғаныс жиынтығында ақау бар-жоғын тексеріп, қажет болса оны ауыстыру.\nҚажетті мөлшерде бөтелкедегі су мен тамақ дайындау. Тамақты бір реттік қаптамаға салу қажет.\nЖеке дозиметр дайындау.\nМаршрут аяқталғаннан кейін қалдықтарды жинауға арналған қоқыс қабын дайындау.\nГигиена құралдарын дайындау: сабын, су және құрғақ майлықтар.",
+    "safety.stage1.extraIntro": "Дайындық кезеңінде қосымша мыналар ұсынылады:",
+    "safety.stage1.extraItems":
+      "Автомобильге техникалық қызмет көрсету, қосымша қосалқы дөңгелектер жиынтығын және 100 км жолға есептелген қосымша жанармай ыдысын дайындау.\nТоппен сапарға шыққанда жеке дозиметрия маманын жалдау.\nМаршруттағы мінез-құлық қағидаларымен, соның ішінде темекі шегуге және алкоголь ішуге тыйым салумен танысу.",
+    "safety.stage2.title": "2-кезең — маршруттан өту",
+    "safety.stage2.intro": "Полигон аумағындағы маршруттан өту кезеңіндегі ұсынымдар:",
+    "safety.stage2.items":
+      "Халық үшін радиациялық қауіп төндіретін аймаққа кірердің алдында табиғи қажеттіліктерді өтеу.\nЖеке қорғаныс құралдарын киер алдында олардың зақымданбағанын тексеру.\nЖеке дозиметрді іске қосу.\nБелгіленген қозғалыс траекториясынан ауытқымау.\nХалық үшін радиациялық қауіп төндіретін аймақта өсімдіктерді, минералдарды, металл және басқа заттарды өз бетінше жинауға жол бермеу.\n«Лас» аймаққа бару аяқталғаннан кейін, автомобильге отырар алдында қорғаныс жиынтығын шешіп, қоқыс қабына салу ұсынылады.",
+    "safety.stage2.warning":
+      "«Лас» аймақта табиғи қажеттіліктерді өтеуге, тамақ жеуге және су ішуге тыйым салынады.",
+    "safety.stage3.title": "3-кезең — сапарды аяқтау",
+    "safety.stage3.intro": "Сапарды аяқтау кезеңіндегі ұсынымдар:",
+    "safety.stage3.items":
+      "Пайдаланылған қорғаныс жиынтықтарын, бір реттік ыдыстар мен бөтелкелерді алдын ала тығыз қаптап, кәдеге жаратуды қамтамасыз ету.\nТабиғи қажеттіліктерді өтеу.\nҚол мен бетті жуу, аяқ киімді шаң қалдықтарынан щеткамен тазалау.\nАвтомобильді жанаспайтын жуу тәсілімен жуу.\nДозиметриялық бақылау нәтижелерін тіркеу; көрсеткіштер жоғары болған жағдайда дәрігерге жүгіну.",
+    "safety.disclaimer":
+      "Бұл анықтамалық ұсынымдар баруға рұқсат болып табылмайды, қауіпсіздікке кепілдік бермейді және ресми рұқсатты, нұсқаманы, кәсіби радиациялық бақылауды және жауапты оператордың нұсқауларын алмастырмайды. Ластанған жеке қорғаныс құралдары мен қалдықтар тұрмыстық қоқыс ретінде емес, жауапты ұйымның бекітілген қағидалары бойынша кәдеге жаратылады.",
+    "safety.sourceLabel": "Ғылыми дереккөз",
+    "safety.source":
+      "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. «Семей сынақ полигоны нысандары бойынша туристік маршруттарда туристердің радиациялық қауіпсіздігін қамтамасыз ету жөніндегі ұсынымдарды әзірлеу». Тапсырыс беруші ұсынған қолжазбаның соңғы редакциясы (2026), 16–17-бб. Толық мәтін мен файлды жариялау құқығы бөлек нақтыланады.",
     "footer.about":
       "Портал подготовлен в рамках реализации грантового финансирования исследований молодых ученых по проекту «Жас ғалым» на 2025-2027 годы на тему «AP25794915 Научное исследование экономического потенциала ядерного туризма на примере Семипалатинского испытательного полигона». Данное исследование финансируется Комитетом науки и высшего образования Министерства науки и высшего образования Республики Казахстан.",
     "footer.links.title": "Навигация",
     "footer.links.home": "Басты бет",
     "footer.links.sip": "СИП туралы",
     "footer.links.mapRoutes": "Алаңдар картасы",
-    "footer.links.zones": "Кіру режимі",
-    "footer.links.safety": "Қауіпсіздік",
+    "footer.links.zones": "Маршруттар",
+    "footer.links.safety": "Қауіпсіздік жөніндегі ұсынымдар",
     "footer.links.contacts": "Байланыс",
     "footer.project.title": "Жоба",
     "footer.project.sipInfo": "СИП туралы ақпарат",
@@ -1366,10 +1431,10 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Сайт ресми рұқсатты, СИП аумағына кіру мен сәулелену мониторингінің регламенттерін алмастырмайды. Нақты режимді ҚР заңнамасы, уәкілетті органдар, оператор және рұқсат құжаттары анықтайды. Материалдар анықтамалық.",
     "footer.meta.copyright": "",
     "researchMaps.kicker": "Ғылыми карталар",
-    "researchMaps.title": "PLOS ONE (2023) суреттері",
+    "researchMaps.title": "СИП ғылыми карталары",
     "researchMaps.lead":
-      "Panitskiy A. et al. (2023): СИП контексті, алаңдар мен сынама нүктелерінің сызбасы, копыттыларда радионуклид жинақталу зерттеуі шеңберінде; суреттерде — ¹³⁷Cs, ²⁴¹Am және ⁹⁰Sr таралуы. Төменде сол иллюстрациялар карточка түрінде. Бұл аумаққа шығу қауіпсіздігінің бағасы емес.",
-    "researchMaps.note": "Дереккөз және сурет нөмірі әр карточкада көрсетілген.",
+      "Каталогта PLOS ONE (2023) мақаласындағы екі шолу картасы және Молдажанов пен авторлар ұжымының соңғы қолжазбасындағы (2026) ¹³⁷Cs, ⁹⁰Sr, ²⁴¹Am және ²³⁹⁺²⁴⁰Pu меншікті белсенділігінің төрт картасы бар. Карталар ғылыми-анықтамалық түсіндіруге арналған және бару қауіпсіздігін бағаламайды.",
+    "researchMaps.note": "Әр картаның дереккөзі бөлек көрсетілген; қолжазбадағы жаңа карталар PLOS ONE материалы емес.",
     "researchMaps.open": "Ашу",
     "researchMaps.cardCta": "Картаны ашу",
     "researchMaps.showMore": "Көбірек көрсету",
@@ -1395,11 +1460,11 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Авторлар көрсеткен учаскелердегі ⁹⁰Sr өрісі.",
     "sources.title": "Дереккөздер",
     "sources.lead":
-      "Карталар бөлімінде қолданылған мақала және НЯЦ сайты.",
+      "Екі шолу картасы мен төрт меншікті белсенділік картасының дереккөздері бөлек көрсетілген.",
     "sources.primary": "Негізгі дереккөз",
     "sources.plos.title": "PLOS ONE — мақала және фигуралар (карталар)",
     "sources.plos.desc":
-      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nБұл бөлімдегі карталар мақаладағы фигураларға сәйкес (g001, g002, g003, g004, g006).",
+      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nМақалаға тек g001 және g002 шолу карталары жатады.",
     "sources.openPdf": "PDF ашу",
     "sources.openSection": "Дереккөздерге өту",
     "sources.more": "Кейін қосамыз",
@@ -1623,17 +1688,16 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Жер бетіндегі немесе оған жақын сынақтың шартты орталығы — жарылыс астындағы нүкте. Схемаларда бұл бағдар, рұқсатсыз бару шақыруы емес.",
   },
   en: {
-    brand: "Путеводитель по СИП",
+    brand: "STS Nuclear-Tour",
     "nav.home": "Home",
     "nav.sip": "About STS",
     "nav.map": "Map",
-    "nav.zones": "Access regime",
+    "nav.zones": "Routes",
     "nav.about": "About",
     "nav.researchMaps": "Research maps",
     "nav.maps": "Map library",
     "nav.guide": "Reference guide",
-    "nav.science": "Scientific data",
-    "nav.safety": "Safety",
+    "nav.safety": "Safety recommendations",
     "nav.contacts": "Contacts",
     "nav.more": "More",
     "nav.openMenu": "Open menu",
@@ -1646,7 +1710,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "map.fullPage.modePoi": "Points",
     "map.fullPage.modeRoutes": "Routes",
     "map.fullPage.routesGoogleBanner":
-      "Open the track in Google Maps. The STS map keeps reference markers for orientation only.",
+      "Individual points open in Google Maps. The STS map shows reference markers; unverified driving tracks are not drawn.",
     "header.searchPlaceholder": "Search access regime and routes…",
     "header.explore": "Sections",
     "search.noResults": "No results for",
@@ -1666,6 +1730,18 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Six cards: topic or object, access status, which map points to open. Not a tour product; field access is arranged separately.",
     "routes.disclaimer":
       "Based on publications and schemes (including maps of ¹³⁷Cs, ²⁴¹Am, ²³⁹+²⁴⁰Pu, ⁹⁰Sr). Not an invitation to enter closed areas without authorization—see “Note” in the footer.",
+    "routes.simple.kicker": "Routes",
+    "routes.simple.title": "Simple Routes",
+    "routes.simple.lead":
+      "The cards show verified objects and links to individual points in Google Maps. They do not confirm road passability, safety, or unrestricted access: visits require official coordination, escort, and radiation monitoring.",
+    "routes.simple.cardLabel": "route",
+    "routes.simple.startLabel": "Start",
+    "routes.simple.destinationLabel": "Objects",
+    "routes.simple.importantLabel": "Important",
+    "routes.simple.locationsLabel": "Open individual points",
+    "routes.simple.openMaps": "open in Google Maps",
+    "routes.simple.photoSourceLabel": "Photo",
+    "routes.simple.sourceLabel": "Source",
 
     "routes.card.kurchatov.type": "Overview",
     "routes.card.kurchatov.title": "Kurchatov and research infrastructure",
@@ -1917,25 +1993,37 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "map.geo.poi.atomicLake.title": "Atomic Lake (Chagan Reservoir)",
     "map.geo.poi.atomicLake.desc":
       "A reservoir formed by an underground nuclear explosion in 1965.",
-    "safety.title": "Safety",
-    "safety.rule1":
-      "Do not treat site content as clearance: conditions are set by Kazakhstan’s laws, authorised bodies, the territory operator, and official documents.",
-    "safety.rule2":
-      "Any field movement only under an approved route and escort instructions; PPE and dosimetry per the clearance regime.",
-    "safety.rule3": "Avoid contact with soil, plants, structures, and unknown objects; no sampling.",
-    "safety.rule4": "Water and food only from sources allowed under your clearance; do not use local produce without official assessment.",
-    "safety.rule5":
-      "If protocols are unclear, you leave the approved regime, or warning signs appear—stop field work and follow the organiser’s emergency procedure.",
-    "safety.note":
-      "Public “emergency hotlines” are not listed here; when operating under clearance, use contacts in your paperwork and official channels of competent authorities.",
+    "safety.title": "Safety recommendations",
+    "safety.stage1.title": "Stage 1 — preparing for a visit to the test site",
+    "safety.stage1.intro": "When preparing for a visit to the test site, it is recommended to:",
+    "safety.stage1.items":
+      "Prepare body protection: a disposable coverall with a density of at least 65 g/m², dust-protective shoe covers, a disposable valved respirator, and disposable rubber gloves (preferably 2–3 pairs).\nInspect the protective equipment for defects and replace it if necessary.\nPrepare enough bottled water and food. Food must be packed in disposable packaging.\nPrepare a personal dosimeter.\nPrepare a refuse bag for waste generated after completing the route.\nPrepare hygiene supplies: soap, water, and dry wipes.",
+    "safety.stage1.extraIntro": "Additional preparation recommendations:",
+    "safety.stage1.extraItems":
+      "Service the vehicle and prepare an additional set of spare wheels and an extra fuel container sufficient for 100 km of travel.\nHire a dedicated dosimetry specialist when travelling as a group.\nReview the rules of conduct on the route, including the prohibition on smoking and drinking alcohol.",
+    "safety.stage2.title": "Stage 2 — travelling along the route",
+    "safety.stage2.intro": "Recommendations while travelling along the route across the test site:",
+    "safety.stage2.items":
+      "Attend to natural needs immediately before entering an area that poses a radiation hazard to the public.\nPut on personal protective equipment after checking it for damage.\nStart the personal dosimeter.\nDo not deviate from the prescribed path.\nIn an area that poses a radiation hazard to the public, do not independently collect vegetation, minerals, metal, or any other objects.\nAfter leaving the “dirty” zone and immediately before entering the vehicle, remove the protective equipment and place it in a refuse bag.",
+    "safety.stage2.warning":
+      "In the “dirty” zone, attending to natural needs, eating, and drinking water are prohibited.",
+    "safety.stage3.title": "Stage 3 — completing the visit",
+    "safety.stage3.intro": "Recommendations after completing the visit:",
+    "safety.stage3.items":
+      "Arrange disposal of used protective equipment, disposable tableware, and bottles after sealing the waste securely.\nAttend to natural needs.\nWash hands and face, and brush residual dust from footwear.\nWash the vehicle using a touchless car wash.\nRecord dosimetry results; seek medical advice if elevated readings are recorded.",
+    "safety.disclaimer":
+      "These reference recommendations are not permission to visit, do not guarantee safety, and do not replace official clearance, a safety briefing, professional radiation monitoring, or instructions from the responsible operator. Contaminated PPE and waste must be disposed of under the responsible organisation’s approved procedures, not as household waste.",
+    "safety.sourceLabel": "Scientific source",
+    "safety.source":
+      "Moldazhanov M. B., Martínez-Falcó J., Duiskenova R. Zh. “Development of recommendations for ensuring the radiation safety of tourists on routes to facilities of the Semipalatinsk Test Site.” Final manuscript supplied by the client (2026), pp. 16–17. Rights to publish the full text and file are to be clarified separately.",
     "footer.about":
       "Портал подготовлен в рамках реализации грантового финансирования исследований молодых ученых по проекту «Жас ғалым» на 2025-2027 годы на тему «AP25794915 Научное исследование экономического потенциала ядерного туризма на примере Семипалатинского испытательного полигона». Данное исследование финансируется Комитетом науки и высшего образования Министерства науки и высшего образования Республики Казахстан.",
     "footer.links.title": "Navigation",
     "footer.links.home": "Home",
     "footer.links.sip": "About SIP",
     "footer.links.mapRoutes": "Site map",
-    "footer.links.zones": "Access regime",
-    "footer.links.safety": "Safety",
+    "footer.links.zones": "Routes",
+    "footer.links.safety": "Safety recommendations",
     "footer.links.contacts": "Contacts",
     "footer.project.title": "Project",
     "footer.project.sipInfo": "SIP information",
@@ -1946,10 +2034,10 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "This site does not replace official clearance, STS access and radiation-monitoring regulations. The on-site regime is set by Kazakhstan’s legislation, authorised bodies, the territory operator, and clearance documents. Site content is for reference only.",
     "footer.meta.copyright": "",
     "researchMaps.kicker": "Scientific maps",
-    "researchMaps.title": "Figures from PLOS ONE (2023)",
+    "researchMaps.title": "Scientific maps of the STS",
     "researchMaps.lead":
-      "Panitskiy A. et al. (2023): STS context, pad layout and sampling points within their study of radionuclide accumulation in hoofed animals; figures show fields of ¹³⁷Cs, ²⁴¹Am and ⁹⁰Sr. Below—the same illustrations as cards. Not an assessment of field-access safety.",
-    "researchMaps.note": "Source and figure ID are on each card.",
+      "The catalogue includes two overview maps from PLOS ONE (2023) and four specific-activity maps for ¹³⁷Cs, ⁹⁰Sr, ²⁴¹Am, and ²³⁹⁺²⁴⁰Pu from the final manuscript by Moldazhanov and co-authors (2026). The maps are for scientific reference and do not assess visit safety.",
+    "researchMaps.note": "Each map has its own source; the new manuscript maps are not PLOS ONE material.",
     "researchMaps.open": "Open",
     "researchMaps.cardCta": "Open map",
     "researchMaps.showMore": "Show more",
@@ -1975,11 +2063,11 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "⁹⁰Sr field on the authors’ plots.",
     "sources.title": "Sources",
     "sources.lead":
-      "Paper and NNC site used in the maps section.",
+      "Sources for the two overview maps and four specific-activity maps are listed separately.",
     "sources.primary": "Primary source",
     "sources.plos.title": "PLOS ONE — article and figures (maps)",
     "sources.plos.desc":
-      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nMaps in this section correspond to article figures (g001, g002, g003, g004, g006).",
+      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nOnly the two overview maps, g001 and g002, belong to the article.",
     "sources.openPdf": "Open PDF",
     "sources.openSection": "Open sources",
     "sources.more": "Add later",

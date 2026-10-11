@@ -4,12 +4,12 @@ import type { Lang } from "@/components/i18n/translations";
 export type MapSlug =
   | "sip-overview"
   | "territory-scheme"
-  | "sip-segments-map"
   | "cs137-distribution"
+  | "sr90-distribution"
   | "am241-distribution"
-  | "sr90-distribution";
+  | "pu239240-distribution";
 
-export type MapCode = "G001" | "G002" | "SEG" | "G003" | "G004" | "G006";
+export type MapCode = "G001" | "G002" | "CS137" | "SR90" | "AM241" | "PU239240";
 
 export type L10n = Record<Lang, string>;
 
@@ -20,6 +20,7 @@ export type MapsListItem = {
   shortTitle: L10n;
   description: L10n;
   image: string;
+  sourceKind?: "manuscript";
   sourceShort: L10n;
   cta: L10n;
   prev: MapSlug | null;
@@ -43,6 +44,10 @@ export type MapsListPageContent = {
     publication: L10n;
     description: L10n;
     note: L10n;
+    manuscriptTitle: L10n;
+    manuscriptPublication: L10n;
+    manuscriptDescription: L10n;
+    manuscriptNote: L10n;
     pdfLabel: L10n;
     doiLabel: L10n;
   };

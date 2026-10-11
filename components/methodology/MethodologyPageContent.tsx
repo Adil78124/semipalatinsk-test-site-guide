@@ -25,23 +25,6 @@ const GLOSSARY_IDS = [
   "groundZero",
 ] as const;
 
-const SOURCE_TYPE_KEYS = [
-  "methodology.v2.sourceType1",
-  "methodology.v2.sourceType2",
-  "methodology.v2.sourceType3",
-  "methodology.v2.sourceType4",
-  "methodology.v2.sourceType5",
-] as const;
-
-const USED_KEYS = [
-  "methodology.v2.used1",
-  "methodology.v2.used2",
-  "methodology.v2.used3",
-  "methodology.v2.used4",
-  "methodology.v2.used5",
-  "methodology.v2.used6",
-] as const;
-
 const LIMIT_KEYS = [
   "methodology.v2.limit1",
   "methodology.v2.limit2",
@@ -111,28 +94,6 @@ export function MethodologyPageContent() {
       </section>
 
       <div className="relative z-30 -mt-12 space-y-20 px-8 pb-24">
-        <section className="mx-auto max-w-4xl">
-          <h2 className="mb-6 font-headline text-2xl font-bold text-on-surface md:text-3xl">
-            {t("methodology.v2.sourceTypesTitle")}
-          </h2>
-          <ol className="list-decimal space-y-3 pl-6 text-lg leading-relaxed text-on-surface-variant marker:font-bold marker:text-primary">
-            {SOURCE_TYPE_KEYS.map((k) => (
-              <li key={k}>{t(k)}</li>
-            ))}
-          </ol>
-        </section>
-
-        <section className="mx-auto max-w-4xl">
-          <h2 className="mb-6 font-headline text-2xl font-bold text-on-surface md:text-3xl">
-            {t("methodology.v2.usedTitle")}
-          </h2>
-          <ul className="list-disc space-y-2 pl-6 text-lg leading-relaxed text-on-surface-variant marker:text-secondary">
-            {USED_KEYS.map((k) => (
-              <li key={k}>{t(k)}</li>
-            ))}
-          </ul>
-        </section>
-
         <section id="methodology-limits" className="mx-auto max-w-4xl scroll-mt-24">
           <div className="rounded-r-xl border-l-4 border-primary bg-surface-container-low p-8 shadow-sm">
             <h2 className="mb-6 font-headline text-2xl font-bold text-on-surface md:text-3xl">
