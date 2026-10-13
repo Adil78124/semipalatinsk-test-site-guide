@@ -52,7 +52,31 @@ function GoogleRouteCardView({
         </div>
         <figcaption className="border-b border-outline-variant/14 bg-surface-container-low/70 px-4 py-2 text-[10px] leading-relaxed text-on-surface-variant sm:px-5">
           <span className="font-extrabold text-on-surface">{t("routes.simple.photoSourceLabel")}:</span>{" "}
-          {localize(lang, route.photoSource)}
+          {route.photoSourceUrl ? (
+            <a
+              href={route.photoSourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="underline decoration-outline-variant underline-offset-2"
+            >
+              {localize(lang, route.photoSource)}
+            </a>
+          ) : (
+            localize(lang, route.photoSource)
+          )}
+          {route.photoLicenseUrl ? (
+            <>
+              {" · "}
+              <a
+                href={route.photoLicenseUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline decoration-outline-variant underline-offset-2"
+              >
+                CC BY 2.0
+              </a>
+            </>
+          ) : null}
         </figcaption>
       </figure>
 
@@ -87,18 +111,6 @@ function GoogleRouteCardView({
             <div className="mt-1 font-semibold text-on-surface">{localize(lang, route.end)}</div>
           </div>
         </div>
-
-        {route.warning ? (
-          <div className="rounded-xl border border-tertiary/20 bg-tertiary-container/15 px-3 py-2.5 text-xs leading-relaxed text-on-surface-variant">
-            <div className="mb-1 inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-[0.14em] text-on-surface">
-              <span className="material-symbols-outlined text-[15px]" aria-hidden>
-                info
-              </span>
-              {t("routes.simple.importantLabel")}
-            </div>
-            <div>{localize(lang, route.warning)}</div>
-          </div>
-        ) : null}
 
         <div className="mt-auto space-y-2">
           <div className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-on-surface-variant">

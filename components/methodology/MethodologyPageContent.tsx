@@ -46,6 +46,7 @@ const PRIMARY_SOURCE_IDS = [
   "nnc-main",
   "iaea",
   "panitskiy-2023-plos",
+  "moldazhanov-2026-radiation-safety-tourists",
   "toporova-2021-dose-methods",
   "subbotin-2023-atomic-lake-dose",
   "mukusheva-2024-monitoring-concepts",
@@ -139,18 +140,26 @@ export function MethodologyPageContent() {
           <ol className="list-decimal space-y-6 pl-6 text-lg leading-relaxed text-on-surface-variant marker:font-bold marker:text-primary">
             {PRIMARY_SOURCE_IDS.map((id) => {
               const entry = pubById(id);
-              if (!entry?.url) return null;
-              const href = pubHref(entry);
+              if (!entry) return null;
+              const href = entry.url ? pubHref(entry) : null;
+              const kindKey = `methodology.publications.kind.${entry.kind}` as TranslationKey;
               return (
                 <li key={id} className="pl-1">
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-headline font-bold text-primary underline decoration-primary/25 underline-offset-2 hover:decoration-primary"
-                  >
-                    {entry.title[lang]}
-                  </a>
+                  {href ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-headline font-bold text-primary underline decoration-primary/25 underline-offset-2 hover:decoration-primary"
+                    >
+                      {entry.title[lang]}
+                    </a>
+                  ) : (
+                    <span className="font-headline font-bold text-on-surface">{entry.title[lang]}</span>
+                  )}
+                  <p className="mt-1 text-sm font-semibold text-on-surface-variant">
+                    {[entry.authors, entry.year, t(kindKey)].filter(Boolean).join(" · ")}
+                  </p>
                   <p className="mt-2 text-on-surface-variant">{entry.summary[lang]}</p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     {entry.url ? (

@@ -30,7 +30,7 @@
         "en": "Open map"
       },
       "prev": null,
-      "next": "territory-scheme",
+      "next": "cs137-distribution",
       "page": {
         "category": {
           "ru": "Scientific & Institutional Materials",
@@ -87,92 +87,6 @@
       }
     },
     {
-      "slug": "territory-scheme",
-      "code": "G002",
-      "title": {
-        "ru": "Схема территории СИП и точки отбора проб",
-        "kk": "СИП аумағының сызбасы және сынама нүктелері",
-        "en": "STS scheme and sampling points"
-      },
-      "shortTitle": {
-        "ru": "Схема территории СИП",
-        "kk": "СИП сызбасы",
-        "en": "Territory scheme"
-      },
-      "description": {
-        "ru": "Схематично отображает основные участки территории, исследовательские зоны и точки отбора проб, используемые в научных исследованиях.",
-        "kk": "Негізгі учаскелерді, зерттеу аймақтарын және ғылыми зерттеулерде қолданылатын сынама алу нүктелерін сызбалық түрде көрсетеді.",
-        "en": "A schematic overview of key areas, study zones, and sampling points used in scientific research."
-      },
-      "image": "/journal.pone.0294632.g002.PNG",
-      "sourceShort": {
-        "ru": "PLOS ONE (Panitskiy et al., 2023)",
-        "kk": "PLOS ONE (Panitskiy et al., 2023)",
-        "en": "PLOS ONE (Panitskiy et al., 2023)"
-      },
-      "cta": {
-        "ru": "Открыть карту",
-        "kk": "Картаны ашу",
-        "en": "Open map"
-      },
-      "prev": "sip-overview",
-      "next": "cs137-distribution",
-      "page": {
-        "category": {
-          "ru": "Scientific & Institutional Materials",
-          "kk": "Scientific & Institutional Materials",
-          "en": "Scientific & Institutional Materials"
-        },
-        "subtitle": {
-          "ru": "Схематично отображает основные участки территории, исследовательские зоны и точки отбора проб, используемые в научных исследованиях.",
-          "kk": "СИП аумағының негізгі учаскелерін, зерттеу аймақтарын және сынама нүктелерін сызбалық түрде көрсетеді.",
-          "en": "A schematic view of key areas and sampling points referenced in research materials."
-        },
-        "breadcrumbs": {
-          "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Схема территории СИП и точки отбора проб" }],
-          "kk": [{ "label": "Карталар", "href": "/maps" }, { "label": "СИП аумағының сызбасы және сынама нүктелері" }],
-          "en": [{ "label": "Maps", "href": "/maps" }, { "label": "STS scheme and sampling points" }]
-        },
-        "meta": {
-          "verified": true,
-          "verifiedLabel": {
-            "ru": "Проверяемый источник",
-            "kk": "Тексерілетін дереккөз",
-            "en": "Verifiable source"
-          }
-        },
-        "sections": {
-          "whatShows": {
-            "ru": "Это схема территории СИП из научной публикации, на которой показаны основные исследовательские участки, границы площадок и точки отбора проб.",
-            "kk": "Бұл — ғылыми жарияланымдағы СИП сызбасы: негізгі учаскелер, алаңдар шекаралары және сынама алу нүктелері көрсетілген.",
-            "en": "A scheme from the publication showing key areas, site boundaries, and sampling points."
-          },
-          "whyImportant": {
-            "ru": "Карта помогает увидеть внутреннюю структуру территории и понять, что разные участки имеют разный исследовательский и экологический контекст.",
-            "kk": "Карта аумақтың ішкі құрылымын көрсетіп, әр учаскенің зерттеу және экологиялық контексті әртүрлі екенін түсінуге көмектеседі.",
-            "en": "Helps visualize the internal structure of the territory and understand how different areas have different research and environmental contexts."
-          },
-          "howInterpret": {
-            "ru": "Схема предназначена для понимания структуры территории, а не для самостоятельного выбора пути посещения. Для любых маршрутов важны официальные ограничения и требования безопасности.",
-            "kk": "Сызба аумақ құрылымын түсіну үшін, ал өз бетінше маршрут таңдауға арналмаған. Кез келген маршрут үшін ресми шектеулер мен қауіпсіздік талаптары маңызды.",
-            "en": "Intended to understand the territory structure, not to choose a visit path on your own. For any routes, follow official restrictions and safety requirements."
-          }
-        },
-        "warning": {
-          "title": {
-            "ru": "Важно",
-            "kk": "Маңызды",
-            "en": "Important"
-          },
-          "text": {
-            "ru": "Карты помогают ориентироваться в научных данных и понимать особенности территории. Они не являются разрешением на свободное посещение. При планировании маршрутов приоритет — безопасность и официальные ограничения.",
-            "kk": "Карталар ғылыми деректерді түсінуге көмектеседі, бірақ еркін баруға рұқсат емес. Маршрут жоспарлауда басымдық — қауіпсіздік және ресми шектеулер.",
-            "en": "Maps help orient you in scientific data, but they are not permission for unrestricted access. For route planning, safety and official restrictions come first."
-          }
-        }
-      }
-    },
-    {
       "slug": "cs137-distribution",
       "code": "CS137",
       "title": {
@@ -191,29 +105,29 @@
         "en": "Shows the areas and ranges of ¹³⁷Cs specific activity in the STS soil cover identified by the authors. It is a scientific scheme, not a map of current dose rate or safe tourist routes."
       },
       "image": "/images/scientific-maps/cs137-specific-activity.png",
-      "sourceKind": "manuscript",
+      "sourceKind": "published_article",
       "sourceShort": {
-        "ru": "Молдажанов и соавт., финальная рукопись (2026), рис. 2",
-        "kk": "Молдажанов және т.б., соңғы қолжазба (2026), 2-сурет",
-        "en": "Moldazhanov et al., final manuscript (2026), Fig. 2"
+        "ru": "Молдажанов и соавт., опубликованная статья (2026), рис. 2",
+        "kk": "Молдажанов және т.б., жарияланған мақала (2026), 2-сурет",
+        "en": "Moldazhanov et al., published paper (2026), Fig. 2"
       },
       "cta": {
         "ru": "Открыть карту",
         "kk": "Картаны ашу",
         "en": "Open map"
       },
-      "prev": "territory-scheme",
+      "prev": "sip-overview",
       "next": "sr90-distribution",
       "page": {
         "category": {
-          "ru": "Научные карты из рукописи",
-          "kk": "Қолжазбадағы ғылыми карталар",
-          "en": "Scientific maps from the manuscript"
+          "ru": "Научные карты из опубликованной статьи",
+          "kk": "Жарияланған мақаладағы ғылыми карталар",
+          "en": "Scientific maps from the published paper"
         },
         "subtitle": {
-          "ru": "Области и диапазоны удельной активности ¹³⁷Cs в почвенном покрове по материалам финальной рукописи.",
-          "kk": "Соңғы қолжазба материалдары бойынша топырақ жамылғысындағы ¹³⁷Cs меншікті белсенділігінің аймақтары мен ауқымдары.",
-          "en": "Areas and ranges of ¹³⁷Cs specific activity in the soil cover, as presented in the final manuscript."
+          "ru": "Области и диапазоны удельной активности ¹³⁷Cs в почвенном покрове по материалам опубликованной статьи.",
+          "kk": "Жарияланған мақала материалдары бойынша топырақ жамылғысындағы ¹³⁷Cs меншікті белсенділігінің аймақтары мен ауқымдары.",
+          "en": "Areas and ranges of ¹³⁷Cs specific activity in the soil cover, as presented in the published paper."
         },
         "breadcrumbs": {
           "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Удельная активность ¹³⁷Cs" }],
@@ -278,11 +192,11 @@
         "en": "Shows the areas and ranges of ⁹⁰Sr specific activity in the STS soil cover identified by the authors. The map is intended for scientific interpretation, not for assessing the safety of a particular route."
       },
       "image": "/images/scientific-maps/sr90-specific-activity.png",
-      "sourceKind": "manuscript",
+      "sourceKind": "published_article",
       "sourceShort": {
-        "ru": "Молдажанов и соавт., финальная рукопись (2026), рис. 2",
-        "kk": "Молдажанов және т.б., соңғы қолжазба (2026), 2-сурет",
-        "en": "Moldazhanov et al., final manuscript (2026), Fig. 2"
+        "ru": "Молдажанов и соавт., опубликованная статья (2026), рис. 2",
+        "kk": "Молдажанов және т.б., жарияланған мақала (2026), 2-сурет",
+        "en": "Moldazhanov et al., published paper (2026), Fig. 2"
       },
       "cta": {
         "ru": "Открыть карту",
@@ -293,14 +207,14 @@
       "next": "am241-distribution",
       "page": {
         "category": {
-          "ru": "Научные карты из рукописи",
-          "kk": "Қолжазбадағы ғылыми карталар",
-          "en": "Scientific maps from the manuscript"
+          "ru": "Научные карты из опубликованной статьи",
+          "kk": "Жарияланған мақаладағы ғылыми карталар",
+          "en": "Scientific maps from the published paper"
         },
         "subtitle": {
-          "ru": "Области и диапазоны удельной активности ⁹⁰Sr в почвенном покрове по материалам финальной рукописи.",
-          "kk": "Соңғы қолжазба материалдары бойынша топырақ жамылғысындағы ⁹⁰Sr меншікті белсенділігінің аймақтары мен ауқымдары.",
-          "en": "Areas and ranges of ⁹⁰Sr specific activity in the soil cover, as presented in the final manuscript."
+          "ru": "Области и диапазоны удельной активности ⁹⁰Sr в почвенном покрове по материалам опубликованной статьи.",
+          "kk": "Жарияланған мақала материалдары бойынша топырақ жамылғысындағы ⁹⁰Sr меншікті белсенділігінің аймақтары мен ауқымдары.",
+          "en": "Areas and ranges of ⁹⁰Sr specific activity in the soil cover, as presented in the published paper."
         },
         "breadcrumbs": {
           "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Удельная активность ⁹⁰Sr" }],
@@ -365,11 +279,11 @@
         "en": "Shows the areas and ranges of ²⁴¹Am specific activity in the STS soil cover identified by the authors. The scheme is intended for reading scientific data, not for independently selecting a route."
       },
       "image": "/images/scientific-maps/am241-specific-activity.png",
-      "sourceKind": "manuscript",
+      "sourceKind": "published_article",
       "sourceShort": {
-        "ru": "Молдажанов и соавт., финальная рукопись (2026), рис. 2",
-        "kk": "Молдажанов және т.б., соңғы қолжазба (2026), 2-сурет",
-        "en": "Moldazhanov et al., final manuscript (2026), Fig. 2"
+        "ru": "Молдажанов и соавт., опубликованная статья (2026), рис. 2",
+        "kk": "Молдажанов және т.б., жарияланған мақала (2026), 2-сурет",
+        "en": "Moldazhanov et al., published paper (2026), Fig. 2"
       },
       "cta": {
         "ru": "Открыть карту",
@@ -380,14 +294,14 @@
       "next": "pu239240-distribution",
       "page": {
         "category": {
-          "ru": "Научные карты из рукописи",
-          "kk": "Қолжазбадағы ғылыми карталар",
-          "en": "Scientific maps from the manuscript"
+          "ru": "Научные карты из опубликованной статьи",
+          "kk": "Жарияланған мақаладағы ғылыми карталар",
+          "en": "Scientific maps from the published paper"
         },
         "subtitle": {
-          "ru": "Области и диапазоны удельной активности ²⁴¹Am в почвенном покрове по материалам финальной рукописи.",
-          "kk": "Соңғы қолжазба материалдары бойынша топырақ жамылғысындағы ²⁴¹Am меншікті белсенділігінің аймақтары мен ауқымдары.",
-          "en": "Areas and ranges of ²⁴¹Am specific activity in the soil cover, as presented in the final manuscript."
+          "ru": "Области и диапазоны удельной активности ²⁴¹Am в почвенном покрове по материалам опубликованной статьи.",
+          "kk": "Жарияланған мақала материалдары бойынша топырақ жамылғысындағы ²⁴¹Am меншікті белсенділігінің аймақтары мен ауқымдары.",
+          "en": "Areas and ranges of ²⁴¹Am specific activity in the soil cover, as presented in the published paper."
         },
         "breadcrumbs": {
           "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Удельная активность ²⁴¹Am" }],
@@ -452,11 +366,11 @@
         "en": "Shows the areas and ranges of ²³⁹⁺²⁴⁰Pu specific activity in the STS soil cover identified by the authors. It is a reference scientific scheme, not an assessment of individual radiation risk."
       },
       "image": "/images/scientific-maps/pu239-240-specific-activity.png",
-      "sourceKind": "manuscript",
+      "sourceKind": "published_article",
       "sourceShort": {
-        "ru": "Молдажанов и соавт., финальная рукопись (2026), рис. 2",
-        "kk": "Молдажанов және т.б., соңғы қолжазба (2026), 2-сурет",
-        "en": "Moldazhanov et al., final manuscript (2026), Fig. 2"
+        "ru": "Молдажанов и соавт., опубликованная статья (2026), рис. 2",
+        "kk": "Молдажанов және т.б., жарияланған мақала (2026), 2-сурет",
+        "en": "Moldazhanov et al., published paper (2026), Fig. 2"
       },
       "cta": {
         "ru": "Открыть карту",
@@ -467,14 +381,14 @@
       "next": null,
       "page": {
         "category": {
-          "ru": "Научные карты из рукописи",
-          "kk": "Қолжазбадағы ғылыми карталар",
-          "en": "Scientific maps from the manuscript"
+          "ru": "Научные карты из опубликованной статьи",
+          "kk": "Жарияланған мақаладағы ғылыми карталар",
+          "en": "Scientific maps from the published paper"
         },
         "subtitle": {
-          "ru": "Области и диапазоны удельной активности ²³⁹⁺²⁴⁰Pu в почвенном покрове по материалам финальной рукописи.",
-          "kk": "Соңғы қолжазба материалдары бойынша топырақ жамылғысындағы ²³⁹⁺²⁴⁰Pu меншікті белсенділігінің аймақтары мен ауқымдары.",
-          "en": "Areas and ranges of ²³⁹⁺²⁴⁰Pu specific activity in the soil cover, as presented in the final manuscript."
+          "ru": "Области и диапазоны удельной активности ²³⁹⁺²⁴⁰Pu в почвенном покрове по материалам опубликованной статьи.",
+          "kk": "Жарияланған мақала материалдары бойынша топырақ жамылғысындағы ²³⁹⁺²⁴⁰Pu меншікті белсенділігінің аймақтары мен ауқымдары.",
+          "en": "Areas and ranges of ²³⁹⁺²⁴⁰Pu specific activity in the soil cover, as presented in the published paper."
         },
         "breadcrumbs": {
           "ru": [{ "label": "Карты", "href": "/maps" }, { "label": "Удельная активность ²³⁹⁺²⁴⁰Pu" }],
@@ -551,14 +465,14 @@
         "en": "Scientific sources"
       },
       "text": {
-        "ru": "Каталог объединяет две карты из статьи PLOS ONE и четыре карты из финальной рукописи Молдажанова и соавторов. Атрибуция и ссылки указаны отдельно для каждой группы материалов.",
-        "kk": "Каталог PLOS ONE мақаласындағы екі картаны және Молдажанов пен авторлар ұжымының соңғы қолжазбасындағы төрт картаны біріктіреді. Атрибуция мен сілтемелер әр материал тобы үшін бөлек берілген.",
-        "en": "The catalogue combines two maps from a PLOS ONE article and four maps from the final manuscript by Moldazhanov and co-authors. Attribution and links are stated separately for each group."
+        "ru": "Каталог объединяет одну карту из статьи PLOS ONE и четыре карты из опубликованной статьи Молдажанова и соавторов. Атрибуция и ссылки указаны отдельно для каждой группы материалов.",
+        "kk": "Каталог PLOS ONE мақаласындағы бір картаны және Молдажанов пен авторлар ұжымының жарияланған мақаласындағы төрт картаны біріктіреді. Атрибуция мен сілтемелер әр материал тобы үшін бөлек берілген.",
+        "en": "The catalogue combines one map from a PLOS ONE article and four maps from the published paper by Moldazhanov and co-authors. Attribution and links are stated separately for each group."
       },
       "mainSourceTitle": {
-        "ru": "Источник первых двух карт",
-        "kk": "Алғашқы екі картаның дереккөзі",
-        "en": "Source of the first two maps"
+        "ru": "Источник обзорной карты",
+        "kk": "Шолу картасының дереккөзі",
+        "en": "Source of the overview map"
       },
       "publication": {
         "ru": "PLOS ONE — статья и фигуры (карты)",
@@ -571,9 +485,9 @@
         "en": "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site."
       },
       "note": {
-        "ru": "К статье PLOS ONE относятся только карты g001 и g002.",
-        "kk": "PLOS ONE мақаласына тек g001 және g002 карталары жатады.",
-        "en": "Only maps g001 and g002 belong to the PLOS ONE article."
+        "ru": "В каталоге отображается обзорная карта g001 из статьи PLOS ONE.",
+        "kk": "Каталогта PLOS ONE мақаласындағы g001 шолу картасы көрсетіледі.",
+        "en": "The catalogue displays the g001 overview map from the PLOS ONE article."
       },
       "manuscriptTitle": {
         "ru": "Источник четырёх карт удельной активности",
@@ -581,9 +495,9 @@
         "en": "Source of the four specific-activity maps"
       },
       "manuscriptPublication": {
-        "ru": "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — финальная рукопись (2026), рисунок 2",
-        "kk": "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — соңғы қолжазба (2026), 2-сурет",
-        "en": "Moldazhanov M. B., Martínez-Falcó J., Duiskenova R. Zh. — final manuscript (2026), Figure 2"
+        "ru": "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — опубликованная статья (2026), рисунок 2",
+        "kk": "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — жарияланған мақала (2026), 2-сурет",
+        "en": "Moldazhanov M. B., Martínez-Falcó J., Duiskenova R. Zh. — published paper (2026), Figure 2"
       },
       "manuscriptDescription": {
         "ru": "Карты подготовлены авторами на основе источников [3, 9, 10]: материалов комплексного экологического обследования СИП, материалов НЯЦ РК и Zenodo.",
@@ -591,9 +505,9 @@
         "en": "The authors prepared the maps from sources [3, 9, 10]: materials from the comprehensive environmental survey of the STS, materials of Kazakhstan's NNC, and Zenodo."
       },
       "manuscriptNote": {
-        "ru": "Рукопись не опубликована; DOI для неё не присваивается. Права на публичное размещение изображений необходимо согласовать с автором или правообладателем.",
-        "kk": "Қолжазба жарияланбаған; оған DOI берілмеген. Кескіндерді ашық жариялау құқығын автормен немесе құқық иесімен келісу қажет.",
-        "en": "The manuscript is unpublished and has no assigned DOI. Rights for public use of the images must be agreed with the author or rights holder."
+        "ru": "Статья опубликована в журнале «Туризм, досуг и гостеприимство», 2026, №3(14), с. 28–45. DOI: 10.59649/2959-5185-2026-3-28-45.",
+        "kk": "Мақала «Туризм, демалыс және қонақжайлылық» журналында жарияланған, 2026, №3(14), 28–45-бб. DOI: 10.59649/2959-5185-2026-3-28-45.",
+        "en": "Published in Tourism, Leisure and Hospitality, 2026, No. 3(14), pp. 28–45. DOI: 10.59649/2959-5185-2026-3-28-45."
       },
       "pdfLabel": {
         "ru": "Открыть PDF",

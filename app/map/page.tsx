@@ -7,6 +7,7 @@ import { SipLeafletMap } from "@/components/map/SipLeafletMap";
 import { I18nContext } from "@/components/providers/AppProviders";
 import type { TranslationKey } from "@/components/i18n/translations";
 import { GoogleRoutesSection } from "@/components/sections/GoogleRoutesSection";
+import { NncTechnicalToursSection } from "@/components/sections/NncTechnicalToursSection";
 import { routes } from "@/data/routes/googleRoutes";
 
 const fallbackT = (key: TranslationKey) => String(key);
@@ -97,6 +98,7 @@ function FullMapPageInner() {
             </div>
           </div>
           <GoogleRoutesSection routes={routes} className="border-t border-outline-variant/10" />
+          <NncTechnicalToursSection />
         </main>
       )}
 

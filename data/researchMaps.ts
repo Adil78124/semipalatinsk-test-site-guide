@@ -1,9 +1,8 @@
 import type { TranslationKey } from "@/components/i18n/translations";
 
-export type ResearchMapId = "g001" | "g002" | "g003" | "g004" | "g006";
+export type ResearchMapId = "g001" | "g003" | "g004" | "g006";
 export type ResearchMapSlug =
   | "sip-overview"
-  | "territory-scheme"
   | "cs137-distribution"
   | "am241-distribution"
   | "sr90-distribution";
@@ -24,14 +23,6 @@ export const RESEARCH_MAPS: ResearchMapItem[] = [
     imageSrc: "/journal.pone.0294632.g001.PNG",
     titleKey: "researchMaps.g001.title",
     bodyKey: "researchMaps.g001.body",
-    sourceKey: "researchMaps.source.plos",
-  },
-  {
-    id: "g002",
-    slug: "territory-scheme",
-    imageSrc: "/journal.pone.0294632.g002.PNG",
-    titleKey: "researchMaps.g002.title",
-    bodyKey: "researchMaps.g002.body",
     sourceKey: "researchMaps.source.plos",
   },
   {

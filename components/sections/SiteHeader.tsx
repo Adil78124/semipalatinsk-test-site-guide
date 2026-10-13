@@ -71,12 +71,11 @@ export function SiteHeader() {
 
   const moreNavItems = useMemo(
     (): NavItem[] => [
-      { href: sectionHref("guide"), labelKey: "nav.guide", useNextLink: false },
       { href: "/contacts", labelKey: "nav.contacts", useNextLink: true },
       { href: "/maps", labelKey: "nav.maps", useNextLink: true },
       { href: "/methodology", labelKey: "footer.links.methodology", useNextLink: true },
     ],
-    [sectionHref],
+    [],
   );
 
   const mobileNavItems = useMemo(
@@ -149,9 +148,14 @@ export function SiteHeader() {
         <div className="flex items-center gap-4 flex-nowrap">
           <a
             href={pathname === "/" ? "#home" : "/"}
-            className="min-w-0 shrink whitespace-nowrap font-['Manrope'] text-[15px] font-extrabold tracking-tighter text-[#0d631b] sm:text-lg lg:shrink-0 xl:text-xl dark:text-[#2e7d32]"
+            className="flex min-w-0 max-w-[145px] shrink flex-col sm:max-w-[280px] lg:shrink-0"
           >
-            {t("brand")}
+            <span className="whitespace-nowrap font-['Manrope'] text-[17px] font-extrabold tracking-tighter text-[#0d631b] sm:text-xl xl:text-[22px] dark:text-[#2e7d32]">
+              {t("brand")}
+            </span>
+            <span className="block max-w-full truncate font-['Inter'] text-[9px] font-semibold leading-tight tracking-wide text-on-surface-variant/75 sm:text-[10px]">
+              {t("brandSubtitle")}
+            </span>
           </a>
 
           <div className="hidden lg:flex flex-1 min-w-0 items-center justify-center gap-x-2 xl:gap-x-3">

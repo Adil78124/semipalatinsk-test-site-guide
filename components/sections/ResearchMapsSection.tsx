@@ -15,7 +15,7 @@ export function ResearchMapsSection() {
 
   const [expanded, setExpanded] = useState(false);
   const allMaps = mapsContent.maps;
-  const visible = useMemo(() => (expanded ? allMaps : allMaps.slice(0, 2)), [expanded, allMaps]);
+  const visible = useMemo(() => (expanded ? allMaps : allMaps.slice(0, 1)), [expanded, allMaps]);
 
   return (
     <section id="research-maps" className="py-24 bg-surface-container-low">

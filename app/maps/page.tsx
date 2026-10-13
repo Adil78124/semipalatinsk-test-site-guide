@@ -8,15 +8,16 @@ import { PUBLICATIONS_CATALOG } from "@/data/publicationsCatalog";
 
 const fallbackT = (key: TranslationKey) => String(key);
 const ADDITIONAL_SOURCE_IDS = [
+  "moldazhanov-2026-radiation-safety-tourists",
   "toporova-2021-dose-methods",
   "subbotin-2023-atomic-lake-dose",
   "mukusheva-2024-monitoring-concepts",
 ] as const;
 
 function sourceLabels(lang: "ru" | "kk" | "en") {
-  if (lang === "en") return { title: "Additional scientific publications", article: "Article", pdf: "PDF", survey: "Environmental survey", nnc: "Kazakhstan NNC" };
-  if (lang === "kk") return { title: "Қосымша ғылыми жарияланымдар", article: "Мақала", pdf: "PDF", survey: "Экологиялық зерттеу", nnc: "ҚР ҰЯО" };
-  return { title: "Дополнительные научные публикации", article: "Статья", pdf: "PDF", survey: "Экологическое обследование", nnc: "НЯЦ РК" };
+  if (lang === "en") return { title: "Additional scientific publications", article: "Article", pdf: "PDF", survey: "Environmental survey", nnc: "Kazakhstan NNC", journal: "Tourism, Leisure and Hospitality" };
+  if (lang === "kk") return { title: "Қосымша ғылыми жарияланымдар", article: "Мақала", pdf: "PDF", survey: "Экологиялық зерттеу", nnc: "ҚР ҰЯО", journal: "Туризм, демалыс және қонақжайлылық" };
+  return { title: "Дополнительные научные публикации", article: "Статья", pdf: "PDF", survey: "Экологическое обследование", nnc: "НЯЦ РК", journal: "Туризм, досуг и гостеприимство" };
 }
 
 export default function MapsIndexPage() {
@@ -169,7 +170,7 @@ export default function MapsIndexPage() {
                       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                         <div className="min-w-0">
                           <p className="text-xs font-bold uppercase tracking-widest text-outline opacity-70">
-                            {entry.year} · Вестник НЯЦ РК
+                            {entry.year} · {entry.id === "moldazhanov-2026-radiation-safety-tourists" ? labels.journal : "Вестник НЯЦ РК"}
                           </p>
                           <h5 className="mt-2 font-headline text-lg font-bold leading-snug text-on-surface">
                             {entry.title[lang]}

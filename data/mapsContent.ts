@@ -3,13 +3,12 @@ import type { Lang } from "@/components/i18n/translations";
 
 export type MapSlug =
   | "sip-overview"
-  | "territory-scheme"
   | "cs137-distribution"
   | "sr90-distribution"
   | "am241-distribution"
   | "pu239240-distribution";
 
-export type MapCode = "G001" | "G002" | "CS137" | "SR90" | "AM241" | "PU239240";
+export type MapCode = "G001" | "CS137" | "SR90" | "AM241" | "PU239240";
 
 export type L10n = Record<Lang, string>;
 
@@ -20,7 +19,7 @@ export type MapsListItem = {
   shortTitle: L10n;
   description: L10n;
   image: string;
-  sourceKind?: "manuscript";
+  sourceKind?: "published_article";
   sourceShort: L10n;
   cta: L10n;
   prev: MapSlug | null;
@@ -70,12 +69,12 @@ export function getMapBySlug(slug: string): MapsListItem | null {
 }
 
 export function getPrevMap(map: MapsListItem): MapsListItem | null {
-  if (!map.prev) return null;
-  return getMapBySlug(map.prev);
+  const index = mapsContent.maps.findIndex((item) => item.slug === map.slug);
+  return index > 0 ? mapsContent.maps[index - 1] : null;
 }
 
 export function getNextMap(map: MapsListItem): MapsListItem | null {
-  if (!map.next) return null;
-  return getMapBySlug(map.next);
+  const index = mapsContent.maps.findIndex((item) => item.slug === map.slug);
+  return index >= 0 && index < mapsContent.maps.length - 1 ? mapsContent.maps[index + 1] : null;
 }
 

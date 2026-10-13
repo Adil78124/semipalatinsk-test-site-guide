@@ -6,7 +6,6 @@ export { ZonesSection } from "./ZonesSection";
 export { MapSection } from "./MapSection";
 export { ResearchMapsSection } from "./ResearchMapsSection";
 export { RoutesSection } from "./RoutesSection";
-export { GuideSection } from "./GuideSection";
 export { ScienceFactsSection } from "./ScienceFactsSection";
 export { SafetySection } from "./SafetySection";
 export { MethodologyTeaserSection } from "./MethodologyTeaserSection";

@@ -2,6 +2,7 @@ export type Lang = "ru" | "kk" | "en";
 
 export type TranslationKey =
   | "brand"
+  | "brandSubtitle"
   | "nav.home"
   | "nav.sip"
   | "nav.map"
@@ -294,8 +295,6 @@ export type TranslationKey =
   | "researchMaps.source.plos"
   | "researchMaps.g001.title"
   | "researchMaps.g001.body"
-  | "researchMaps.g002.title"
-  | "researchMaps.g002.body"
   | "researchMaps.g003.title"
   | "researchMaps.g003.body"
   | "researchMaps.g004.title"
@@ -420,6 +419,7 @@ export type TranslationKey =
   | "methodology.publications.title"
   | "methodology.publications.lead"
   | "methodology.publications.kind.peer_reviewed"
+  | "methodology.publications.kind.manuscript"
   | "methodology.publications.kind.institutional"
   | "methodology.publications.kind.reference_portal"
   | "methodology.glossary.title"
@@ -484,6 +484,7 @@ export type TranslationKey =
 export const translations: Record<Lang, Record<TranslationKey, string>> = {
   ru: {
     brand: "STS Nuclear-Tour",
+    brandSubtitle: "Путеводитель по СИП",
     "nav.home": "Главная",
     "nav.sip": "О СИП",
     "nav.map": "Карта",
@@ -810,7 +811,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Эти справочные рекомендации не являются разрешением на посещение, не гарантируют безопасность и не заменяют официальный допуск, инструктаж, профессиональный радиационный контроль и указания ответственного оператора. Загрязнённые СИЗ и отходы утилизируются по утверждённым правилам ответственной организации, а не как бытовой мусор.",
     "safety.sourceLabel": "Научный источник",
     "safety.source":
-      "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. «Разработка рекомендаций по обеспечению радиационной безопасности туристов на маршрутах по объектам Семипалатинского испытательного полигона». Финальная редакция рукописи, предоставленная заказчиком (2026), стр. 16–17. Права на публичное размещение полного текста и файла уточняются отдельно.",
+      "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. «Разработка рекомендаций по обеспечению радиационной безопасности туристов на маршрутах по объектам Семипалатинского испытательного полигона». «Туризм, досуг и гостеприимство», 2026, №3(14), с. 28–45. DOI: 10.59649/2959-5185-2026-3-28-45.",
     "footer.about":
       "Портал подготовлен в рамках реализации грантового финансирования исследований молодых ученых по проекту «Жас ғалым» на 2025-2027 годы на тему «AP25794915 Научное исследование экономического потенциала ядерного туризма на примере Семипалатинского испытательного полигона». Данное исследование финансируется Комитетом науки и высшего образования Министерства науки и высшего образования Республики Казахстан.",
     "footer.links.title": "Навигация",
@@ -831,8 +832,8 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "researchMaps.kicker": "Научные карты",
     "researchMaps.title": "Научные карты СИП",
     "researchMaps.lead":
-      "Каталог включает две обзорные карты из PLOS ONE (2023) и четыре карты удельной активности ¹³⁷Cs, ⁹⁰Sr, ²⁴¹Am и ²³⁹⁺²⁴⁰Pu из финальной рукописи Молдажанова и соавторов (2026). Карты предназначены для научно-справочной интерпретации и не оценивают безопасность посещения.",
-    "researchMaps.note": "Источник каждой карты указан отдельно; новые карты из рукописи не относятся к PLOS ONE.",
+      "Каталог включает одну обзорную карту из PLOS ONE (2023) и четыре карты удельной активности ¹³⁷Cs, ⁹⁰Sr, ²⁴¹Am и ²³⁹⁺²⁴⁰Pu из статьи Молдажанова и соавторов (2026). Карты предназначены для научно-справочной интерпретации и не оценивают безопасность посещения.",
+    "researchMaps.note": "Источник каждой карты указан отдельно; карты из статьи Молдажанова и соавторов не относятся к PLOS ONE.",
     "researchMaps.open": "Открыть",
     "researchMaps.cardCta": "Открыть карту",
     "researchMaps.showMore": "Показать больше",
@@ -844,9 +845,6 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "researchMaps.g001.title": "Обзорное расположение СИП в Казахстане",
     "researchMaps.g001.body":
       "Положение СИП в Казахстане и соседние регионы (как в статье).",
-    "researchMaps.g002.title": "Схема территории СИП и точки отбора проб",
-    "researchMaps.g002.body":
-      "Участки и точки отбора проб по данным авторов.",
     "researchMaps.g003.title": "Распределение Cs-137 (цезий‑137)",
     "researchMaps.g003.body":
       "Поле ¹³⁷Cs по статье; сравнивайте масштаб и легенду с PDF.",
@@ -858,11 +856,11 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Поле ⁹⁰Sr на участках, показанных авторами.",
     "sources.title": "Источники",
     "sources.lead":
-      "Источники двух обзорных карт и четырёх карт удельной активности указаны раздельно.",
+      "Источники одной обзорной карты и четырёх карт удельной активности указаны раздельно.",
     "sources.primary": "Основной источник",
     "sources.plos.title": "PLOS ONE — статья и фигуры (карты)",
     "sources.plos.desc":
-      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nК статье относятся только две обзорные карты: g001 и g002.",
+      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nВ каталоге отображается обзорная карта g001.",
     "sources.openPdf": "Открыть PDF",
     "sources.openSection": "Открыть источники",
     "sources.more": "Добавим позже",
@@ -1008,6 +1006,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "methodology.publications.lead":
       "Ниже — источники, которые проект уже использует. Для статей приведены DOI или прямые ссылки; институциональные ресурсы — как справочные порталы.",
     "methodology.publications.kind.peer_reviewed": "Рецензируемая публикация",
+    "methodology.publications.kind.manuscript": "Финальная научная рукопись",
     "methodology.publications.kind.institutional": "Институциональный ресурс",
     "methodology.publications.kind.reference_portal": "Справочный портал",
     "methodology.glossary.title": "Глоссарий",
@@ -1086,6 +1085,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
   },
   kk: {
     brand: "STS Nuclear-Tour",
+    brandSubtitle: "Семей сынақ полигоны бойынша жолсілтеме",
     "nav.home": "Басты бет",
     "nav.sip": "СИП туралы",
     "nav.map": "Карта",
@@ -1412,7 +1412,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Бұл анықтамалық ұсынымдар баруға рұқсат болып табылмайды, қауіпсіздікке кепілдік бермейді және ресми рұқсатты, нұсқаманы, кәсіби радиациялық бақылауды және жауапты оператордың нұсқауларын алмастырмайды. Ластанған жеке қорғаныс құралдары мен қалдықтар тұрмыстық қоқыс ретінде емес, жауапты ұйымның бекітілген қағидалары бойынша кәдеге жаратылады.",
     "safety.sourceLabel": "Ғылыми дереккөз",
     "safety.source":
-      "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. «Семей сынақ полигоны нысандары бойынша туристік маршруттарда туристердің радиациялық қауіпсіздігін қамтамасыз ету жөніндегі ұсынымдарды әзірлеу». Тапсырыс беруші ұсынған қолжазбаның соңғы редакциясы (2026), 16–17-бб. Толық мәтін мен файлды жариялау құқығы бөлек нақтыланады.",
+      "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. «Семей сынақ полигоны нысандары бойынша туристік маршруттарда туристердің радиациялық қауіпсіздігін қамтамасыз ету жөніндегі ұсынымдарды әзірлеу». «Туризм, демалыс және қонақжайлылық», 2026, №3(14), 28–45-бб. DOI: 10.59649/2959-5185-2026-3-28-45.",
     "footer.about":
       "Портал подготовлен в рамках реализации грантового финансирования исследований молодых ученых по проекту «Жас ғалым» на 2025-2027 годы на тему «AP25794915 Научное исследование экономического потенциала ядерного туризма на примере Семипалатинского испытательного полигона». Данное исследование финансируется Комитетом науки и высшего образования Министерства науки и высшего образования Республики Казахстан.",
     "footer.links.title": "Навигация",
@@ -1433,8 +1433,8 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "researchMaps.kicker": "Ғылыми карталар",
     "researchMaps.title": "СИП ғылыми карталары",
     "researchMaps.lead":
-      "Каталогта PLOS ONE (2023) мақаласындағы екі шолу картасы және Молдажанов пен авторлар ұжымының соңғы қолжазбасындағы (2026) ¹³⁷Cs, ⁹⁰Sr, ²⁴¹Am және ²³⁹⁺²⁴⁰Pu меншікті белсенділігінің төрт картасы бар. Карталар ғылыми-анықтамалық түсіндіруге арналған және бару қауіпсіздігін бағаламайды.",
-    "researchMaps.note": "Әр картаның дереккөзі бөлек көрсетілген; қолжазбадағы жаңа карталар PLOS ONE материалы емес.",
+      "Каталогта PLOS ONE (2023) мақаласындағы бір шолу картасы және Молдажанов пен авторлар ұжымының мақаласындағы (2026) ¹³⁷Cs, ⁹⁰Sr, ²⁴¹Am және ²³⁹⁺²⁴⁰Pu меншікті белсенділігінің төрт картасы бар. Карталар ғылыми-анықтамалық түсіндіруге арналған және бару қауіпсіздігін бағаламайды.",
+    "researchMaps.note": "Әр картаның дереккөзі бөлек көрсетілген; Молдажанов пен бірлескен авторлар мақаласындағы карталар PLOS ONE материалы емес.",
     "researchMaps.open": "Ашу",
     "researchMaps.cardCta": "Картаны ашу",
     "researchMaps.showMore": "Көбірек көрсету",
@@ -1446,9 +1446,6 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "researchMaps.g001.title": "СИП-тың Қазақстандағы жалпы орналасуы",
     "researchMaps.g001.body":
       "СИП Қазақстандағы орны және көршілес өңірлер (мақаладағыдай).",
-    "researchMaps.g002.title": "СИП аумағының сызбасы және сынама нүктелері",
-    "researchMaps.g002.body":
-      "Авторлардың учаскелері мен сынама нүктелері.",
     "researchMaps.g003.title": "Cs-137 (цезий‑137) таралуы",
     "researchMaps.g003.body":
       "¹³⁷Cs өрісі мақала бойынша; масштаб пен легенданы PDF-пен салыстырыңыз.",
@@ -1460,11 +1457,11 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "Авторлар көрсеткен учаскелердегі ⁹⁰Sr өрісі.",
     "sources.title": "Дереккөздер",
     "sources.lead":
-      "Екі шолу картасы мен төрт меншікті белсенділік картасының дереккөздері бөлек көрсетілген.",
+      "Бір шолу картасы мен төрт меншікті белсенділік картасының дереккөздері бөлек көрсетілген.",
     "sources.primary": "Негізгі дереккөз",
     "sources.plos.title": "PLOS ONE — мақала және фигуралар (карталар)",
     "sources.plos.desc":
-      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nМақалаға тек g001 және g002 шолу карталары жатады.",
+      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nКаталогта g001 шолу картасы көрсетіледі.",
     "sources.openPdf": "PDF ашу",
     "sources.openSection": "Дереккөздерге өту",
     "sources.more": "Кейін қосамыз",
@@ -1610,6 +1607,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "methodology.publications.lead":
       "Төменде жоба қазірдің өзінде пайдаланатын дереккөздер. Мақалалар үшін DOI немесе тікелей сілтемелер; институциялық ресурстар — анықтамалық портал ретінде.",
     "methodology.publications.kind.peer_reviewed": "Рецензияланған жариялама",
+    "methodology.publications.kind.manuscript": "Соңғы ғылыми қолжазба",
     "methodology.publications.kind.institutional": "Институциялық ресурс",
     "methodology.publications.kind.reference_portal": "Анықтамалық портал",
     "methodology.glossary.title": "Глоссарий",
@@ -1689,6 +1687,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
   },
   en: {
     brand: "STS Nuclear-Tour",
+    brandSubtitle: "Semipalatinsk Test Site Guide",
     "nav.home": "Home",
     "nav.sip": "About STS",
     "nav.map": "Map",
@@ -2015,7 +2014,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "These reference recommendations are not permission to visit, do not guarantee safety, and do not replace official clearance, a safety briefing, professional radiation monitoring, or instructions from the responsible operator. Contaminated PPE and waste must be disposed of under the responsible organisation’s approved procedures, not as household waste.",
     "safety.sourceLabel": "Scientific source",
     "safety.source":
-      "Moldazhanov M. B., Martínez-Falcó J., Duiskenova R. Zh. “Development of recommendations for ensuring the radiation safety of tourists on routes to facilities of the Semipalatinsk Test Site.” Final manuscript supplied by the client (2026), pp. 16–17. Rights to publish the full text and file are to be clarified separately.",
+      "Moldazhanov M. B., Martínez-Falcó J., Duiskenova R. Zh. “Development of recommendations for ensuring the radiation safety of tourists on routes to facilities of the Semipalatinsk Test Site.” Tourism, Leisure and Hospitality, 2026, No. 3(14), pp. 28–45. DOI: 10.59649/2959-5185-2026-3-28-45.",
     "footer.about":
       "Портал подготовлен в рамках реализации грантового финансирования исследований молодых ученых по проекту «Жас ғалым» на 2025-2027 годы на тему «AP25794915 Научное исследование экономического потенциала ядерного туризма на примере Семипалатинского испытательного полигона». Данное исследование финансируется Комитетом науки и высшего образования Министерства науки и высшего образования Республики Казахстан.",
     "footer.links.title": "Navigation",
@@ -2036,8 +2035,8 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "researchMaps.kicker": "Scientific maps",
     "researchMaps.title": "Scientific maps of the STS",
     "researchMaps.lead":
-      "The catalogue includes two overview maps from PLOS ONE (2023) and four specific-activity maps for ¹³⁷Cs, ⁹⁰Sr, ²⁴¹Am, and ²³⁹⁺²⁴⁰Pu from the final manuscript by Moldazhanov and co-authors (2026). The maps are for scientific reference and do not assess visit safety.",
-    "researchMaps.note": "Each map has its own source; the new manuscript maps are not PLOS ONE material.",
+      "The catalogue includes one overview map from PLOS ONE (2023) and four specific-activity maps for ¹³⁷Cs, ⁹⁰Sr, ²⁴¹Am, and ²³⁹⁺²⁴⁰Pu from the paper by Moldazhanov and co-authors (2026). The maps are for scientific reference and do not assess visit safety.",
+    "researchMaps.note": "Each map has its own source; the maps from the paper by Moldazhanov and co-authors are not PLOS ONE material.",
     "researchMaps.open": "Open",
     "researchMaps.cardCta": "Open map",
     "researchMaps.showMore": "Show more",
@@ -2049,9 +2048,6 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "researchMaps.g001.title": "Overview location of STS in Kazakhstan",
     "researchMaps.g001.body":
       "STS location in Kazakhstan and neighbouring regions (as in the paper).",
-    "researchMaps.g002.title": "STS scheme and sampling points",
-    "researchMaps.g002.body":
-      "Pads and sampling points from the authors.",
     "researchMaps.g003.title": "Cs‑137 distribution (cesium‑137)",
     "researchMaps.g003.body":
       "¹³⁷Cs field per the paper; compare scale and legend with the PDF.",
@@ -2063,11 +2059,11 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
       "⁹⁰Sr field on the authors’ plots.",
     "sources.title": "Sources",
     "sources.lead":
-      "Sources for the two overview maps and four specific-activity maps are listed separately.",
+      "Sources for the one overview map and four specific-activity maps are listed separately.",
     "sources.primary": "Primary source",
     "sources.plos.title": "PLOS ONE — article and figures (maps)",
     "sources.plos.desc":
-      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nOnly the two overview maps, g001 and g002, belong to the article.",
+      "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.\nThe catalogue displays the g001 overview map.",
     "sources.openPdf": "Open PDF",
     "sources.openSection": "Open sources",
     "sources.more": "Add later",
@@ -2213,6 +2209,7 @@ export const translations: Record<Lang, Record<TranslationKey, string>> = {
     "methodology.publications.lead":
       "Sources the project already uses. Articles include DOIs or direct links; institutional entries are reference portals.",
     "methodology.publications.kind.peer_reviewed": "Peer-reviewed article",
+    "methodology.publications.kind.manuscript": "Final scientific manuscript",
     "methodology.publications.kind.institutional": "Institutional resource",
     "methodology.publications.kind.reference_portal": "Reference portal",
     "methodology.glossary.title": "Glossary",

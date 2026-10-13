@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import {
-  GuideSection,
   HeroSection,
   MethodologyTeaserSection,
   MapSection,
@@ -35,7 +34,6 @@ export default function Home() {
         {/* временно отключено */}
         {/* <RoutesSection /> */}
         <MethodologyTeaserSection />
-        <GuideSection />
         <SafetySection />
       </main>
       <SiteFooter />

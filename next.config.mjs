@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   webpack: (config, { dev }) => {
     // Windows dev-mode ENOENT/missing-chunk issues are often caused by
     // filesystem cache getting into an inconsistent state (antivirus/OneDrive/abrupt restarts).

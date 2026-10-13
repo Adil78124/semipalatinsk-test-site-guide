@@ -2,7 +2,7 @@ import type { Lang } from "@/components/i18n/translations";
 
 export type LocalizedText = Record<Lang, string>;
 
-export type PublicationKind = "peer_reviewed" | "institutional" | "reference_portal";
+export type PublicationKind = "peer_reviewed" | "manuscript" | "institutional" | "reference_portal";
 
 export type PublicationEntry = {
   id: string;
@@ -32,12 +32,31 @@ export const PUBLICATIONS_CATALOG: PublicationEntry[] = [
       en: "Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site",
     },
     summary: {
-      ru: "Открытая статья PLOS ONE — источник двух обзорных карт каталога: g001 и g002. Четыре карты удельной активности из рукописи к этой статье не относятся.",
-      kk: "Ашық PLOS ONE мақаласы каталогтағы екі шолу картасының — g001 және g002 — дереккөзі. Қолжазбадағы меншікті белсенділіктің төрт картасы бұл мақалаға жатпайды.",
-      en: "The open-access PLOS ONE paper is the source of the catalogue's two overview maps, g001 and g002. The four manuscript specific-activity maps do not belong to this paper.",
+      ru: "Открытая статья PLOS ONE — источник обзорной карты g001 в каталоге. Четыре карты удельной активности относятся к отдельной статье Молдажанова и соавторов.",
+      kk: "Ашық PLOS ONE мақаласы каталогтағы g001 шолу картасының дереккөзі. Меншікті белсенділіктің төрт картасы Молдажанов пен бірлескен авторлардың бөлек мақаласына жатады.",
+      en: "The open-access PLOS ONE paper is the source of the catalogue's g001 overview map. The four specific-activity maps belong to a separate paper by Moldazhanov and co-authors.",
     },
     doi: "10.1371/journal.pone.0294632",
     url: "https://doi.org/10.1371/journal.pone.0294632",
+  },
+  {
+    id: "moldazhanov-2026-radiation-safety-tourists",
+    kind: "peer_reviewed",
+    authors: "Молдажанов Марат Бетимбаевич; Javier Martínez-Falcó; Дүйскенова Райгүл Жеңісқызы",
+    year: "2026",
+    title: {
+      ru: "Разработка рекомендаций по обеспечению радиационной безопасности туристов на маршрутах по объектам Семипалатинского испытательного полигона",
+      kk: "Семей сынақ полигоны нысандары бойынша туристік маршруттарда туристердің радиациялық қауіпсіздігін қамтамасыз ету жөніндегі ұсынымдарды әзірлеу",
+      en: "Development of recommendations for ensuring the radiation safety of tourists on routes to facilities of the Semipalatinsk Test Site",
+    },
+    summary: {
+      ru: "Статья опубликована в журнале «Туризм, досуг и гостеприимство», 2026, №3(14), с. 28–45. В таблице 4 систематизированы три технических тура STS-2025.",
+      kk: "Мақала «Туризм, досуг и гостеприимство» журналында жарияланған, 2026, №3(14), 28–45-бб. 4-кестеде STS-2025 үш техникалық туры жүйеленген.",
+      en: "Published in Tourism, Leisure and Hospitality, 2026, No. 3(14), pp. 28–45. Table 4 documents the three STS-2025 technical tours.",
+    },
+    doi: "10.59649/2959-5185-2026-3-28-45",
+    url: "https://tlh.kz/",
+    pdfUrl: "/pdf/moldazhanov-2026-radiation-safety-tourists.pdf",
   },
   {
     id: "nnc-sts",

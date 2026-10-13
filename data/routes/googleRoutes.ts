@@ -21,6 +21,8 @@ export type GoogleRouteCard = {
   image: string;
   imageAlt: LocalizedRouteText;
   photoSource: LocalizedRouteText;
+  photoSourceUrl?: string;
+  photoLicenseUrl?: string;
   locations: GoogleRouteLocation[];
   source: LocalizedRouteText;
   sourceUrl?: string;
@@ -52,17 +54,19 @@ export const routes: GoogleRouteCard[] = [
       kk: "Экспозицияға бару үшін ҚР ҰЯО-мен алдын ала өтінім беру және келісу қажет болуы мүмкін. Сапар алдында мекемеден қолданыстағы тәртіпті нақтылаңыз.",
       en: "A visit to the exhibition may require advance application and coordination with the NNC RK. Confirm the current procedure with the institution before travelling.",
     },
-    image: "/images/kurchatov-city.jpg",
+    image: "/images/routes/route-1_kurchatov_aerial.jpg",
     imageAlt: {
-      ru: "Панорамный вид города — прежняя обложка ознакомительного маршрута",
-      kk: "Қаланың панорамалық көрінісі — таныстыру маршрутының бұрынғы мұқабасы",
-      en: "Panoramic city view — the previous cover of the introductory route",
+      ru: "Вид с воздуха на город Курчатов, Казахстан",
+      kk: "Қазақстандағы Курчатов қаласының әуеден көрінісі",
+      en: "Aerial view of Kurchatov, Kazakhstan",
     },
     photoSource: {
-      ru: "Источник изображения: архив проекта; первоисточник требует уточнения.",
-      kk: "Сурет көзі: жоба мұрағаты; бастапқы дереккөзді нақтылау қажет.",
-      en: "Image source: project archive; the original source requires verification.",
+      ru: "Mark Pitcher, 29.05.2009, Wikimedia Commons",
+      kk: "Mark Pitcher, 29.05.2009, Wikimedia Commons",
+      en: "Mark Pitcher, 29 May 2009, Wikimedia Commons",
     },
+    photoSourceUrl: "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Kurchatov,_Kazakhstan.jpg",
+    photoLicenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     locations: [
       {
         id: "sts-history-exhibition",
@@ -211,9 +215,9 @@ export const routes: GoogleRouteCard[] = [
       en: "Salt lake Zhamantuz",
     },
     photoSource: {
-      ru: "Фото автора. Источник: финальная рукопись Молдажанова и соавт., 2026.",
-      kk: "Автор фотосы. Дереккөз: Молдажанов және авторлар ұжымының финалдық қолжазбасы, 2026.",
-      en: "Photo by the author. Source: final manuscript by Moldazhanov et al., 2026.",
+      ru: "Фото автора. Источник: статья Молдажанова и соавт., 2026.",
+      kk: "Автор фотосы. Дереккөз: Молдажанов және авторлар ұжымының мақаласы, 2026.",
+      en: "Photo by the author. Source: paper by Moldazhanov et al., 2026.",
     },
     locations: [
       {

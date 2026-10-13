@@ -11,7 +11,7 @@ const fallbackT = (key: TranslationKey) => String(key);
 /** Локальный PDF в `public/pdf/` — корректная ссылка с кодированием имени файла */
 const SCIENTIFIC_ARTICLE_PDF_HREF = `/pdf/${encodeURIComponent("scientific article about animals (segments).pdf")}`;
 
-const MANUSCRIPT_REFERENCES = [
+const PUBLISHED_ARTICLE_REFERENCES = [
   { href: "https://hearings.ndbecology.gov.kz/Disscusion/DisPublic/PublicHearingDetail?hearingId=17850", key: "survey" },
   { href: "https://doi.org/10.5281/zenodo.20699777", key: "zenodo" },
   { href: "https://nnc.kz/assets/mono2_kz.pdf", key: "nnc" },
@@ -20,26 +20,26 @@ const MANUSCRIPT_REFERENCES = [
 function sourceLabels(lang: "ru" | "kk" | "en") {
   if (lang === "kk") return {
     name: "Дереккөз атауы", description: "Сипаттама", year: "Жыл", type: "Түрі",
-    manuscriptTitle: "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — соңғы қолжазба, 2-сурет",
+    manuscriptTitle: "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — жарияланған мақала, 2-сурет",
     manuscriptDescription: "Карталарды авторлар [3, 9, 10] дереккөздері негізінде дайындаған: СИП кешенді экологиялық зерттеу материалдары, ҚР ҰЯО материалдары және Zenodo.",
-    manuscriptType: "Соңғы қолжазбаның материалы", educational: "Материал ақпараттық-білім беру мақсатында пайдаланылады.",
-    rights: "Қолжазба жарияланбаған; оған DOI берілмеген. Кескіндерді ашық жариялау құқығы автормен немесе құқық иесімен бөлек келісіледі.",
+    manuscriptType: "Жарияланған ғылыми мақала", educational: "Материал ақпараттық-білім беру мақсатында пайдаланылады.",
+    rights: "«Туризм, демалыс және қонақжайлылық», 2026, №3(14), 28–45-бб. DOI: 10.59649/2959-5185-2026-3-28-45.",
     survey: "Кешенді экологиялық зерттеу материалдары", zenodo: "Zenodo материалдары", nnc: "ҚР ҰЯО материалдары",
   };
   if (lang === "en") return {
     name: "Source title", description: "Description", year: "Year", type: "Type",
-    manuscriptTitle: "Moldazhanov M. B., Martínez-Falcó J., Duiskenova R. Zh. — final manuscript, Figure 2",
+    manuscriptTitle: "Moldazhanov M. B., Martínez-Falcó J., Duiskenova R. Zh. — published paper, Figure 2",
     manuscriptDescription: "The authors prepared the maps from sources [3, 9, 10]: materials from the comprehensive environmental survey of the STS, materials of Kazakhstan's NNC, and Zenodo.",
-    manuscriptType: "Final-manuscript material", educational: "The material is used for information and education.",
-    rights: "The manuscript is unpublished and has no assigned DOI. Rights for public use of the images must be agreed separately with the author or rights holder.",
+    manuscriptType: "Published scientific paper", educational: "The material is used for information and education.",
+    rights: "Tourism, Leisure and Hospitality, 2026, No. 3(14), pp. 28–45. DOI: 10.59649/2959-5185-2026-3-28-45.",
     survey: "Comprehensive environmental survey materials", zenodo: "Zenodo materials", nnc: "Kazakhstan NNC materials",
   };
   return {
     name: "Название источника", description: "Описание", year: "Год", type: "Тип",
-    manuscriptTitle: "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — финальная рукопись, рисунок 2",
+    manuscriptTitle: "Молдажанов М. Б., Martínez-Falcó J., Дүйскенова Р. Ж. — опубликованная статья, рисунок 2",
     manuscriptDescription: "Карты подготовлены авторами на основе источников [3, 9, 10]: материалов комплексного экологического обследования СИП, материалов НЯЦ РК и Zenodo.",
-    manuscriptType: "Материал финальной рукописи", educational: "Материал используется в информационно-образовательных целях.",
-    rights: "Рукопись не опубликована; DOI для неё не присваивается. Права на публичное размещение изображений отдельно согласуются с автором или правообладателем.",
+    manuscriptType: "Опубликованная научная статья", educational: "Материал используется в информационно-образовательных целях.",
+    rights: "«Туризм, досуг и гостеприимство», 2026, №3(14), с. 28–45. DOI: 10.59649/2959-5185-2026-3-28-45.",
     survey: "Материалы комплексного экологического обследования", zenodo: "Материалы Zenodo", nnc: "Материалы НЯЦ РК",
   };
 }
@@ -54,17 +54,17 @@ export default function MapDetailPage() {
   const map = getMapBySlug(slug);
   const prev = map ? getPrevMap(map) : null;
   const next = map ? getNextMap(map) : null;
-  const isManuscriptMap = map?.sourceKind === "manuscript";
+  const isPublishedArticleMap = map?.sourceKind === "published_article";
   const labels = sourceLabels(lang);
 
   const pageTitle = map ? l10n(lang, map.title) : t("maps.notFound");
   const lead = map ? l10n(lang, map.page.subtitle) : "";
-  const sourceTitle = isManuscriptMap ? labels.manuscriptTitle : "PLOS ONE — Panitskiy A. et al.";
-  const sourceDescription = isManuscriptMap
+  const sourceTitle = isPublishedArticleMap ? labels.manuscriptTitle : "PLOS ONE — Panitskiy A. et al.";
+  const sourceDescription = isPublishedArticleMap
     ? labels.manuscriptDescription
     : "Panitskiy A. et al. (2023). Bioaccumulation of radionuclides in hoofed animals inhabiting the Semipalatinsk Test Site.";
-  const sourceYear = isManuscriptMap ? "2026" : "2023";
-  const sourceType = isManuscriptMap ? labels.manuscriptType : "PLOS ONE";
+  const sourceYear = isPublishedArticleMap ? "2026" : "2023";
+  const sourceType = isPublishedArticleMap ? labels.manuscriptType : "PLOS ONE";
 
   const infoBlocks = useMemo(
     () => [
@@ -194,11 +194,21 @@ export default function MapDetailPage() {
               </div>
               <div className="pt-4 border-t border-outline-variant/20">
                 <p className="text-[11px] italic text-outline leading-tight">{labels.educational}</p>
-                {isManuscriptMap ? <p className="mt-2 text-[11px] text-outline leading-tight">{labels.rights}</p> : null}
+                {isPublishedArticleMap ? <p className="mt-2 text-[11px] text-outline leading-tight">{labels.rights}</p> : null}
               </div>
-              {isManuscriptMap ? (
+              {isPublishedArticleMap ? (
                 <div className="flex flex-col gap-2 pt-2">
-                  {MANUSCRIPT_REFERENCES.map((reference) => (
+                  <div className="flex flex-wrap gap-3 pb-2">
+                    <a href="/pdf/moldazhanov-2026-radiation-safety-tourists.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg shadow-primary/20">
+                      <span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                      {t("sources.openPdf")}
+                    </a>
+                    <a href="https://doi.org/10.59649/2959-5185-2026-3-28-45" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-white/70 border border-outline-variant/20 text-on-surface px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">
+                      <span className="material-symbols-outlined text-[18px]">open_in_new</span>
+                      DOI
+                    </a>
+                  </div>
+                  {PUBLISHED_ARTICLE_REFERENCES.map((reference) => (
                     <a key={reference.key} href={reference.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold text-primary underline underline-offset-4">
                       <span className="material-symbols-outlined text-[16px]">open_in_new</span>
                       {labels[reference.key]}
@@ -229,7 +239,7 @@ export default function MapDetailPage() {
             </div>
           </div>
 
-          {!isManuscriptMap ? (
+          {!isPublishedArticleMap ? (
             <a
               href={SCIENTIFIC_ARTICLE_PDF_HREF}
               download="Panitskiy-2023-PLOS-scientific-article-segments.pdf"

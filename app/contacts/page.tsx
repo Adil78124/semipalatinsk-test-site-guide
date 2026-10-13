@@ -67,6 +67,21 @@ export default function ContactsPage() {
               ))}
             </div>
 
+            <div className="mt-6 rounded-lg border border-outline-variant/15 bg-surface-container-low p-7">
+              <span className="material-symbols-outlined text-3xl text-primary" aria-hidden>
+                science
+              </span>
+              <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-on-surface-variant">
+                Научный автор
+              </p>
+              <h2 className="mt-3 font-headline text-2xl font-extrabold tracking-tight text-on-surface">
+                Молдажанов Марат Бетимбаевич
+              </h2>
+              <p className="mt-3 max-w-3xl text-base leading-relaxed text-on-surface-variant">
+                PhD, Alikhan Bokeikhan University, автор научного исследования по ядерному туризму.
+              </p>
+            </div>
+
             <div className="mt-8 rounded-lg border border-outline-variant/15 bg-white/70 p-7 dark:bg-[#191c1c]/40">
               <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
                 <div>
